@@ -1,0 +1,690 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+------------ MAP ------------
+
+01. GENERAL STYLES
+02. WORDPRESS BODY CLASSES
+03. LAYOUT & GRID STYLES
+04. LINK STYLES
+05. H1, H2, H3, H4, H5 STYLES
+06. HEADER STYLES
+07. NAVIGATION STYLES
+08. POSTS & CONTENT STYLES
+09. PAGE NAVI STYLES
+10. COMMENT STYLES
+11. COMMENT FORM STYLES
+12. SIDEBARS & ASIDES
+13. FOOTER STYLES
+
+******************************************************************/
+
+
+
+
+/*********************
+01. GENERAL STYLES
+*********************/
+
+html, body {
+	/* height: 100%; */
+}
+body {
+	font-family: @sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+	color: @black;
+	background-color: @color4;
+
+}
+
+/********************
+02. WORDPRESS BODY CLASSES
+    style a page via class
+********************/
+
+.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
+.home {}                          /* home page */
+.blog {}                          /* blog template page */
+.archive {}                       /* archive page */
+.date {}                          /* date archive page */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
+.search {}                        /* search page */
+	.search-results {}              /* search result page */
+	.search-no-results {}           /* no results search page */
+	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
+.error404 {}                      /* 404 page */
+.single {}                        /* single post page */
+	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
+	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
+.attachment {}                    /* attatchment page */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
+.author {}                        /* author page */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category {}                      /* category page */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
+.tag {}                           /* tag page */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
+.page-template {}                 /* custom page template page */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}                 /* parent page template */
+	.page-child {}                  /* child page template */
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+.logged-in {}                     /* if user is logged in */
+.paged {}                         /* paged items like search results or archives */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+
+/*********************
+03. LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 96%;
+	margin: 0 auto;
+}
+#container {}
+
+/* Flexible iFrame */
+
+.Flexible-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.Flexible-container iframe,   
+.Flexible-container object,  
+.Flexible-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*********************
+04. LINK STYLES
+*********************/
+
+a, a:visited {
+	color: @black;
+	text-decoration: none;
+	/* on hover */
+	&:hover, &:focus {
+	color: @black;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+05. H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	font-family: @sans-serif;
+	text-rendering: optimizelegibility;
+	font-weight: 400;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size: 2.5em;
+	line-height: 1.333em;
+}
+
+h2, .h2 {
+	font-size: 1.75em;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+	margin-top: 0;
+}
+
+h3, .h3 {
+	font-size: 1.125em;
+}
+
+h4, .h4 {
+	font-size: 1.1em;
+	font-weight: 700;
+}
+
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/*********************
+06. HEADER STYLES
+*********************/
+
+.header {
+	
+	background-color: @white;
+	
+	#inner-header {
+		position: relative;
+	}
+
+	#logo {
+		margin-top: 32px; 
+	}
+
+	#logo img {
+		max-width: 100%;
+		height: auto;
+	}
+	
+	#eventdate {
+		color: @color6;
+		font-size: 0.95em;
+		line-height: 1.5em;
+
+	}
+
+	#description {
+		font-size: 1em;
+		line-height: 1.25em;
+		margin: 0px;
+	}	
+
+	#anmelden {
+		background-color: @color1;
+		padding: 10px;
+		font-size: 1.5em;
+		text-align: center;
+		padding-top: 10px;
+		padding-left: 10px;
+		padding-bottom: 5px;
+		a, a:hover, a:visited { color: @white; }
+		 }
+
+	nav {
+		ul.nav {
+			li {
+				a {
+	
+		text-transform: uppercase;
+		
+		
+		}
+
+				&:first-child {}
+
+				&:last-child {}
+			}
+		}
+	}
+}
+
+/*********************
+07. NAVIGATION STYLES
+*********************/
+
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+
+.nav {
+
+	li {
+		padding-right: 20px;
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: @color4;
+			
+			/*
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.scss file where it's relevant. We want to
+			keep this file as small as possible!
+			*/
+			&:hover, &:focus {
+			color: @black;
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child { padding-right: 0px;}
+
+		/*
+		so you really have to rethink your dropdowns for mobile.
+		you don't want to have it expand too much because the
+		screen is so small. How you manage your menu should
+		depend on the project. Here's some great info on it:
+		http://www.alistapart.com/articles/organizing-mobile/
+		*/
+		ul.sub-menu,
+		ul.children {
+
+			li {
+
+				a {
+					padding-left: 30px;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+
+				}
+
+				&:first-child {}
+
+				&:last-child {}
+
+			}
+
+		}
+
+	} /* end .menu li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+
+		a { 
+			
+			color: @color3;
+		
+		}
+
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+
+/*********************
+08. POSTS & CONTENT STYLES
+*********************/
+
+#content {
+	/* background: url(../images/background_1.png);*/
+	
+	 background: url(../images/background.png); 
+
+    background-position: 50% 0%;
+
+  #inner-content {
+		padding-top: 260px;
+	}
+	
+	}
+
+		.hentry {
+			background-color: @color2;
+			padding: 50px;
+			margin-bottom: 75px;
+			
+			header {}
+
+			footer {}
+
+		} /* end .hentry */
+
+		.attachment {
+			padding: 25px;
+			margin-bottom: 50px;
+			img { margin-bottom: 0px !important;}
+		}
+
+		.teaser-item {
+			padding: 50px;
+			margin-bottom: 75px;
+			
+			h2 {
+				margin-bottom: 1em;	
+			}
+		}
+		
+		.custom-layout-wrapper>div {
+			background-color: @color2;
+			padding: 25px;
+			margin-bottom: 50px;
+
+		}
+
+		.custom-layout-wrapper>div>h2 {
+				margin-bottom: 1em;	
+			}
+		
+		.timetable {
+			h2 { margin: 0em; line-height: 1em;}
+			p { margin-top: 0em; margin-bottom: 1.5em; }
+		}
+
+		/*********************
+		TEASER ICONS
+		*********************/
+		.withicon {
+			position: relative;
+		}
+		
+		.withicon:after {
+			display: block;
+			width: 55px;
+			height:55px;
+			content: "";
+			position: absolute;
+			top:35px;
+			right:35px;
+			visibility: hidden;
+			background: url(../images/teaser_icons.png) no-repeat;
+		}
+		
+		/* Worum geht's?*/
+		#post-4:after { background-position: 0 0px; visibility: visible;}
+		
+		/* Die Herausforderung*/
+		#post-9:after { background-position: 0 -55px;visibility: visible;}
+		
+		/* Fragen und Antworten*/
+		#post-14:after { background-position: 0 -110px;visibility: visible;}
+		
+		/* Programm */
+		#post-12:after { background-position: 0 -165px;visibility: visible;}
+		
+		/* Material */
+		#post-16:after { background-position: 0 -220px;visibility: visible;}
+
+
+
+		.single-title,
+		.page-title { 
+			text-transform: uppercase;
+			margin: 0;
+		 }
+
+		.single-title {}
+
+		.page-title {}
+
+		.archive-title { }
+
+		/* want to style individual post classes? Booya! */
+		.post-id {}         /* post by id (i.e. post-3) */
+		.post {}            /* general post style */
+		.page {}            /* general article on a page style */
+		.attachment {}      /* general style on an attatchment */
+		.sticky {}          /* sticky post style */
+		.hentry {}          /* hentry class */
+		.category-slug {}   /* style by category (i.e. category-videos) */
+		.tag-slug {}        /* style by tag (i.e. tag-news) */
+
+		/* post meta */
+		.byline {
+			color: #999;
+			time {}
+		}
+
+
+		/* entry content */
+		.entry-content {
+			p { 
+				font-family: @sans-serif-p;
+				font-size: 1.125em;
+				line-height: 1.5em;
+				
+				a, a:visited, a:active {
+					text-decoration: underline; 
+				}
+			}
+
+
+			ul, ol, table, dl {}
+
+			ul, ol {
+
+				li {}
+
+			}
+
+			ul {
+
+				li {}
+
+			}
+
+			ol {
+
+				li {}
+
+			}
+
+			blockquote {
+
+				&:before {}
+
+			}
+
+			dl {}
+
+			dt {}
+
+			dd {
+				margin-left: 0;
+				font-size: 0.9em;
+				color: #787878;
+				margin-bottom: 1.5em;
+			}
+
+			img {
+				margin: 0 0 1.5em 0;
+				max-width: 100%;
+				height: auto;
+			}
+
+			/*
+			image alignment on a screen this size may be
+			a bit difficult. It's set to start aligning
+			and floating images at the next breakpoint,
+			but it's up to you. Feel free to change it up.
+			*/
+			.alignleft, img.alignleft {}
+			.alignright, img.alignright {}
+			.aligncenter, img.aligncenter {}
+
+			video, object {
+				max-width: 100%;
+				height: auto;
+			}
+
+			pre {
+				background: #eee;
+				border: 1px solid #cecece;
+				padding: 10px;
+			}
+
+		} /* end .entry-content */
+
+		.wp-caption {
+			max-width: 100%;
+			background: #eee;
+			padding: 5px;
+
+			/* images inside wp-caption */
+			img {
+				max-width: 100%;
+				margin-bottom: 0;
+				width: 100%;
+			}
+
+			p.wp-caption-text {
+				font-size: 0.85em;
+				margin: 4px 0 7px;
+				text-align: center;
+			}
+
+		} /* end .wp-caption */
+
+		/* image gallery styles */
+		.gallery {
+
+			dl {
+
+				a {}
+
+				img {}
+
+			}
+
+			dt {}
+
+			dd {}
+
+		} /* end .gallery */
+
+		/* gallery caption styles */
+		.gallery-caption {}
+
+		.size-full {}
+		.size-large {}
+		.size-medium {}
+		.size-thumbnail {}
+
+
+/*********************
+12. SIDEBARS & ASIDES
+*********************/
+
+.sidebar {}
+
+	.widgettitle {}
+
+	.widget {
+
+		ul {
+
+			li {
+
+				&:first-child {}
+
+				&:last-child {}
+
+				a {}
+
+				/* deep nesting */
+				ul {}
+
+			}
+
+		}
+
+	}
+
+/*********************
+13. FOOTER STYLES
+*********************/
+
+.footer {
+	clear: both;
+	background-color: @color5;
+	
+	#inner-footer {
+	font-size: 1.375em;
+	font-family: @sans-serif-p;
+	color: @white;
+	padding-bottom: 3em;
+	padding-top: 1em;
+	
+	a {
+	color: @white;
+	}
+	
+	}
+	nav {
+		ul.nav {
+			li {
+				a {
+
+				}
+				
+				&:first-child {}
+
+				&:last-child {}
+
+			}
+		}
+	}
+}
+
+.ph {
+	margin-bottom: 0;
+}
+
+.partner {
+	float:left;
+	padding-right: 1em;
+	margin-top: 1em;
+}
+
+	/*
+	if you checked out the link above:
+	http://www.alistapart.com/articles/organizing-mobile/
+	you'll want to style the footer nav
+	a bit more in-depth. Remember to keep
+	it simple because you'll have to
+	override these styles for the desktop
+	view.
+	*/
+	.footer-links {
+
+		ul {
+
+			li {}
+
+		}
+
+	} /* end .footer-links */
+
+
+	.copyright {}
+	
+	
+
