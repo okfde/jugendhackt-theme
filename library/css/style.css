@@ -1093,6 +1093,26 @@ and more scalable.
   background-position: 0 -220px;
   visibility: visible;
 }
+/* Mentor/innen */
+#post-605:after {
+  background-position: 0 -275px;
+  visibility: visible;
+}
+/* Sponsoren */
+#post-598:after {
+  background-position: 0 -385px;
+  visibility: visible;
+}
+/* Presse */
+#post-599:after {
+  background-position: 0 -385px;
+  visibility: visible;
+}
+/* Für die Eltern */
+#post-600:after {
+  background-position: 0 -330px;
+  visibility: visible;
+}
 .single-title,
 .page-title {
   text-transform: uppercase;
