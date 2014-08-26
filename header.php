@@ -52,7 +52,7 @@
 									<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Jugend hackt" width="369" height="78"/>
 								</a>
 							</div>
-							<span id="eventdate" class="uppercase" style="letter-spacing: -3px;">12-14. September 2014</span><br />
+							<span id="eventdate" class="uppercase" style="letter-spacing: -3px;"><?php echo get_theme_mod('tagline_date'); ?></span><br />
 							<span id="description">
 								<?php  bloginfo('description'); ?>
 							</span>
@@ -64,9 +64,13 @@
 										<?php bones_meta_links(); ?>
 									</nav>
 								</div>
-								<div id="anmelden" class="uppercase">
-									<a href="https://youngrewiredstate.org/yrs-everywhere/yrs-berlin" target="_blank" >Anmelden</a>
-								</div>
+
+								<? if ( has_nav_menu('cta-links') ) { ?> 
+									<div class="uppercase anmelden">
+										<!--<a href="https://youngrewiredstate.org/yrs-everywhere/yrs-berlin/apply/de" target="_blank" >Anmelden</a>-->
+										<?php bones_cta_links(); ?>								
+									</div>
+								<? } ?>
 
 								<nav role="navigation">
 									<?php bones_main_nav(); ?>

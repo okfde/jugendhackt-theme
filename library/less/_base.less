@@ -226,16 +226,26 @@ h5, .h5 {
 		margin: 0px;
 	}	
 
-	#anmelden {
-		background-color: @color1;
-		padding: 10px;
+	.anmelden {
+
 		font-size: 1.5em;
 		text-align: center;
-		padding-top: 10px;
-		padding-left: 10px;
-		padding-bottom: 5px;
+
+		li {
+			
+			background-color: @color1;
+			padding: 10px 10px 5px 10px;
+			min-width: 170px;
+			margin-bottom: 10px;
+			
+			&:last-child {
+				margin-bottom: 0;
+				padding-right: 10px;
+			}
+		}
+
 		a, a:hover, a:visited { color: @white; }
-		 }
+	}
 
 	nav {
 		ul.nav {
@@ -254,6 +264,15 @@ h5, .h5 {
 		}
 	}
 }
+
+ul.cta-links {
+	margin: 0;
+	li {
+		display: block;
+		float: none;
+	}
+}
+
 
 /*********************
 07. NAVIGATION STYLES

@@ -251,4 +251,48 @@ function bones_meta_links() {
     	'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 	));
 } /* end bones footer link */
+
+// Adding custom theme settings for Eventdate 
+function mytheme_customize_register( $wp_customize ) {
+	// Create settings itself
+	$wp_customize->add_setting( 'tagline_date' , array(
+	    'default'     => '12-14. September 2014',
+	    'transport'   => 'refresh',
+	) );
+
+	// Now add the Color Controls
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'c_tagline_date', array(
+		'label'        => __( 'Date', 'bonestheme' ),
+		'section'    => 'title_tagline',
+		'settings'   => 'tagline_date',
+	) ) );
+}
+add_action( 'customize_register', 'mytheme_customize_register' );
+
+// Additional social media menu
+register_nav_menus(
+		array(
+			'cta-links' => __( 'The CTA-Menu', 'bonestheme' )   // main nav in header
+		)
+	);
+
+// the social media menu (should you choose to use one)
+function bones_cta_links() {
+	// display the wp3 menu if available
+    wp_nav_menu(array(
+    	'container' => '',                              // remove nav container
+    	'container_class' => 'cta-links clearfix',   // class of container (should you choose to use it)
+    	'menu' => __( 'CTA Link(s)', 'bonestheme' ),   // nav name
+    	'menu_class' => 'nav cta-links clearfix',      // adding custom nav class
+    	'theme_location' => 'cta-links',             // where it's located in the theme
+    	'before' => '',                                 // before the menu
+        'after' => '',                                  // after the menu
+        'link_before' => '',                            // before each link
+        'link_after' => '',                             // after each link
+        'depth' => 0,                                   // limit the depth of the nav
+    	'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
+	));
+} /* end bones footer link */
+
+
 ?>

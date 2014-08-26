@@ -248,11 +248,8 @@ NAVIGATION STYLES
 *********************/
 ul {
   /* end .menu ul li */
-
   /* highlight current page */
-
   /* end current highlighters */
-
 }
 ul li {
   float: left;
@@ -260,14 +257,12 @@ ul li {
   /*
 				plan your menus and drop-downs wisely.
 				*/
-
 }
 ul li a {
   /*
 					you can use hover styles here even though this size
 					has the possibility of being a mobile device.
 					*/
-
 }
 /* end  ul */
 /*********************
@@ -276,7 +271,6 @@ POSTS & CONTENT STYLES
 /* entry content */
 .entry-content {
   /* at this larger size, we can start to align images */
-
 }
 .entry-content .alignleft,
 .entry-content img.alignleft {
@@ -438,14 +432,10 @@ HEADER STYLES
   right: 0;
   top: 0;
 }
-.header #anmelden {
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 5px;
-  width: 170px;
+.header .anmelden {
   position: absolute;
   right: 0;
-  top: 100px;
+  bottom: 22px;
 }
 .header #eventdate {
   font-size: 1.125em;
@@ -463,11 +453,8 @@ NAVIGATION STYLES
 *********************/
 .nav {
   /* end .menu ul li */
-
   /* highlight current page */
-
   /* end current highlighters */
-
 }
 .nav li {
   float: left;
@@ -475,16 +462,13 @@ NAVIGATION STYLES
   /*
 		plan your menus and drop-downs wisely.
 		*/
-
   /* showing sub-menus */
-
 }
 .nav li a {
   /*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
 			*/
-
 }
 .nav li ul.sub-menu,
 .nav li ul.children {
@@ -495,7 +479,6 @@ NAVIGATION STYLES
   display: none;
   z-index: 8999;
   /* highlight sub-menu current page */
-
 }
 .nav li ul.sub-menu li,
 .nav li ul.children li {
@@ -504,7 +487,6 @@ NAVIGATION STYLES
 				just remember deeper menus suck
 				for usability. k, bai.
 				*/
-
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
@@ -540,7 +522,6 @@ SIDEBARS & ASIDES
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
-
 }
 .widget ul li ul {
   margin-top: 0.75em;
@@ -571,7 +552,6 @@ mobile. Make sure to double check these!
 			it's very rare to have multi-depth menus in
 			the footer.
 			*/
-
 }
 /* end .footer-links */
 /******************************************************************
