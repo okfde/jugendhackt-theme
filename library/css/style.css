@@ -522,14 +522,13 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
-/* rot 
-@color1: #f4382a;*/
-/* gelb 
-@color2: #e8df48;*/
-/* blau 
-@color3: #24809f;
-@color3:#60dba4;*/
+/* rot */
+/* gelb */
+/* blau */
 /* grau */
+.background-panel {
+  background: #ffffff;
+}
 /*
 Here's a great tutorial on how to
 use color variables properly:
@@ -558,9 +557,6 @@ span.amp {
 }
 .uppercase {
   text-transform: uppercase;
-}
-.background-yellow {
-  background: #ffffff;
 }
 /*********************
 BORDER RADIUS
@@ -721,7 +717,7 @@ body {
   /* height: 100%; */
 }
 body {
-  font-family: "Ebisu", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #222222;
@@ -730,7 +726,7 @@ body {
 /********************
 02. WORDPRESS BODY CLASSES
     style a page via class
-********************/
+    ********************/
 /* for sites that are read right to left (i.e. hebrew) */
 /* home page */
 /* blog template page */
@@ -772,23 +768,6 @@ body {
 .wrap {
   width: 96%;
   margin: 0 auto;
-}
-/* Flexible iFrame */
-.Flexible-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
-}
-.Flexible-container iframe,
-.Flexible-container object,
-.Flexible-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 /*********************
 04. LINK STYLES
@@ -883,6 +862,7 @@ h5,
 *********************/
 .header {
   background-color: #ffffff;
+  font-family: "Ebisu", Helvetica, Arial, sans-serif;
 }
 .header #inner-header {
   position: relative;
@@ -986,11 +966,36 @@ and more scalable.
   color: #2aabe1;
 }
 /* end .nav */
+.page-navigation {
+  text-align: center;
+  background: #ffffff;
+  padding: 25px;
+}
+.page-navigation ol {
+  margin: 0;
+}
+.page-navigation .bpn-current {
+  color: #f86d14;
+}
+.page-navigation li {
+  display: inline-block;
+  margin-right: 25px;
+}
+.page-navigation li:last-child {
+  margin-right: 0;
+}
 /*********************
 08. POSTS & CONTENT STYLES
 *********************/
+.blog-title {
+  padding: 25px 25px 20px 25px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+.blog-title h2 {
+  margin: 0;
+}
 #content {
-  /* background: url(../images/background_1.png);*/
   background: url(../images/background.png);
   background-position: 50% 0%;
 }
@@ -1002,6 +1007,14 @@ and more scalable.
   padding: 50px;
   margin-bottom: 75px;
 }
+.hentry:last-child {
+  margin-bottom: 50px;
+}
+.hentry footer a,
+.hentry footer a:visited,
+.hentry footer a:active {
+  text-decoration: underline;
+}
 /* end .hentry */
 .attachment {
   padding: 25px;
@@ -1009,6 +1022,9 @@ and more scalable.
 }
 .attachment img {
   margin-bottom: 0px !important;
+}
+.layout-custom .attachment {
+  padding: 50px;
 }
 .teaser-item {
   padding: 50px;
@@ -1100,6 +1116,24 @@ and more scalable.
   text-transform: uppercase;
   margin: 0;
 }
+.archive-title {
+  background: #ffffff;
+  font-family: "Ebisu", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  font-weight: 400;
+  /*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+  /* removing text decoration from all headline links */
+  font-size: 1.1em;
+  font-weight: 700;
+  padding: 25px 25px 20px 25px;
+  margin-bottom: 25px;
+}
+.archive-title a {
+  text-decoration: none;
+}
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
 /* general post style */
@@ -1110,8 +1144,15 @@ and more scalable.
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-.byline {
-  color: #999;
+.byline a,
+.byline a:visited,
+.byline a:active {
+  text-decoration: underline;
+}
+.tags a,
+.tags a:visited,
+.tags a:active {
+  text-decoration: underline;
 }
 /* entry content */
 .entry-content {
@@ -1123,7 +1164,6 @@ and more scalable.
 			*/
 }
 .entry-content p {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 1.125em;
   line-height: 1.5em;
 }
@@ -1139,9 +1179,12 @@ and more scalable.
   margin-bottom: 1.5em;
 }
 .entry-content img {
-  margin: 0 0 1.5em 0;
+  margin: 25px 0;
   max-width: 100%;
   height: auto;
+}
+.entry-content .fluid-width-video-wrapper {
+  margin: 25px 0;
 }
 .entry-content video,
 .entry-content object {
@@ -1177,6 +1220,16 @@ and more scalable.
 /*********************
 12. SIDEBARS & ASIDES
 *********************/
+.widgettitle {
+  text-transform: uppercase;
+}
+.widget {
+  background: #ffffff;
+}
+.widget img {
+  max-width: 100%;
+  height: auto;
+}
 .widget ul li {
   /* deep nesting */
 }
@@ -1189,7 +1242,6 @@ and more scalable.
 }
 .footer #inner-footer {
   font-size: 1.375em;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   color: #ffffff;
   padding-bottom: 3em;
   padding-top: 1em;
@@ -1246,25 +1298,27 @@ upon your base.less styles.
   /*********************
 NAVIGATION STYLES
 *********************/
-  ul {
+  .nav {
+    /* end  ul */
+  }
+  .nav ul {
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */
   }
-  ul li {
+  .nav ul li {
     float: left;
     position: relative;
     /*
 				plan your menus and drop-downs wisely.
 				*/
   }
-  ul li a {
+  .nav ul li a {
     /*
 					you can use hover styles here even though this size
 					has the possibility of being a mobile device.
 					*/
   }
-  /* end  ul */
   /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -1522,35 +1576,39 @@ NAVIGATION STYLES
 SIDEBARS & ASIDES
 *********************/
   .sidebar {
-    margin-top: 2.2em;
+    /* links widget */
+    /* meta widget */
+    /* pages widget */
+    /* recent-posts widget */
+    /* archives widget */
+    /* tag-cloud widget */
+    /* calendar widget */
+    /* category widget */
+    /* recent-comments widget */
+    /* search widget */
+    /* text widget */
   }
-  .widgettitle {
-    border-bottom: 2px solid #444;
+  .sidebar .widgettitle {
+    margin-top: 0;
     margin-bottom: 0.75em;
   }
-  .widget {
-    padding: 0 10px;
-    margin: 2.2em 0;
+  .sidebar .widget {
+    margin-bottom: 25px;
+    padding: 25px;
   }
-  .widget ul li {
-    margin-bottom: 0.75em;
+  .sidebar .widget ul li {
     /* deep nesting */
   }
-  .widget ul li ul {
-    margin-top: 0.75em;
+  .sidebar .widget ul li ul {
     padding-left: 1em;
   }
-  /* links widget */
-  /* meta widget */
-  /* pages widget */
-  /* recent-posts widget */
-  /* archives widget */
-  /* tag-cloud widget */
-  /* calendar widget */
-  /* category widget */
-  /* recent-comments widget */
-  /* search widget */
-  /* text widget */
+  .sidebar .tweets-headline {
+    float: left;
+  }
+  .sidebar .follow-wrap {
+    float: right;
+    margin-top: 2px;
+  }
   /*********************
 FOOTER STYLES
 *********************/
