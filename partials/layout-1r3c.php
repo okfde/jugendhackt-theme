@@ -13,9 +13,6 @@
 				<?php the_content(); ?>
 			</section> <!-- end article section -->
 
-			<footer class="article-footer">
-				<?php the_tags('<span class="tags">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?>
-			</footer> <!-- end article footer -->
 		</article> <!-- end article -->
 	</section>
 
@@ -27,7 +24,7 @@
 			for ( $i = 0 ; $i < $attachments->total() ; $i++) { ?>
 			
 			<?php if($i % 3 == 0 ) echo '<div class="row clearfix">'?>
-				<div class="attachment background-yellow <?php if($i % 3 == 0 )echo 'first'?> fourcol ">
+				<div class="attachment background-panel <?php if($i % 3 == 0 )echo 'first'?> fourcol ">
 					<a href="<?php echo $attachments->field( 'linkurl',$i);?>" target="_blank">
 						<?php
 						echo '<h2>'.$attachments->field( 'title',$i)."</h2>";

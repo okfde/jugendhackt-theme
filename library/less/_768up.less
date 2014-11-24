@@ -171,21 +171,19 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	margin-top: 2.2em;
-}
 
 	.widgettitle {
-		border-bottom: 2px solid #444;
+		margin-top: 0;
 		margin-bottom: 0.75em;
 	}
 
 	.widget {
-		padding: 0 10px;
-		margin: 2.2em 0;
+		margin-bottom: 25px;
+		padding: 25px;
 
 		ul {
 			li {
-				margin-bottom: 0.75em;
+				// margin-bottom: 0.75em;
 
 				&:first-child {}
 				&:last-child {}
@@ -193,11 +191,20 @@ SIDEBARS & ASIDES
 				/* deep nesting */
 
 				ul {
-					margin-top: 0.75em;
+					// margin-top: 0.75em;
 					padding-left: 1em;
 				}
 			}
 		}
+	}
+
+	.tweets-headline {
+		float:left;
+	}
+
+	.follow-wrap {
+		float:right;
+		margin-top: 2px;
 	}
 
 
@@ -288,7 +295,7 @@ SIDEBARS & ASIDES
 	.widget_text {}
 	.textwidget p {}
 
-
+}
 /*********************
 FOOTER STYLES
 *********************/

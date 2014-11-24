@@ -30,7 +30,6 @@ if (!window.getComputedStyle) {
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
 
-//$('#content').stellar();
     /*
     Responsive jQuery is a tricky thing.
     There's a bunch of different ways to handle
@@ -38,6 +37,10 @@ jQuery(document).ready(function($) {
     that works for you best.
     */
     
+    $(".entry-content").fitVids();
+    $('.entry-content').fitVids({ customSelector: "iframe[src*='maps.google']" });
+
+
     /* getting viewport width */
     var responsive_viewport = $(window).width();
     
