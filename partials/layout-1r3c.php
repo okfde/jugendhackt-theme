@@ -13,9 +13,6 @@
 				<?php the_content(); ?>
 			</section> <!-- end article section -->
 
-			<footer class="article-footer">
-				<?php the_tags('<span class="tags">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?>
-			</footer> <!-- end article footer -->
 		</article> <!-- end article -->
 	</section>
 
@@ -25,16 +22,18 @@
 		$attachments = new Attachments( 'my_attachments'); /* pass the instance name */ 
 		if( $attachments->exist() ) {
 			for ( $i = 0 ; $i < $attachments->total() ; $i++) { ?>
-
-			<div class="attachment background-yellow <?php if($i % 3 == 0 )echo 'first'?> fourcol ">
-				<a href="<?php echo $attachments->field( 'linkurl',$i);?>" target="_blank">
-					<?php
-					echo '<h2>'.$attachments->field( 'title',$i)."</h2>";
-					echo $attachments->image( 'fullsize', $i )."<br />";
-					echo '<p>'.$attachments->field( 'caption',$i)."</p>";
-					?>
-				</a>
-			</div>
+			
+			<?php if($i % 3 == 0 ) echo '<div class="row clearfix">'?>
+				<div class="attachment background-panel <?php if($i % 3 == 0 )echo 'first'?> fourcol ">
+					<a href="<?php echo $attachments->field( 'linkurl',$i);?>" target="_blank">
+						<?php
+						echo '<h2>'.$attachments->field( 'title',$i)."</h2>";
+						echo $attachments->image( 'fullsize', $i )."<br />";
+						echo '<p>'.$attachments->field( 'caption',$i)."</p>";
+						?>
+					</a>
+				</div>
+			<?php if(($i % 3 == 2) OR $attachments->total()-1 == $i) echo '</div>'; ?>
 			<?php }
 		} ?>
 	</section>

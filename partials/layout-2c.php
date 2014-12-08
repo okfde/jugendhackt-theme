@@ -14,53 +14,44 @@
 				<?php the_content(); ?>
 			</section> <!-- end article section -->
 
-			<footer class="article-footer">
-				<?php the_tags('<span class="tags">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?>
-			</footer> <!-- end article footer -->
-
-
 		</article> <!-- end article -->
 	</section>
 
 	<section class="sixcol last clearfix entry-content" >
-	<?php 
-// Get the Map Embed
+		<?php 
+		// Get the Map Embed
 
 		$embed = get_field('embed');
 		$embed_title = get_field('embed_title');
 		$embed_desc = get_field('embed_description');
 
 		if($embed) { ?>
-		<div class="background-yellow attachment">
+		<div class="background-panel attachment">
 			<h2><?php echo $embed_title;?></h2>
-			<div class="Flexible-container">
+			<div class="">
 				<?php echo $embed;?>
 			</div>
 			<p>
 				<?php echo $embed_desc;?>
 			</p>
-
 		</div>
 		<?php } ?>
 
 
-<?php 
-// Get the Map Embed
+		<?php 
+		// Get the Map Embed
 
 		$video_embed = get_field('video_embedcode');
 		$video_title = get_field('video_title');
 		$video_desc = get_field('video_description');
 
 		if($video_embed) { ?>
-		<div class="background-yellow attachment">
+		<div class="background-panel attachment">
 			<h2><?php echo $video_title;?></h2>
-			<div class="Flexible-container">
-				<?php echo $video_embed;?>
-			</div>
+			<?php echo $video_embed;?>
 			<p>
 				<?php echo $video_desc;?>
 			</p>
-
 		</div>
 		<?php } ?>
 
@@ -68,20 +59,18 @@
 		<?php
 		$attachments = new Attachments( 'my_attachments'); /* pass the instance name */ 
 		if( $attachments->exist() ) {
-			for ( $i = 0 ; $i < $attachments->total() ; $i++)
-				{ ?>
-			<div class="attachment background-yellow">
+			for ( $i = 0 ; $i < $attachments->total() ; $i++) { ?>
+			<div class="attachment background-panel">
 				<?php
 				echo '<h2>'.$attachments->field( 'title',$i)."</h2>";
 				echo $attachments->image( 'large', $i )."<br/ >";
 				echo '<p>'.$attachments->field( 'caption',$i)."</p>";
 				?>
 			</div>
-			<?php
+			<?php }
 		}
-	}
-	?>
-</section>
+		?>
+	</section>
 
 <?php endwhile; else : ?>
 
