@@ -11,15 +11,12 @@
 						?>
 						
 						<div class="first sixcol" >
-							
-							
 							<nav role="navigation">
 								<?php bones_footer_links(); ?>
 							</nav>
-
-
 							<?php echo $content; ?>
 						</div>
+
 						<div class="last sixcol" >
 							<p class="ph"><span>Kooperationspartner</span></p>
 							<div class="coops clearfix">
@@ -50,7 +47,6 @@
 										echo "</a>";
 										$urlflag = false; 
 									}
-										
 								}
 							}
 							?>

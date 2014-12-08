@@ -41,7 +41,7 @@ $wp_query = new WP_Query( $args );
 				// If its even (second column ) echo class "last"
 				else if($i > 0) {echo "last sixcol";} 
 
-				?>  clearfix withicon background-yellow teaser-item">
+				?>  clearfix withicon background-panel teaser-item">
 				<header class="article-header" >
 					<a href="<?php the_permalink(); ?>" > 
 						<h2 class="page-title" ><?php the_title(); ?> </h2>

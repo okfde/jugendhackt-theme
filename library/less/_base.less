@@ -37,55 +37,55 @@ and will be used across all viewports.
 html, body {
 	/* height: 100%; */
 }
+
 body {
 	font-family: @sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
 	color: @black;
 	background-color: @color4;
-
 }
 
 /********************
 02. WORDPRESS BODY CLASSES
     style a page via class
-********************/
+    ********************/
 
-.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-.home {}                          /* home page */
-.blog {}                          /* blog template page */
-.archive {}                       /* archive page */
-.date {}                          /* date archive page */
-	.date-paged-1 {}                /* replace the number to the corresponding page number */
-.search {}                        /* search page */
-	.search-results {}              /* search result page */
-	.search-no-results {}           /* no results search page */
-	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
-.error404 {}                      /* 404 page */
-.single {}                        /* single post page */
-	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
-	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
-.attachment {}                    /* attatchment page */
-	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
-	.attachment-mime-type {}        /* style mime type pages */
-.author {}                        /* author page */
-	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
-	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
-.category {}                      /* category page */
-	.category-1 {}                  /* individual category page (i.e. body.category-6) */
-	.category-paged-1 {}            /* replace the number to the corresponding page number */
-.tag {}                           /* tag page */
-	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
-	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
-.page-template {}                 /* custom page template page */
-	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
-	.page-paged-1 {}                /* replace the number to the corresponding page number */
-	.page-parent {}                 /* parent page template */
-	.page-child {}                  /* child page template */
-	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
-.logged-in {}                     /* if user is logged in */
-.paged {}                         /* paged items like search results or archives */
-	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+    .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
+    .home {}                          /* home page */
+    .blog {}                          /* blog template page */
+    .archive {}                       /* archive page */
+    .date {}                          /* date archive page */
+    .date-paged-1 {}                /* replace the number to the corresponding page number */
+    .search {}                        /* search page */
+    .search-results {}              /* search result page */
+    .search-no-results {}           /* no results search page */
+    .search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
+    .error404 {}                      /* 404 page */
+    .single {}                        /* single post page */
+    .postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
+    .single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
+    .attachment {}                    /* attatchment page */
+    .attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+    .attachment-mime-type {}        /* style mime type pages */
+    .author {}                        /* author page */
+    .author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+    .author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+    .category {}                      /* category page */
+    .category-1 {}                  /* individual category page (i.e. body.category-6) */
+    .category-paged-1 {}            /* replace the number to the corresponding page number */
+    .tag {}                           /* tag page */
+    .tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+    .tag-paged-1 {}                 /* replace the number to the corresponding page number */
+    .page-template {}                 /* custom page template page */
+    .page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+    	.page-paged-1 {}                /* replace the number to the corresponding page number */
+    	.page-parent {}                 /* parent page template */
+    	.page-child {}                  /* child page template */
+    	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+    	.logged-in {}                     /* if user is logged in */
+    	.paged {}                         /* paged items like search results or archives */
+    	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
 
 /*********************
 03. LAYOUT & GRID STYLES
@@ -95,27 +95,8 @@ body {
 	width: 96%;
 	margin: 0 auto;
 }
+
 #container {}
-
-/* Flexible iFrame */
-
-.Flexible-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-}
-
-.Flexible-container iframe,   
-.Flexible-container object,  
-.Flexible-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
 /*********************
 04. LINK STYLES
@@ -126,7 +107,7 @@ a, a:visited {
 	text-decoration: none;
 	/* on hover */
 	&:hover, &:focus {
-	color: @black;
+		color: @black;
 	}
 
 	/* on click */
@@ -150,7 +131,7 @@ a, a:visited {
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	font-family: @sans-serif;
+	font-family: @headline-font;
 	text-rendering: optimizelegibility;
 	font-weight: 400;
 	/*
@@ -199,7 +180,8 @@ h5, .h5 {
 .header {
 	
 	background-color: @white;
-	
+	font-family: @headline-font;
+
 	#inner-header {
 		position: relative;
 	}
@@ -217,7 +199,6 @@ h5, .h5 {
 		color: @color6;
 		font-size: 0.95em;
 		line-height: 1.5em;
-
 	}
 
 	#description {
@@ -251,11 +232,11 @@ h5, .h5 {
 		ul.nav {
 			li {
 				a {
-	
-		text-transform: uppercase;
-		
-		
-		}
+
+					text-transform: uppercase;
+
+
+				}
 
 				&:first-child {}
 
@@ -287,10 +268,8 @@ and more scalable.
 */
 
 .nav {
-
 	li {
 		padding-right: 20px;
-
 		a {
 			display: block;
 			text-decoration: none;
@@ -303,7 +282,7 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
-			color: @black;
+				color: @black;
 			}
 		}
 
@@ -342,81 +321,119 @@ and more scalable.
 		}
 
 	} /* end .menu li */
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
-
-		a { 
-			
-			color: @color3;
-		
-		}
-
-	}  /* end current highlighters */
+		/* highlight current page */
+		li.current-menu-item,
+		li.current_page_item,
+		li.current_page_ancestor {
+			a { 
+				color: @color3;
+			}
+		}  /* end current highlighters */
 
 } /* end .nav */
 
+.page-navigation {
+	
+	text-align: center;
+	.background-panel;
+	padding: 25px;
+
+	ol {
+		margin: 0;
+	}
+
+	.bpn-current {
+		color: @color1;
+	}
+
+	li { 
+		display: inline-block; 
+		margin-right: 25px;
+		&:last-child {
+			margin-right: 0;
+		}
+
+	}
+
+}
 
 /*********************
 08. POSTS & CONTENT STYLES
 *********************/
 
+.blog-title {
+	padding: 25px 25px 20px 25px;
+	margin-bottom: 25px;
+	text-transform: uppercase;
+	h2 {
+		margin: 0;
+	}
+}
+
 #content {
-	/* background: url(../images/background_1.png);*/
 	
-	 background: url(../images/background.png); 
+	background: url(../images/background.png); 
+	background-position: 50% 0%;
 
-    background-position: 50% 0%;
-
-  #inner-content {
+	#inner-content {
 		padding-top: 260px;
 	}
 	
+}
+
+.hentry {
+	background-color: @color2;
+	padding: 50px;
+	margin-bottom: 75px;
+
+	&:last-child {
+		margin-bottom: 50px; 
 	}
 
-		.hentry {
-			background-color: @color2;
-			padding: 50px;
-			margin-bottom: 75px;
-			
-			header {}
+	header {}
 
-			footer {}
-
-		} /* end .hentry */
-
-		.attachment {
-			padding: 25px;
-			margin-bottom: 50px;
-			img { margin-bottom: 0px !important;}
+	footer {
+		a, a:visited, a:active {
+			text-decoration: underline; 
 		}
+	}
 
-		.teaser-item {
-			padding: 50px;
-			margin-bottom: 75px;
-			
-			h2 {
-				margin-bottom: 1em;	
-			}
-		}
-		
-		.custom-layout-wrapper>div {
-			background-color: @color2;
-			padding: 25px;
-			margin-bottom: 50px;
+	} /* end .hentry */
 
-		}
+	.attachment {
+		padding: 25px;
+		margin-bottom: 50px;
+		img { margin-bottom: 0px !important;}
+	}
 
-		.custom-layout-wrapper>div>h2 {
-				margin-bottom: 1em;	
-			}
-		
-		.timetable {
-			h2 { margin: 0em; line-height: 1em;}
-			p { margin-top: 0em; margin-bottom: 1.5em; }
+	.layout-custom .attachment {
+		padding: 50px;
+	}
+
+	.teaser-item {
+		padding: 50px;
+		margin-bottom: 75px;
+
+		h2 {
+			margin-bottom: 1em;	
 		}
+	}
+
+	.custom-layout-wrapper>div {
+		background-color: @color2;
+		padding: 25px;
+		margin-bottom: 50px;
+
+	}
+
+	.custom-layout-wrapper>div>h2 {
+		margin-bottom: 1em;	
+	}
+
+	.timetable {
+		h2 { margin: 0em; line-height: 1em;}
+		p { margin-top: 0em; margin-bottom: 1.5em; }
+	}
 
 		/*********************
 		TEASER ICONS
@@ -468,13 +485,18 @@ and more scalable.
 		.page-title { 
 			text-transform: uppercase;
 			margin: 0;
-		 }
+		}
 
 		.single-title {}
 
 		.page-title {}
 
-		.archive-title { }
+		.archive-title { 
+			.background-panel;
+			.h4;
+			padding: 25px 25px 20px 25px;
+			margin-bottom: 25px;
+		}
 
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */
@@ -488,15 +510,22 @@ and more scalable.
 
 		/* post meta */
 		.byline {
-			color: #999;
 			time {}
+			a, a:visited, a:active {
+				text-decoration: underline; 
+			}
+		}
+
+		.tags {
+			a, a:visited, a:active {
+				text-decoration: underline; 
+			}
 		}
 
 
 		/* entry content */
 		.entry-content {
 			p { 
-				font-family: @sans-serif-p;
 				font-size: 1.125em;
 				line-height: 1.5em;
 				
@@ -544,9 +573,13 @@ and more scalable.
 			}
 
 			img {
-				margin: 0 0 1.5em 0;
+				margin: 25px 0;
 				max-width: 100%;
 				height: auto;
+			}
+
+			.fluid-width-video-wrapper {
+				margin: 25px 0;
 			}
 
 			/*
@@ -569,83 +602,92 @@ and more scalable.
 				border: 1px solid #cecece;
 				padding: 10px;
 			}
-
 		} /* end .entry-content */
 
-		.wp-caption {
-			max-width: 100%;
-			background: #eee;
-			padding: 5px;
-
-			/* images inside wp-caption */
-			img {
+			.wp-caption {
 				max-width: 100%;
-				margin-bottom: 0;
-				width: 100%;
-			}
+				background: #eee;
+				padding: 5px;
 
-			p.wp-caption-text {
-				font-size: 0.85em;
-				margin: 4px 0 7px;
-				text-align: center;
-			}
+				/* images inside wp-caption */
+				img {
+					max-width: 100%;
+					margin-bottom: 0;
+					width: 100%;
+				}
 
-		} /* end .wp-caption */
+				p.wp-caption-text {
+					font-size: 0.85em;
+					margin: 4px 0 7px;
+					text-align: center;
+				}
 
-		/* image gallery styles */
-		.gallery {
+			} /* end .wp-caption */
 
-			dl {
+				/* image gallery styles */
+				.gallery {
 
-				a {}
+					dl {
 
-				img {}
+						a {}
 
-			}
+						img {}
 
-			dt {}
+					}
 
-			dd {}
+					dt {}
 
-		} /* end .gallery */
+					dd {}
 
-		/* gallery caption styles */
-		.gallery-caption {}
+					} /* end .gallery */
 
-		.size-full {}
-		.size-large {}
-		.size-medium {}
-		.size-thumbnail {}
+					/* gallery caption styles */
+					.gallery-caption {}
+
+					.size-full {}
+					.size-large {}
+					.size-medium {}
+					.size-thumbnail {}
 
 
 /*********************
 12. SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
+}
 
-	.widgettitle {}
+.widgettitle {
+	text-transform: uppercase;
+}
 
-	.widget {
+.widget {
 
-		ul {
+	.background-panel;
+	
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 
-			li {
+	ul {
 
-				&:first-child {}
+		li {
 
-				&:last-child {}
+			&:first-child {}
 
-				a {}
+			&:last-child {}
 
-				/* deep nesting */
-				ul {}
+			a {}
 
-			}
+			/* deep nesting */
+			ul {}
 
 		}
 
 	}
+
+}
 
 /*********************
 13. FOOTER STYLES
@@ -656,16 +698,15 @@ and more scalable.
 	background-color: @color5;
 	
 	#inner-footer {
-	font-size: 1.375em;
-	font-family: @sans-serif-p;
-	color: @white;
-	padding-bottom: 3em;
-	padding-top: 1em;
-	
-	a {
-	color: @white;
-	}
-	
+		font-size: 1.375em;
+		color: @white;
+		padding-bottom: 3em;
+		padding-top: 1em;
+
+		a {
+			color: @white;
+		}
+
 	}
 	nav {
 		ul.nav {
@@ -712,8 +753,7 @@ and more scalable.
 
 	} /* end .footer-links */
 
+.copyright {}
 
-	.copyright {}
-	
-	
+
 

@@ -65,14 +65,13 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
-/* rot 
-@color1: #f4382a;*/
-/* gelb 
-@color2: #e8df48;*/
-/* blau 
-@color3: #24809f;
-@color3:#60dba4;*/
+/* rot */
+/* gelb */
+/* blau */
 /* grau */
+.background-panel {
+  background: #ffffff;
+}
 /*
 Here's a great tutorial on how to
 use color variables properly:
@@ -101,9 +100,6 @@ span.amp {
 }
 .uppercase {
   text-transform: uppercase;
-}
-.background-yellow {
-  background: #ffffff;
 }
 /*********************
 BORDER RADIUS
@@ -246,25 +242,27 @@ upon your base.less styles.
 /*********************
 NAVIGATION STYLES
 *********************/
-ul {
+.nav {
+  /* end  ul */
+}
+.nav ul {
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
 }
-ul li {
+.nav ul li {
   float: left;
   position: relative;
   /*
 				plan your menus and drop-downs wisely.
 				*/
 }
-ul li a {
+.nav ul li a {
   /*
 					you can use hover styles here even though this size
 					has the possibility of being a mobile device.
 					*/
 }
-/* end  ul */
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -509,35 +507,39 @@ NAVIGATION STYLES
 SIDEBARS & ASIDES
 *********************/
 .sidebar {
-  margin-top: 2.2em;
+  /* links widget */
+  /* meta widget */
+  /* pages widget */
+  /* recent-posts widget */
+  /* archives widget */
+  /* tag-cloud widget */
+  /* calendar widget */
+  /* category widget */
+  /* recent-comments widget */
+  /* search widget */
+  /* text widget */
 }
-.widgettitle {
-  border-bottom: 2px solid #444;
+.sidebar .widgettitle {
+  margin-top: 0;
   margin-bottom: 0.75em;
 }
-.widget {
-  padding: 0 10px;
-  margin: 2.2em 0;
+.sidebar .widget {
+  margin-bottom: 25px;
+  padding: 25px;
 }
-.widget ul li {
-  margin-bottom: 0.75em;
+.sidebar .widget ul li {
   /* deep nesting */
 }
-.widget ul li ul {
-  margin-top: 0.75em;
+.sidebar .widget ul li ul {
   padding-left: 1em;
 }
-/* links widget */
-/* meta widget */
-/* pages widget */
-/* recent-posts widget */
-/* archives widget */
-/* tag-cloud widget */
-/* calendar widget */
-/* category widget */
-/* recent-comments widget */
-/* search widget */
-/* text widget */
+.sidebar .tweets-headline {
+  float: left;
+}
+.sidebar .follow-wrap {
+  float: right;
+  margin-top: 2px;
+}
 /*********************
 FOOTER STYLES
 *********************/

@@ -23,59 +23,56 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic' rel='stylesheet' type='text/css'>
 	<link href='<?php echo get_template_directory_uri(); ?>/library/css/ebisu.css' rel='stylesheet' type='text/css'>
-
-			
-			<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
-			<!-- wordpress head functions -->
-			<?php wp_head(); ?>
-			<!-- end of wordpress head -->
-
-			<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
-			<!-- drop Google Analytics Here -->
-			<!-- end analytics -->
+	<link href='<?php echo get_template_directory_uri(); ?>/library/css/slick.css' rel='stylesheet' type='text/css'>
 
 
-		</head>
+	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		<body <?php body_class(); ?>  >
+	<!-- wordpress head functions -->
+	<?php wp_head(); ?>
+	<!-- end of wordpress head -->
 
-			<div id="container">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/slick.js"></script>
 
-				<header class="header" role="banner">
+</head>
 
-					<div id="inner-header" class="wrap clearfix">
-						<div id="logo" class="h1 clearfix">
-							<div id="logowrapper">
-								<a href="<?php echo home_url(); ?>" rel="nofollow">
-									<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Jugend hackt" width="369" height="78"/>
-								</a>
-							</div>
-							<span id="eventdate" class="uppercase" style="letter-spacing: -3px;"><?php echo get_theme_mod('tagline_date'); ?></span><br />
-							<span id="description">
-								<?php  bloginfo('description'); ?>
-							</span>
-						</div>
+<body <?php body_class(); ?>  >
 
+	<div id="container">
 
-								<div id="metawrapper">
-									<nav role="navigation">
-										<?php bones_meta_links(); ?>
-									</nav>
-								</div>
+		<header class="header" role="banner">
 
-								<? if ( has_nav_menu('cta-links') ) { ?> 
-									<div class="uppercase anmelden">
-										<!--<a href="https://youngrewiredstate.org/yrs-everywhere/yrs-berlin/apply/de" target="_blank" >Anmelden</a>-->
-										<?php bones_cta_links(); ?>								
-									</div>
-								<? } ?>
+			<div id="inner-header" class="wrap clearfix">
+				<div id="logo" class="h1 clearfix">
+					<div id="logowrapper">
+						<a href="<?php echo home_url(); ?>" rel="nofollow">
+							<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Jugend hackt" width="369" height="78"/>
+						</a>
+					</div>
+					<span id="eventdate" class="uppercase" style="letter-spacing: -3px;"><?php echo get_theme_mod('tagline_date'); ?></span><br />
+					<span id="description">
+						<?php  bloginfo('description'); ?>
+					</span>
+				</div>
 
-								<nav role="navigation">
-									<?php bones_main_nav(); ?>
-								</nav>
+				<div id="metawrapper">
+					<nav role="navigation">
+						<?php bones_meta_links(); ?>
+					</nav>
+				</div>
 
-							</div> <!-- end #inner-header -->
+				<? if ( has_nav_menu('cta-links') ) { ?> 
+				<div class="uppercase anmelden">
+					<?php bones_cta_links(); ?>								
+				</div>
+				<? } ?>
 
-						</header> <!-- end header -->
+				<nav role="navigation">
+					<?php bones_main_nav(); ?>
+				</nav>
+
+			</div> <!-- end #inner-header -->
+
+		</header> <!-- end header -->

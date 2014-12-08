@@ -1,65 +1,102 @@
 <?php get_header(); ?>
 
-			<div id="content" data-speed="5" >
+<div id="content" data-speed="5" >
 
-				<div id="inner-content" class="wrap clearfix">
+	<div id="inner-content" class="wrap clearfix">
 
-						<div id="main" class="first clearfix" role="main">
+		<div id="main" class="eightcol first clearfix" role="main">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<div class="background-panel blog-title">
+				<h2>Blog</h2>
+			</div>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-								<header class="article-header">
-									<h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-								</header> <!-- end article header -->
+			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-								<section class="entry-content clearfix">
-									<?php the_content(); ?>
-								</section> <!-- end article section -->
+				<header class="article-header">
+					<h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+					<p class="byline vcard"><?php
+					printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&amp;</span> filed under %4$s.', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', '));
+					?></p>
+				</header> <!-- end article header -->
 
-								<footer class="article-footer">
-									<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?></p>
+				<section class="entry-content clearfix">
+					<?php the_content(); ?>
+				</section> <!-- end article section -->
 
-								</footer> <!-- end article footer -->
+				<section>
+					<?php
+					$attachments = new Attachments( 'my_attachments'); /* pass the instance name */ 
+					if( $attachments->exist() ) { ?>
+					<div class="slick">
+						<?php
+						for ( $i = 0 ; $i < $attachments->total() ; $i++) { ?>
+						<div class="">
+							<?php
+							echo $attachments->image( 'large', $i );
+							$caption = $attachments->field('caption',$i);
+							if(!empty($caption)){
+								echo '<p>'.$caption."</p>";
+							}?>
+						</div>
+						<?php }
+						?>
+					</div>
+					<?php } ?>
+					</section
 
-								<?php // comments_template(); // uncomment if you want to use them ?>
+					<footer class="article-footer">
+						<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?></p>
+					</footer> <!-- end article footer -->
 
-							</article> <!-- end article -->
+					<?php // comments_template(); // uncomment if you want to use them ?>
 
-							<?php endwhile; ?>
+				</article> <!-- end article -->
 
-									<?php if (function_exists('bones_page_navi')) { ?>
-											<?php bones_page_navi(); ?>
-									<?php } else { ?>
-											<nav class="wp-prev-next">
-													<ul class="clearfix">
-														<li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "bonestheme")) ?></li>
-														<li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "bonestheme")) ?></li>
-													</ul>
-											</nav>
-									<?php } ?>
+			<?php endwhile; ?>
 
-							<?php else : ?>
+			<?php if (function_exists('bones_page_navi')) { ?>
+			<?php bones_page_navi(); ?>
+			<?php } else { ?>
+			<nav class="wp-prev-next">
+				<ul class="clearfix">
+					<li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "bonestheme")) ?></li>
+					<li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "bonestheme")) ?></li>
+				</ul>
+			</nav>
+			<?php } ?>
 
-									<article id="post-not-found" class="hentry clearfix">
-											<header class="article-header">
-												<h1><?php _e("Oops, Post Not Found!", "bonestheme"); ?></h1>
-										</header>
-											<section class="entry-content">
-												<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "bonestheme"); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e("This is the error message in the index.php template.", "bonestheme"); ?></p>
-										</footer>
-									</article>
+		<?php else : ?>
 
-							<?php endif; ?>
+		<article id="post-not-found" class="hentry clearfix">
+			<header class="article-header">
+				<h1><?php _e("Oops, Post Not Found!", "bonestheme"); ?></h1>
+			</header>
+			<section class="entry-content">
+				<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "bonestheme"); ?></p>
+			</section>
+			<footer class="article-footer">
+				<p><?php _e("This is the error message in the index.php template.", "bonestheme"); ?></p>
+			</footer>
+		</article>
 
-						</div> <!-- end #main -->
+	<?php endif; ?>
 
-				</div> <!-- end #inner-content -->
+</div> <!-- end #main -->
 
-			</div> <!-- end #content -->
+<?php get_sidebar(); ?>
+
+</div> <!-- end #inner-content -->
+
+</div> <!-- end #content -->
+
+<script>
+$(document).ready(function(){
+	$('.slick').slick({
+		adaptiveHeight: true
+	});
+});
+</script>
 
 <?php get_footer(); ?>
