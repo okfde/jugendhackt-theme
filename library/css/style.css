@@ -1051,7 +1051,7 @@ and more scalable.
 .hero-wrap {
   color: #60dba4;
   text-align: center;
-  width: 940px;
+  max-width: 940px;
   margin: 128px auto 70px auto;
 }
 .hero-wrap:after {
@@ -1704,7 +1704,6 @@ HEADER STYLES
 *********************/
   .header #logo {
     margin-bottom: 0;
-    margin-left: -25px;
   }
   .header #metawrapper {
     float: right;

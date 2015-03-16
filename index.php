@@ -3,10 +3,12 @@
 <div id="content" data-speed="5" >
 
 	<div id="inner-content" class="wrap clearfix">
-
+		
+		<?php if(is_home()) : ?>
 		<div class="hero-wrap">
 			<h1 class="hero">Mit Code die Welt verbessern</h1>
 		</div>
+		<?php endif; ?>
 
 		<div id="main" class="eightcol first clearfix" role="main">
 
