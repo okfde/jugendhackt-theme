@@ -558,7 +558,6 @@ HEADER STYLES
 *********************/
 .header #logo {
   margin-bottom: 0;
-  margin-left: -25px;
 }
 .header #metawrapper {
   float: right;
