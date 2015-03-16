@@ -22,6 +22,8 @@ of the styles inside media queries.
 // import mixins
 @import "_mixins.less";
 
+@import "sprite.less";
+
 /*
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -54,10 +56,10 @@ you can add resource intensive styles.
 @media only screen and (min-width: 768px) {
 
 	// import grid
-	// @import "_grid.less";
+	@import "_grid.less";
 
 	// styles in 768up.less
-	// @import "_768up.less";
+	@import "_768up.less";
 
 } // end of media query
 
@@ -73,7 +75,7 @@ you can add resource intensive styles.
 	@import "_grid.less";
 
 	// styles in 768up.less
-	@import "_768up.less";
+	@import "_1030up.less";
 
 } // end of media query
 

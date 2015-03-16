@@ -184,15 +184,19 @@ h5, .h5 {
 
 	#inner-header {
 		position: relative;
+		padding-top: 50px;
+		padding-bottom: 22px;
 	}
 
 	#logo {
-		margin-top: 32px; 
+		margin-bottom: 10px;
+		margin-right: 20px;
 	}
 
 	#logo img {
 		max-width: 100%;
 		height: auto;
+		display: block;
 	}
 	
 	#eventdate {
@@ -207,21 +211,21 @@ h5, .h5 {
 		margin: 0px;
 	}	
 
-	.anmelden {
+	.cta-wrap {
 
-		font-size: 1.5em;
-		text-align: center;
+		float: left;
 
 		li {
 			
 			background-color: @color1;
-			padding: 10px 10px 5px 10px;
-			min-width: 170px;
+			padding: 4px 10px 0 10px;
 			margin-bottom: 10px;
-			
+			display: block; 
+			float: left;
+			margin-right: 20px;
+
 			&:last-child {
-				margin-bottom: 0;
-				padding-right: 10px;
+				margin-right: 20px;
 			}
 		}
 
@@ -232,10 +236,7 @@ h5, .h5 {
 		ul.nav {
 			li {
 				a {
-
 					text-transform: uppercase;
-
-
 				}
 
 				&:first-child {}
@@ -254,6 +255,38 @@ ul.cta-links {
 	}
 }
 
+.social-nav-wrap {
+	
+	float: left;
+
+	ul { 
+		margin: 0
+	}
+
+	li {
+		display: block;
+		float: left;
+	}
+
+	a {
+		.image-replacement;
+	}
+}
+
+.social-nav-facebook a {
+	.svg-facebook;
+	.svg-facebook-dims;
+}
+
+.social-nav-twitter a {
+	.svg-twitter;
+	.svg-twitter-dims;
+}
+.social-nav-gplus a {
+	.svg-gplus;
+	.svg-gplus-dims;
+}
+
 
 /*********************
 07. NAVIGATION STYLES
@@ -269,11 +302,11 @@ and more scalable.
 
 .nav {
 	li {
-		padding-right: 20px;
+		margin-right: 20px;
 		a {
 			display: block;
 			text-decoration: none;
-			color: @color4;
+			color: @color3;
 			
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -281,6 +314,7 @@ and more scalable.
 			the style.scss file where it's relevant. We want to
 			keep this file as small as possible!
 			*/
+
 			&:hover, &:focus {
 				color: @black;
 			}
@@ -288,7 +322,9 @@ and more scalable.
 
 		&:first-child {}
 
-		&:last-child { padding-right: 0px;}
+		&:last-child {
+			margin-right: 0;
+		}
 
 		/*
 		so you really have to rethink your dropdowns for mobile.
@@ -326,7 +362,7 @@ and more scalable.
 		li.current_page_item,
 		li.current_page_ancestor {
 			a { 
-				color: @color3;
+				color: @black;
 			}
 		}  /* end current highlighters */
 
@@ -361,14 +397,28 @@ and more scalable.
 08. POSTS & CONTENT STYLES
 *********************/
 
-.blog-title {
-	padding: 25px 25px 20px 25px;
-	margin-bottom: 25px;
-	text-transform: uppercase;
-	h2 {
-		margin: 0;
+.hero-wrap {
+	color: @color6;
+	text-align: center;
+	width: 940px;
+	margin: 128px auto 70px auto;
+
+	&:after {
+		content: "";
+		display: block;
+		border-top: 50px solid white;
+		border-right: 50px solid transparent;
+		width: 0;
 	}
 }
+
+.hero {
+	display: block;
+	background-color: white;
+	margin: 0;
+	padding: 20px 0 10px 0;
+}
+
 
 #content {
 	
@@ -378,7 +428,10 @@ and more scalable.
 	#inner-content {
 		padding-top: 260px;
 	}
-	
+}
+
+.home #content #inner-content {
+	padding-top: 0;
 }
 
 .hentry {

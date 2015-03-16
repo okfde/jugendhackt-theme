@@ -45,29 +45,25 @@
 		<header class="header" role="banner">
 
 			<div id="inner-header" class="wrap clearfix">
-				<div id="logo" class="h1 clearfix">
-					<div id="logowrapper">
-						<a href="<?php echo home_url(); ?>" rel="nofollow">
-							<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Jugend hackt" width="369" height="78"/>
-						</a>
-					</div>
-					<span id="eventdate" class="uppercase" style="letter-spacing: -3px;"><?php echo get_theme_mod('tagline_date'); ?></span><br />
-					<span id="description">
-						<?php  bloginfo('description'); ?>
-					</span>
+				<div id="logo" class="clearfix">
+					<a href="<?php echo home_url(); ?>" rel="nofollow">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.svg" alt="Jugend hackt" width="488" height="100"/>
+					</a>
 				</div>
 
-				<div id="metawrapper">
-					<nav role="navigation">
+				<div id="metawrapper" class="clearfix">
+					<? if ( has_nav_menu('cta-links') ) { ?> 
+					<div class="cta-wrap uppercase ">
+						<?php bones_cta_links(); ?>								
+					</div>
+					<? } ?>
+
+					<nav role="navigation" class="social-nav-wrap" >
 						<?php bones_meta_links(); ?>
 					</nav>
 				</div>
 
-				<? if ( has_nav_menu('cta-links') ) { ?> 
-				<div class="uppercase anmelden">
-					<?php bones_cta_links(); ?>								
-				</div>
-				<? } ?>
+
 
 				<nav role="navigation">
 					<?php bones_main_nav(); ?>

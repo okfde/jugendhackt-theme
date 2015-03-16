@@ -675,6 +675,30 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1681c4, #1990db);
   background-image: linear-gradient(to bottom, #1681c4, #1990db);
 }
+.svg-facebook {
+  background: url(svg/sprite.css-dc35ceec.svg) no-repeat;
+  background-position: 0 0;
+}
+.svg-facebook-dims {
+  width: 11.982px;
+  height: 25px;
+}
+.svg-gplus {
+  background: url(svg/sprite.css-dc35ceec.svg) no-repeat;
+  background-position: 26.84984225717674% 50%;
+}
+.svg-gplus-dims {
+  width: 24.307px;
+  height: 25px;
+}
+.svg-twitter {
+  background: url(svg/sprite.css-dc35ceec.svg) no-repeat;
+  background-position: 98.01324503311258% 100%;
+}
+.svg-twitter-dims {
+  width: 31.25px;
+  height: 25px;
+}
 /*
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -866,13 +890,17 @@ h5,
 }
 .header #inner-header {
   position: relative;
+  padding-top: 50px;
+  padding-bottom: 22px;
 }
 .header #logo {
-  margin-top: 32px;
+  margin-bottom: 10px;
+  margin-right: 20px;
 }
 .header #logo img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 .header #eventdate {
   color: #60dba4;
@@ -884,23 +912,23 @@ h5,
   line-height: 1.25em;
   margin: 0px;
 }
-.header .anmelden {
-  font-size: 1.5em;
-  text-align: center;
+.header .cta-wrap {
+  float: left;
 }
-.header .anmelden li {
+.header .cta-wrap li {
   background-color: #f86d14;
-  padding: 10px 10px 5px 10px;
-  min-width: 170px;
+  padding: 4px 10px 0 10px;
   margin-bottom: 10px;
+  display: block;
+  float: left;
+  margin-right: 20px;
 }
-.header .anmelden li:last-child {
-  margin-bottom: 0;
-  padding-right: 10px;
+.header .cta-wrap li:last-child {
+  margin-right: 20px;
 }
-.header .anmelden a,
-.header .anmelden a:hover,
-.header .anmelden a:visited {
+.header .cta-wrap a,
+.header .cta-wrap a:hover,
+.header .cta-wrap a:visited {
   color: #ffffff;
 }
 .header nav ul.nav li a {
@@ -912,6 +940,39 @@ ul.cta-links {
 ul.cta-links li {
   display: block;
   float: none;
+}
+.social-nav-wrap {
+  float: left;
+}
+.social-nav-wrap ul {
+  margin: 0;
+}
+.social-nav-wrap li {
+  display: block;
+  float: left;
+}
+.social-nav-wrap a {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.social-nav-facebook a {
+  background: url(svg/sprite.css-dc35ceec.svg) no-repeat;
+  background-position: 0 0;
+  width: 11.982px;
+  height: 25px;
+}
+.social-nav-twitter a {
+  background: url(svg/sprite.css-dc35ceec.svg) no-repeat;
+  background-position: 98.01324503311258% 100%;
+  width: 31.25px;
+  height: 25px;
+}
+.social-nav-gplus a {
+  background: url(svg/sprite.css-dc35ceec.svg) no-repeat;
+  background-position: 26.84984225717674% 50%;
+  width: 24.307px;
+  height: 25px;
 }
 /*********************
 07. NAVIGATION STYLES
@@ -929,7 +990,7 @@ and more scalable.
   /* end current highlighters */
 }
 .nav li {
-  padding-right: 20px;
+  margin-right: 20px;
   /*
 		so you really have to rethink your dropdowns for mobile.
 		you don't want to have it expand too much because the
@@ -941,7 +1002,7 @@ and more scalable.
 .nav li a {
   display: block;
   text-decoration: none;
-  color: #808080;
+  color: #2aabe1;
   /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -954,7 +1015,7 @@ and more scalable.
   color: #222222;
 }
 .nav li:last-child {
-  padding-right: 0px;
+  margin-right: 0;
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
@@ -963,7 +1024,7 @@ and more scalable.
 .nav li.current-menu-item a,
 .nav li.current_page_item a,
 .nav li.current_page_ancestor a {
-  color: #2aabe1;
+  color: #222222;
 }
 /* end .nav */
 .page-navigation {
@@ -987,13 +1048,24 @@ and more scalable.
 /*********************
 08. POSTS & CONTENT STYLES
 *********************/
-.blog-title {
-  padding: 25px 25px 20px 25px;
-  margin-bottom: 25px;
-  text-transform: uppercase;
+.hero-wrap {
+  color: #60dba4;
+  text-align: center;
+  width: 940px;
+  margin: 128px auto 70px auto;
 }
-.blog-title h2 {
+.hero-wrap:after {
+  content: "";
+  display: block;
+  border-top: 50px solid white;
+  border-right: 50px solid transparent;
+  width: 0;
+}
+.hero {
+  display: block;
+  background-color: white;
   margin: 0;
+  padding: 20px 0 10px 0;
 }
 #content {
   background: url(../images/background.png);
@@ -1001,6 +1073,9 @@ and more scalable.
 }
 #content #inner-content {
   padding-top: 260px;
+}
+.home #content #inner-content {
+  padding-top: 0;
 }
 .hentry {
   background-color: #ffffff;
@@ -1290,10 +1365,9 @@ so you still want to keep it pretty light and simply expand
 upon your base.less styles.
 
 ******************************************************************/
-  #metawrapper {
-    position: absolute;
-    right: 0;
-    top: 15px;
+  #logo {
+    margin-bottom: 0;
+    float: left;
   }
   /*********************
 NAVIGATION STYLES
@@ -1322,6 +1396,9 @@ NAVIGATION STYLES
   /*********************
 POSTS & CONTENT STYLES
 *********************/
+  .hero {
+    font-size: 64px;
+  }
   /* entry content */
   .entry-content {
     /* at this larger size, we can start to align images */
@@ -1361,13 +1438,7 @@ This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 */
-/*
-DESKTOP
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*/
-@media only screen and (min-width: 1030px) {
+@media only screen and (min-width: 768px) {
   /******************************************************************
 Site Name:
 Author:
@@ -1478,31 +1549,168 @@ GENERAL STYLES
   /*********************
 LAYOUT & GRID STYLES
 *********************/
+  /*********************
+HEADER STYLES
+*********************/
+  /*********************
+NAVIGATION STYLES
+*********************/
+  .nav {
+    float: right;
+    display: block;
+    margin-left: 30px;
+    margin-top: -20px;
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */
+  }
+  .nav li {
+    display: block;
+    float: left;
+    /*
+		plan your menus and drop-downs wisely.
+		*/
+    /* showing sub-menus */
+  }
+  .nav li a {
+    /*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+  }
+  .nav li ul.sub-menu,
+  .nav li ul.children {
+    margin-top: 0;
+    border: 1px solid #ccc;
+    border-top: 0;
+    position: absolute;
+    display: none;
+    z-index: 8999;
+    /* highlight sub-menu current page */
+  }
+  .nav li ul.sub-menu li,
+  .nav li ul.children li {
+    /*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+  }
+  .nav li ul.sub-menu li a,
+  .nav li ul.children li a {
+    padding-left: 10px;
+    border-right: 0;
+    display: block;
+    width: 180px;
+    border-bottom: 1px solid #ccc;
+  }
+  .nav li ul.sub-menu li:last-child a,
+  .nav li ul.children li:last-child a {
+    border-bottom: 0;
+  }
+  .nav li:hover ul {
+    top: auto;
+    display: block;
+  }
+  /* end .nav */
+  /*********************
+SIDEBARS & ASIDES
+*********************/
+  .sidebar {
+    /* links widget */
+    /* meta widget */
+    /* pages widget */
+    /* recent-posts widget */
+    /* archives widget */
+    /* tag-cloud widget */
+    /* calendar widget */
+    /* category widget */
+    /* recent-comments widget */
+    /* search widget */
+    /* text widget */
+  }
+  .sidebar .widgettitle {
+    margin-top: 0;
+    margin-bottom: 0.75em;
+  }
+  .sidebar .widget {
+    margin-bottom: 25px;
+    padding: 25px;
+  }
+  .sidebar .widget ul li {
+    /* deep nesting */
+  }
+  .sidebar .widget ul li ul {
+    padding-left: 1em;
+  }
+  /*********************
+FOOTER STYLES
+*********************/
+  /*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+  .footer-links ul li {
+    /*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+  }
+  /* end .footer-links */
+}
+/*
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 1030px) {
+  /******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+  /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+  /*********************
+GENERAL STYLES
+*********************/
+  /*********************
+LAYOUT & GRID STYLES
+*********************/
   .wrap {
-    max-width: 1140px;
+    max-width: 1440px;
   }
   /*********************
 HEADER STYLES
 *********************/
-  .header #logowrapper {
-    float: left;
-    margin-bottom: -50px;
-  }
   .header #logo {
     margin-bottom: 0;
-    max-width: 830px;
     margin-left: -25px;
-    text-align: right;
   }
   .header #metawrapper {
-    position: absolute;
-    right: 0;
-    top: 0;
+    float: right;
   }
-  .header .anmelden {
-    position: absolute;
-    right: 0;
-    bottom: 22px;
+  .header .cta-wrap li {
+    margin-bottom: 0;
   }
   .header #eventdate {
     font-size: 1.125em;
@@ -1519,13 +1727,13 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
   .nav {
+    margin-left: 0;
+    margin-top: 28px;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */
   }
   .nav li {
-    float: left;
-    position: relative;
     /*
 		plan your menus and drop-downs wisely.
 		*/
