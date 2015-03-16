@@ -234,10 +234,9 @@ so you still want to keep it pretty light and simply expand
 upon your base.less styles.
 
 ******************************************************************/
-#metawrapper {
-  position: absolute;
-  right: 0;
-  top: 15px;
+#logo {
+  margin-bottom: 0;
+  float: left;
 }
 /*********************
 NAVIGATION STYLES
@@ -266,6 +265,9 @@ NAVIGATION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.hero {
+  font-size: 64px;
+}
 /* entry content */
 .entry-content {
   /* at this larger size, we can start to align images */
@@ -409,31 +411,160 @@ GENERAL STYLES
 /*********************
 LAYOUT & GRID STYLES
 *********************/
+/*********************
+HEADER STYLES
+*********************/
+/*********************
+NAVIGATION STYLES
+*********************/
+.nav {
+  float: right;
+  display: block;
+  margin-left: 30px;
+  margin-top: -20px;
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+.nav li {
+  display: block;
+  float: left;
+  /*
+		plan your menus and drop-downs wisely.
+		*/
+  /* showing sub-menus */
+}
+.nav li a {
+  /*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+}
+.nav li ul.sub-menu,
+.nav li ul.children {
+  margin-top: 0;
+  border: 1px solid #ccc;
+  border-top: 0;
+  position: absolute;
+  display: none;
+  z-index: 8999;
+  /* highlight sub-menu current page */
+}
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  /*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+}
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 10px;
+  border-right: 0;
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #ccc;
+}
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+.nav li:hover ul {
+  top: auto;
+  display: block;
+}
+/* end .nav */
+/*********************
+SIDEBARS & ASIDES
+*********************/
+.sidebar {
+  /* links widget */
+  /* meta widget */
+  /* pages widget */
+  /* recent-posts widget */
+  /* archives widget */
+  /* tag-cloud widget */
+  /* calendar widget */
+  /* category widget */
+  /* recent-comments widget */
+  /* search widget */
+  /* text widget */
+}
+.sidebar .widgettitle {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+}
+.sidebar .widget {
+  margin-bottom: 25px;
+  padding: 25px;
+}
+.sidebar .widget ul li {
+  /* deep nesting */
+}
+.sidebar .widget ul li ul {
+  padding-left: 1em;
+}
+/*********************
+FOOTER STYLES
+*********************/
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links ul li {
+  /*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+}
+/* end .footer-links */
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/*********************
+LAYOUT & GRID STYLES
+*********************/
 .wrap {
-  max-width: 1140px;
+  max-width: 1440px;
 }
 /*********************
 HEADER STYLES
 *********************/
-.header #logowrapper {
-  float: left;
-  margin-bottom: -50px;
-}
 .header #logo {
   margin-bottom: 0;
-  max-width: 830px;
   margin-left: -25px;
-  text-align: right;
 }
 .header #metawrapper {
-  position: absolute;
-  right: 0;
-  top: 0;
+  float: right;
 }
-.header .anmelden {
-  position: absolute;
-  right: 0;
-  bottom: 22px;
+.header .cta-wrap li {
+  margin-bottom: 0;
 }
 .header #eventdate {
   font-size: 1.125em;
@@ -450,13 +581,13 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 .nav {
+  margin-left: 0;
+  margin-top: 28px;
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
 }
 .nav li {
-  float: left;
-  position: relative;
   /*
 		plan your menus and drop-downs wisely.
 		*/
@@ -556,16 +687,6 @@ mobile. Make sure to double check these!
 			*/
 }
 /* end .footer-links */
-/******************************************************************
-Site Name: 
-Author: 
-
-Stylesheet: Desktop Stylsheet
-
-This is the desktop size. It's larger than an iPad so it will only
-be seen on the Desktop. 
-
-******************************************************************/
 /* 
 you can call the larger styles if you want, but there's really no need 
 */
