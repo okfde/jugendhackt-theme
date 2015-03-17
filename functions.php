@@ -30,7 +30,7 @@ require_once('library/bones.php'); // if you remove this, bones will break
 	- example custom taxonomy (like categories)
 	- example custom taxonomy (like tags)
 */
-// require_once('library/custom-post-type.php'); // you can disable this if you like
+require_once('library/custom-post-types.php'); // you can disable this if you like
 /*
 3. library/admin.php
 	- removing some default WordPress dashboard widgets
@@ -45,10 +45,13 @@ require_once('library/bones.php'); // if you remove this, bones will break
 */
 // require_once('library/translation/translation.php'); // this comes turned off by default
 
+include_once('library/acf-repeater/acf-repeater.php');
+
+
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-// add_image_size( 'bones-thumb-600', 600, 150, true );
+add_image_size( 'event-teaser', 500, 300, true );
 // add_image_size( 'bones-thumb-300', 300, 100, true );
 /*
 to add more sizes, simply copy a line from above
@@ -293,6 +296,26 @@ function bones_cta_links() {
     	'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 	));
 } /* end bones footer link */
+
+/*==============================
+=            EVENTS            =
+==============================*/
+
+function get_event_fields ($id) {
+			
+	$result['event_city'] = get_field('event_city');
+	$result['event_date'] = get_field('event_date');
+	$result['event_registerpage_id'] = get_field('event_registerpage')[0]->ID;
+	$result['event_facts'] = get_field('event_facts');
+	$result['event_program'] = get_field('event_program');
+	$result['event_sponsors'] = get_field('event_sponsors');
+	
+	return $result;
+
+}
+
+
+/*-----  End of EVENTS  ------*/
 
 
 ?>
