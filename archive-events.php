@@ -9,8 +9,6 @@ $args = array( 	'post_type' => array('events') ,
 	);
 $wp_query = new WP_Query( $args );
 
-// var_dump($wp_query);
-
 ?>
 
 <div id="content" data-speed="3" >
