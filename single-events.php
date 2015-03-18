@@ -1,6 +1,15 @@
 <?php 
 get_header(); 
+
 $event_fields = get_event_fields($post->id);
+
+// If the event-facts field is empty span the content over 2 cols
+if($event_fields['event_facts']) {
+	$contentColClass = 'sixcol';
+} else {
+	$contentColClass = 'twelvecol';
+}
+
 ?>
 
 <div id="content" data-speed="3" >
@@ -12,17 +21,18 @@ $event_fields = get_event_fields($post->id);
 			<div id="post-<?php the_ID(); ?>" class="clearfix">
 			
 				<div class="row">
-					<section class="event-section-topic entry-content background-panel first sixcol">
+					<section class="event-section-topic entry-content background-panel first <?php echo $contentColClass; ?>">
 						<h2>Thema</h2>
 						<?php the_content() ?>
 					</section>
-					
+
+				<?php if($event_fields['event_facts']) { ?>
 					<section class="event-section-topic entry-content background-panel last sixcol">
 						<h2>Facts</h2>
-						<?php if($event_fields['event_facts']) { ?>
 						<?php echo $event_fields['event_facts'];?>
-						<?php } ?>
 					</section>
+				<?php } ?>
+
 				</div>
 					
 				<?php if($event_fields['event_program']) { ?>
