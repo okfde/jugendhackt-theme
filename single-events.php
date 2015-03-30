@@ -43,14 +43,13 @@ if($event_fields['event_facts']) {
 				<?php } ?>
 
 				<?php if($event_fields['event_sponsors']) { ?>
-				<section class="event-section-topic entry-content background-panel first twelvecol">
+				<section class="event-section-sponsors entry-content background-panel first twelvecol">
 					<h2>Regionale Sponsoren</h2>
 					<?php 
 						foreach ( $event_fields['event_sponsors'] as $key => $sponsor ) { ?>
 							<a href="<?php echo $sponsor['event_sponsor_link']; ?>" >
 								<?php
-									echo wp_get_attachment_image( $sponsor['event_sponsor_logo']['id'],'large',false) . '<br>'; 
-									print_r($sponsor['event_sponsor_name']);
+									echo wp_get_attachment_image( $sponsor['event_sponsor_logo']['id'],'medium',false); 
 								?>
 							</a>
 					<?php }	?>
