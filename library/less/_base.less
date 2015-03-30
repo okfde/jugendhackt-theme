@@ -27,9 +27,6 @@ and will be used across all viewports.
 
 ******************************************************************/
 
-
-
-
 /*********************
 01. GENERAL STYLES
 *********************/
@@ -411,13 +408,50 @@ and more scalable.
 	}
 
 	.teaser-item {
-		padding: 50px;
-		margin-bottom: 75px;
 
 		h2 {
 			margin-bottom: 1em;	
 		}
 	}
+
+	.background-panel {
+		padding: 50px;
+		margin-bottom: 75px;
+	}
+
+	.teaser-item-events {
+		img {
+			margin-top: 0 !important;
+		}
+
+		h2 {
+			margin-bottom: 0;
+		}
+		
+		.teaser-body-left {
+			float: left;
+		}
+
+		.teaser-body-right {
+			float: right;
+		}
+
+		.button {
+			display: block;
+			margin-bottom: 5px;
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+
+		&.sixcol .button-primary {
+		}
+
+		&.sixcol .button-secondary {
+		}
+
+	}
+
 
 	.custom-layout-wrapper>div {
 		background-color: @color2;
@@ -648,6 +682,19 @@ and more scalable.
 					.size-large {}
 					.size-medium {}
 					.size-thumbnail {}
+
+
+
+.event-section-sponsors {
+
+	img {
+		display: inline-block;
+		max-width: 15%;
+		vertical-align: middle;
+		margin-right: 25px; 
+	}
+
+}
 
 
 /*********************
