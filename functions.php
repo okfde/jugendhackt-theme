@@ -45,9 +45,6 @@ require_once('library/custom-post-types.php'); // you can disable this if you li
 */
 // require_once('library/translation/translation.php'); // this comes turned off by default
 
-include_once('library/acf-repeater/acf-repeater.php');
-
-
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
