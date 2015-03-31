@@ -302,7 +302,8 @@ function get_event_fields ($id) {
 			
 	$result['event_city'] = get_field('event_city');
 	$result['event_date'] = get_field('event_date');
-	$result['event_registerpage_id'] = get_field('event_registerpage')[0]->ID;
+	$tmp = get_field('event_registerpage');
+	$result['event_registerpage_id'] = $tmp[0]->ID;
 	$result['event_facts'] = get_field('event_facts');
 	$result['event_program'] = get_field('event_program');
 	$result['event_sponsors'] = get_field('event_sponsors');
