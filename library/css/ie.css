@@ -172,9 +172,15 @@ so you still want to keep it pretty light and simply expand
 upon your base.less styles.
 
 ******************************************************************/
-#logo {
-  margin-bottom: 0;
+.header #logo {
   float: left;
+}
+.header #description {
+  font-size: 30px;
+  line-height: 1.25em;
+  margin: 0px;
+  margin-top: -20px;
+  margin-left: 32px;
 }
 /*********************
 NAVIGATION STYLES
@@ -352,14 +358,14 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
+.header #description {
+  font-size: 34px;
+}
 /*********************
 NAVIGATION STYLES
 *********************/
 .nav {
-  float: right;
   display: block;
-  margin-left: 30px;
-  margin-top: -20px;
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
@@ -503,14 +509,6 @@ HEADER STYLES
 .header .cta-wrap li {
   margin-bottom: 0;
 }
-.header #eventdate {
-  font-size: 1.125em;
-  white-space: nowrap;
-}
-.header #description {
-  font-size: 1.125em;
-  margin: 0px;
-}
 #inner-content {
   padding-bottom: 200px;
 }
@@ -519,7 +517,6 @@ NAVIGATION STYLES
 *********************/
 .nav {
   margin-left: 0;
-  margin-top: 28px;
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */

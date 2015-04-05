@@ -49,6 +49,9 @@
 					<a href="<?php echo home_url(); ?>" rel="nofollow">
 						<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.svg" alt="Jugend hackt" width="488" height="100"/>
 					</a>
+					<div id="description">
+						<?php  bloginfo('description'); ?>
+					</div>
 				</div>
 
 				<div id="metawrapper" class="clearfix">
