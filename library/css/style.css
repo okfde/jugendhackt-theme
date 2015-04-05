@@ -825,6 +825,7 @@ h5,
 .header {
   background-color: #ffffff;
   font-family: "Ebisu", Helvetica, Arial, sans-serif;
+  font-size: 18px;
 }
 .header #inner-header {
   position: relative;
@@ -840,15 +841,12 @@ h5,
   height: auto;
   display: block;
 }
-.header #eventdate {
-  color: #60dba4;
-  font-size: 0.95em;
-  line-height: 1.5em;
-}
 .header #description {
-  font-size: 1em;
+  font-size: 18px;
   line-height: 1.25em;
   margin: 0px;
+  margin-top: -6px;
+  margin-left: 25px;
 }
 .header .cta-wrap {
   float: left;
@@ -869,6 +867,9 @@ h5,
 .header .cta-wrap a:visited {
   color: #ffffff;
 }
+.header .top-nav {
+  float: left;
+}
 .header nav ul.nav li a {
   text-transform: uppercase;
 }
@@ -880,6 +881,7 @@ ul.cta-links li {
   float: none;
 }
 .social-nav-wrap {
+  margin-top: 5px;
   float: left;
 }
 .social-nav-wrap ul {
@@ -1012,10 +1014,7 @@ and more scalable.
   background-position: 50% 0%;
 }
 #content #inner-content {
-  padding-top: 260px;
-}
-.home #content #inner-content {
-  padding-top: 0;
+  padding-top: 180px;
 }
 .hentry {
   background-color: #ffffff;
@@ -1208,6 +1207,16 @@ and more scalable.
 .entry-content p a:active {
   text-decoration: underline;
 }
+.entry-content ul,
+.entry-content ol {
+  padding-left: 38px;
+}
+.entry-content ul {
+  list-style-type: disc;
+}
+.entry-content ol {
+  list-style-type: decimal;
+}
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
@@ -1334,9 +1343,15 @@ so you still want to keep it pretty light and simply expand
 upon your base.less styles.
 
 ******************************************************************/
-  #logo {
-    margin-bottom: 0;
+  .header #logo {
     float: left;
+  }
+  .header #description {
+    font-size: 30px;
+    line-height: 1.25em;
+    margin: 0px;
+    margin-top: -20px;
+    margin-left: 32px;
   }
   /*********************
 NAVIGATION STYLES
@@ -1521,14 +1536,14 @@ LAYOUT & GRID STYLES
   /*********************
 HEADER STYLES
 *********************/
+  .header #description {
+    font-size: 34px;
+  }
   /*********************
 NAVIGATION STYLES
 *********************/
   .nav {
-    float: right;
     display: block;
-    margin-left: 30px;
-    margin-top: -20px;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */
@@ -1680,14 +1695,6 @@ HEADER STYLES
   .header .cta-wrap li {
     margin-bottom: 0;
   }
-  .header #eventdate {
-    font-size: 1.125em;
-    white-space: nowrap;
-  }
-  .header #description {
-    font-size: 1.125em;
-    margin: 0px;
-  }
   #inner-content {
     padding-bottom: 200px;
   }
@@ -1696,7 +1703,6 @@ NAVIGATION STYLES
 *********************/
   .nav {
     margin-left: 0;
-    margin-top: 28px;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */
@@ -1817,6 +1823,10 @@ You can add some advanced styles here if you like. This kicks in
 on larger screens.
 
 ******************************************************************/
+  .header .top-nav {
+    float: right;
+    margin-top: 61px;
+  }
 }
 /*
 RETINA (2x RESOLUTION DEVICES)

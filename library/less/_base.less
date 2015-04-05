@@ -178,6 +178,7 @@ h5, .h5 {
 	
 	background-color: @white;
 	font-family: @headline-font;
+	font-size: 18px;
 
 	#inner-header {
 		position: relative;
@@ -196,16 +197,12 @@ h5, .h5 {
 		display: block;
 	}
 	
-	#eventdate {
-		color: @color6;
-		font-size: 0.95em;
-		line-height: 1.5em;
-	}
-
 	#description {
-		font-size: 1em;
+		font-size: 18px;
 		line-height: 1.25em;
 		margin: 0px;
+		margin-top: -6px;
+		margin-left: 25px;
 	}	
 
 	.cta-wrap {
@@ -227,6 +224,10 @@ h5, .h5 {
 		}
 
 		a, a:hover, a:visited { color: @white; }
+	}
+
+	.top-nav {
+		float: left;
 	}
 
 	nav {
@@ -253,7 +254,7 @@ ul.cta-links {
 }
 
 .social-nav-wrap {
-	
+	margin-top: 5px; 
 	float: left;
 
 	ul { 
@@ -423,12 +424,8 @@ and more scalable.
 	background-position: 50% 0%;
 
 	#inner-content {
-		padding-top: 260px;
+		padding-top: 180px;
 	}
-}
-
-.home #content #inner-content {
-	padding-top: 0;
 }
 
 .hentry {
@@ -626,17 +623,24 @@ and more scalable.
 
 			ul, ol {
 
+				padding-left: 38px;
+
 				li {}
 
 			}
 
 			ul {
 
+				list-style-type: disc;
+
 				li {}
 
 			}
 
 			ol {
+
+				list-style-type: decimal;
+
 
 				li {}
 
