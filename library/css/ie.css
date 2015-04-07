@@ -419,6 +419,13 @@ NAVIGATION STYLES
   display: block;
 }
 /* end .nav */
+/*=============================
+=            Forms            =
+=============================*/
+.field-wrap {
+  width: 75%;
+}
+/*-----  End of Forms  ------*/
 /*********************
 SIDEBARS & ASIDES
 *********************/

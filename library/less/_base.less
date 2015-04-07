@@ -170,6 +170,39 @@ h5, .h5 {
 	letter-spacing: 2px;
 }
 
+.button, .button:visited {
+	font-family: Ebisu;
+	border: none;
+	padding: 8px 20px 4px 20px;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin-bottom: 20px;
+	
+	&:active {
+	}	
+}
+
+.button-primary {
+	color: white;
+	background-color: @color1;
+	&:hover, &:focus, &:active {
+		color: white !important;
+	}
+}
+
+.button-secondary {
+
+	color: white;
+	background: @color4;
+
+	&:hover, &:focus, &:active {
+		color: white !important;
+	}
+}
+
+
 /*********************
 06. HEADER STYLES
 *********************/
@@ -486,13 +519,16 @@ and more scalable.
 			float: right;
 		}
 
-		.button {
+		.button , a.button {
 			display: block;
 			margin-bottom: 5px;
+			color: white ;
+
 			&:last-child {
 				margin-bottom: 0px;
 			}
 		}
+
 
 		&.sixcol .button-primary {
 		}
@@ -752,6 +788,15 @@ and more scalable.
 	}
 
 }
+
+
+/*=============================
+=            Forms            =
+=============================*/
+
+
+
+/*-----  End of Forms  ------*/
 
 
 /*********************
