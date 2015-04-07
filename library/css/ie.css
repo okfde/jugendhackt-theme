@@ -126,36 +126,6 @@ BOX SHADOW
 *********************/
 /* .boxShadow(0,0,4px,0,#444); */
 /* .boxShadow(none); */
-/*********************
-BUTTONS
-*********************/
-.button,
-.button:visited {
-  font-family: Ebisu;
-  border: none;
-  padding: 8px 20px 4px 20px;
-  display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-.button-primary {
-  color: white;
-  background-color: #f86d14;
-}
-.button-primary:hover,
-.button-primary:focus {
-  color: white;
-}
-.button-secondary {
-  color: back;
-  border: 2px solid black;
-}
-.button-secondary:hover,
-.button-secondary:focus {
-  color: black;
-}
 /******************************************************************
 Site Name: 
 Author: 
