@@ -65,34 +65,37 @@
 
 	</section>
 
-	<section class="attachment background-panel">
 		<?php
 		$attachments = new Attachments( 'my_attachments'); /* pass the instance name */ 
 		if( $attachments->exist() ) { ?>
-		<div class="slick">
-			<?php
-			for ( $i = 0 ; $i < $attachments->total() ; $i++) { ?>
-			<div class="">
+		<section class="attachment background-panel">
+
+			<div class="slick">
 				<?php
-				echo $attachments->image( 'large', $i );
-				$caption = $attachments->field('caption',$i);
-				if(!empty($caption)){
-					echo '<p>'.$caption."</p>";
-				}?>
+				for ( $i = 0 ; $i < $attachments->total() ; $i++) { ?>
+				<div class="">
+					<?php
+					echo $attachments->image( 'large', $i );
+					$caption = $attachments->field('caption',$i);
+					if(!empty($caption)){
+						echo '<p>'.$caption."</p>";
+					}?>
+				</div>
+				<?php }
+				?>
 			</div>
-			<?php }
-			?>
-		</div>
+
+			<script>
+				$(document).ready(function(){
+					$('.slick').slick({
+						adaptiveHeight: true
+					});
+				});
+			</script>
+		</section>
 		<?php } ?>
 
-		<script>
-			$(document).ready(function(){
-				$('.slick').slick({
-					adaptiveHeight: true
-				});
-			});
-		</script>
-	</section>
+
 
 <?php endwhile; else : ?>
 

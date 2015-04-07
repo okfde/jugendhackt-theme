@@ -48,7 +48,7 @@ require_once('library/translation/translation.php'); // this comes turned off by
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'event-teaser', 500, 300, true );
+add_image_size( 'event-teaser', 600, 350, true );
 // add_image_size( 'bones-thumb-300', 300, 100, true );
 /*
 to add more sizes, simply copy a line from above

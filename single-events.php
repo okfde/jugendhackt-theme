@@ -22,7 +22,7 @@ if($event_fields['event_facts']) {
 			
 				<div class="row">
 					<section class="event-section-topic entry-content background-panel first <?php echo $contentColClass; ?>">
-						<h2>Thema</h2>
+						<h2>Herausforderung</h2>
 						<?php the_content() ?>
 					</section>
 
@@ -44,7 +44,7 @@ if($event_fields['event_facts']) {
 
 				<?php if($event_fields['event_sponsors']) { ?>
 				<section class="event-section-sponsors entry-content background-panel first twelvecol">
-					<h2>Regionale Sponsoren</h2>
+					<h2>Regionale Partner</h2>
 					<?php 
 						foreach ( $event_fields['event_sponsors'] as $key => $sponsor ) { ?>
 							<a href="<?php echo $sponsor['event_sponsor_link']; ?>" >
