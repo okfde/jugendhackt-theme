@@ -1840,6 +1840,9 @@ on larger screens.
     float: right;
     margin-top: 61px;
   }
+  #metawrapper {
+    margin-left: 200px;
+  }
 }
 /*
 RETINA (2x RESOLUTION DEVICES)
