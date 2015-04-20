@@ -40,13 +40,23 @@
 						?>
 					</div>
 					<?php } ?>
-					</section
+					</section>
 
 					<footer class="article-footer">
+ 						
+						<?php 
+
+							if(!is_single()) { ?>
+								
+								<a href="<?php the_permalink(); ?>#disqus_thread">Kommetare</a>
+								
+							<?php
+							}
+						 ?>
 						<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?></p>
 					</footer> <!-- end article footer -->
 
-					<?php // comments_template(); // uncomment if you want to use them ?>
+					<?php comments_template(); // uncomment if you want to use them ?>
 
 				</article> <!-- end article -->
 
