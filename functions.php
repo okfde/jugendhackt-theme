@@ -294,6 +294,21 @@ function bones_cta_links() {
 	));
 } /* end bones footer link */
 
+
+function get_the_content_by_id($post_id) {
+	
+	$page_data = get_page($post_id);
+	
+	if ($page_data) {
+		$content = $page_data->post_content;
+		$content = apply_filters('the_content', $content);
+		return $content;
+	}
+	else return false;
+
+}
+
+
 /*==============================
 =            EVENTS            =
 ==============================*/
@@ -312,8 +327,45 @@ function get_event_fields ($id) {
 
 }
 
-
 /*-----  End of EVENTS  ------*/
+
+// Register Custom Taxonomy
+function page_category() {
+
+	$labels = array(
+		'name'                       => _x( 'Kategorien', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Kategorie', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Kategorien', 'text_domain' ),
+		'all_items'                  => __( 'Alle', 'text_domain' ),
+		'parent_item'                => __( 'Eltern', 'text_domain' ),
+		'parent_item_colon'          => __( 'Elternelement:', 'text_domain' ),
+		'new_item_name'              => __( 'Neue Kategorie Nam', 'text_domain' ),
+		'add_new_item'               => __( 'Neue Kategorie hinzufügen', 'text_domain' ),
+		'edit_item'                  => __( 'Kategorie bearbeiten', 'text_domain' ),
+		'update_item'                => __( 'Kategorie aktualisieren', 'text_domain' ),
+		'view_item'                  => __( 'Kategorie ansehen', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Items', 'text_domain' ),
+		'search_items'               => __( 'Search Items', 'text_domain' ),
+		'not_found'                  => __( 'Not Found', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'page_category', array( 'page' ), $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'page_category', 0 );
 
 
 ?>
