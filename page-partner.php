@@ -1,5 +1,7 @@
 <?php 
-
+/*
+Template Name: Page Partner
+*/
 get_header(); 
 
 ?>
@@ -33,20 +35,19 @@ get_header();
 		if(!empty($partner_groups)) {
 			foreach ($partner_groups as $key => $partner_group) { ?>
 				
-				<section class="twelvecol background-panel first entry-content" >
-				
-				<?php 
-				echo '<h2>' .  $partner_group['partner_group_title'] .'</h2>'; 
+				<section class="twelvecol background-panel first entry-content partner-group" >
+				<h2><?php echo $partner_group['partner_group_title']; ?></h2> 
 
-					foreach ($partner_group['partners'] as $key => $partner) { ?>
-					<a href=" <?php echo $partner['partner_link']; ?> ">
-						<img src="<?php echo $partner['partner_image']['sizes']['medium']; ?> " alt=""> 
-					</a>
+				<?php 					
+
+					foreach ($partner_group['partners'] as $partner) { ?>
+						<a href=" <?php echo $partner['partner_link']; ?> ">
+							<img src="<?php echo $partner['partner_image']['sizes']['partner-logo']; ?> " alt=""> 
+						</a>
 
 					<?php
-					}
+					 }
 				?>
-
 				</section> 
 
 				<?php

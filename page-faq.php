@@ -1,5 +1,7 @@
 <?php 
-
+/*
+Template Name: Page Faq
+*/
 get_header(); 
 
 ?>
@@ -12,63 +14,63 @@ get_header();
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
-		<section class="twelvecol first clearfix">
-			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix withicon'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+			<?php 
 
-				<header class="article-header">
-					<h2 class="page-title" itemprop="headline"><?php the_title(); ?></h2>
-				</header> <!-- end article header -->
+			$region_parent_obj = get_term_by('name', 'zielgruppe', 'page_category');
+			$region_parent_id = $region_parent_obj->term_id;
 
-				<section class="entry-content clearfix" itemprop="articleBody">
-					<?php the_content(); 
+			$args = array(
+				'child_of'                 => $region_parent_id,
+				'orderby'                  => 'name',
+				'order'                    => 'ASC',
+				'hide_empty'               => 0,
+				'hierarchical'             => 1,
+				'taxonomy'                 => 'page_category',
+			); 
 
-					$region_parent_obj = get_term_by('name', 'zielgruppe', 'page_category');
-					$region_parent_id = $region_parent_obj->term_id;
+			$categories = get_categories( $args );
 
-					$args = array(
-						'child_of'                 => $region_parent_id,
-						'orderby'                  => 'name',
-						'order'                    => 'ASC',
-						'hide_empty'               => 0,
-						'hierarchical'             => 1,
-						'taxonomy'                 => 'page_category',
+			function sort_category_slug  ($a, $b) {
+				return strcmp($a->slug,$b->slug);
+			}
+			usort($categories,'sort_category_slug');
+			
+			if(!empty($categories)) {
+				foreach ($categories as $key => $value) { ?>
+				
+				<div class="<?php if($key % 3 == 0 )echo 'first'?> fourcol background-panel faq-nav clearfix">
+					<h2><a href="#<?php echo $value->slug ?>"><?php echo $value->name ?></a></h2>
+				</div>
+				
+				<?php
+				}
+			}
 
-					); 
+			?>					
 
-					$categories = get_categories( $args );
-					
-					if(!empty($categories)) {
-						foreach ($categories as $key => $value) {
-							echo $value->name;
-						}
-					}
-
-					?>					
-				</section> <!-- end article section -->
-
-			</article> <!-- end article -->
-		</section>
+		</div>
 
 		<?php 
 
 		$faqs = get_field('faq');
 		if(!empty($faqs)) {
 			foreach ($categories as $key => $category) { ?>
-				<section class="twelvecol background-panel first entry-content" >
+				<section id="<?php echo $category->slug; ?>" class="twelvecol background-panel first entry-content" >
 				
-				<?php 
-				echo $category->name . '<br>'; 
-
+				<h2><?php echo $category->name; ?></h2>
+				
+				<div id="accordion-<?php  echo $category->slug; ?>" class="accordion" >
+					<?php 
 					foreach ($faqs as $key => $faq) {
-
 						foreach ($faq['faq_group'] as $key => $faq_group) {
 							if( $faq_group->term_id == $category->term_id ) {
-								echo '<h2>'.$faq['faq_question'] . '</h2>';
-								echo '<p>'. $faq['faq_answer'] . '</p>';
+								echo '<h3>'.$faq['faq_question'] . '</h3>';
+								echo '<div>'.$faq['faq_answer'].'</div>';
 							}
 						}
 					}
-				?>
+					?>
+				</div>
 				</section> 
 				<?php
 			}

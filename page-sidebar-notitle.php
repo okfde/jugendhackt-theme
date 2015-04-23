@@ -1,7 +1,8 @@
 <?php 
 /*
-Template Name: Page Projekte
+Template Name: Page with Sidebar no Title
 */
+
 get_header(); ?>
 
 <div id="content" data-speed="3" >
@@ -15,7 +16,7 @@ get_header(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix withicon'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 				<header class="article-header">
-					<h2 class="page-title" itemprop="headline"><?php the_title(); ?></h2>
+					<h2 class="page-title" itemprop="headline"></h2>
 				</header> <!-- end article header -->
 
 				<section class="entry-content clearfix" itemprop="articleBody">

@@ -33,6 +33,36 @@ jQuery(document).ready(function($) {
     $('.entry-content, .sidebar').fitVids();
     $('.entry-content').fitVids({ customSelector: "iframe[src*='maps.google']" });
 
+    $('.more-toggle').click(function(){
+       
+       var target = '#' + $(this).data('toggletarget');
+        
+       $(target).slideToggle( 'slow', function(){ 
+            if(!$(this).hasClass('open')) {
+                $(this).parent().find('.more-toggle').text('Weniger...');
+                $(this).addClass('open');
+            } else {
+                $(this).parent().find('.more-toggle').text('Mehr...');
+                $(this).removeClass('open');
+            }
+        });
+
+    });
+
+    $('.accordion').collapse(
+        {
+          show: function() {
+            this.slideDown(300);
+          },
+          hide: function() {
+            this.slideUp(300);
+          },
+          accordion: true,
+          persist: false
+        }
+    ); // Initializing plugin
+
+
     /*
     Responsive jQuery is a tricky thing.
     There's a bunch of different ways to handle

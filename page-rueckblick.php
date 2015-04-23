@@ -1,5 +1,7 @@
 <?php 
-
+/*
+Template Name: Page Rückblick
+*/
 get_header(); 
 
 ?>

@@ -8,29 +8,31 @@
 
 	$content = get_the_content_by_id($review->ID);
 	$content = get_extended($content);
-    
-	if(!empty($content)) { ?>
+
+	if(!empty($content['main'])) { ?>
 		<div class="twelvecol first entry-content clearfix"> 
 			
-			<?php //  echo $content; 
-			    echo $content['main'];
-			    echo '--more--';
- 				echo $content['extended'];
-			?>
+			<div class="content-main"><?php echo $content['main'];?></p></div>
+			
+			<?php if(!empty($content['extended'])) { ?>
+				<div class="content-more" id="more-<?php echo $review->ID ; ?>" ><p><?php echo $content['extended']; ?></div>
+				<a class="more-toggle" data-toggletarget="more-<?php echo $review->ID ; ?>">Mehr...></a>
+			<?php } ?>
 
 		</div>
 	<?php } ?>
 
 	<div class="sixcol first entry-content clearfix">
 		<?php 
+		$content = get_extended(get_field('gp_leftcol', $review->ID)); ?>
+			<div class="content-main"><?php echo $content['main'];?></div>
+			
+			<?php if(!empty($content['extended'])) { ?>
+				<div class="content-more" id="more-leftcol-<?php echo $review->ID ; ?>" ><p><?php echo $content['extended']; ?></div>
+				<a class="more-toggle" data-toggletarget="more-leftcol-<?php echo $review->ID ; ?>">Mehr...</a>
 
-		$content = get_extended(get_field('gp_leftcol', $review->ID)); 
-				
-	    echo $content['main'];
-	    echo '--more--';
-		echo $content['extended'];
-		
-		?>
+			<?php } ?>
+
 	</div>
 	<div class="sixcol last entry-content clearfix">
 		<?php 

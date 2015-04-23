@@ -16,42 +16,6 @@
 							</nav>
 							<?php echo $content; ?>
 						</div>
-
-						<div class="last sixcol" >
-							<p class="ph"><span>Kooperationspartner</span></p>
-							<div class="coops clearfix">
-								<?php
-								
-								$attachments = new Attachments( 'my_attachments',40 ); /* pass the instance name */ 
-								if( $attachments->exist() ) {
-									for ( $i = 0 ; $i < $attachments->total() ; $i++)
-										{ 
-									
-									if($attachments->field('linkurl',$i))
-									{
-										$urlflag = true; 
-										echo '<a href="'. $attachments->field('linkurl',$i). '" >';
-									}
-
-									?>
-									<div class="partner">
-										<?php
-										echo $attachments->image( 'fullsize', $i )."<br />";
-										echo $attachments->field('title',$i);
-										?>
-									</div> 
-
-									<?php
-
-									if($urlflag) {
-										echo "</a>";
-										$urlflag = false; 
-									}
-								}
-							}
-							?>
-						</div>
-
 						
 				</div>
 			</div> <!-- end #inner-footer -->
