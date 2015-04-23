@@ -1,5 +1,4 @@
 var gulp = require('gulp'),     
-    compass = require('gulp-compass') ,
     notify = require("gulp-notify"), 
     livereload = require('gulp-livereload'),
     usemin = require('gulp-usemin'),
@@ -8,6 +7,7 @@ var gulp = require('gulp'), 
     autoprefixer = require('gulp-autoprefixer'),
     less = require('gulp-less'),
     svgSprite = require('gulp-svg-sprite'),
+    svgo = require('gulp-svgo'),
     gulpIgnore = require('gulp-ignore');
 
 var config = {
@@ -40,10 +40,16 @@ sprite_config       = {
     }
 };
 
-gulp.task('sprite', function() {
+gulp.task('create-sprite', function() {
   gulp.src(config.base_path +'images/svg/*.svg')
+      .pipe(svgo())
       .pipe(svgSprite(sprite_config))
       .pipe(gulp.dest(config.base_path));
+});
+
+gulp.task('sprite', ['create-sprite'],function (){
+    gulp.src(config.base_path +'less/svg/*.svg')
+        .pipe(gulp.dest(config.base_path +'css/svg/'));
 });
 
 gulp.task('less', function () {

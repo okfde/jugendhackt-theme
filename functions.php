@@ -48,7 +48,10 @@ require_once('library/translation/translation.php'); // this comes turned off by
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'event-teaser', 600, 350, true );
+add_image_size( 'panel-2col', 600, 350, true );
+add_image_size( 'partner-logo', 250,200, false);
+add_image_size( 'square-600', 500, 500, true);
+
 // add_image_size( 'bones-thumb-300', 300, 100, true );
 /*
 to add more sizes, simply copy a line from above
@@ -366,6 +369,7 @@ function page_category() {
 
 // Hook into the 'init' action
 add_action( 'init', 'page_category', 0 );
+
 
 
 ?>

@@ -1,4 +1,7 @@
 <?php 
+/*
+Template Name: Page About
+*/
 
 get_header(); 
 
@@ -20,7 +23,19 @@ get_header();
 				</header> <!-- end article header -->
 
 				<section class="entry-content clearfix" itemprop="articleBody">
-					<?php the_content(); ?>						
+					
+					<?php 
+						$content = get_the_content_by_id($post->ID);
+						$content = get_extended($content);
+					?>
+
+					<div class="content-main"><?php echo $content['main'];?></p></div>
+					
+					<?php if(!empty($content['extended'])) { ?>
+						<div class="content-more" id="more-<?php echo $post->ID ; ?>" ><p><?php echo $content['extended']; ?></div>
+						<a class="more-toggle" data-toggletarget="more-<?php echo $post->ID ; ?>">Mehr...</a>
+					<?php } ?>	
+
 				</section> <!-- end article section -->
 
 			</article> <!-- end article -->
@@ -43,12 +58,12 @@ get_header();
 			if($key % 3 == 0 ) echo '<div class="row clearfix">';
 			
 				include('partials/project-teaser.php');
-
-			if(($key % 3 == 2) OR count($projects)-1 == $key) echo '</div>'; ?>
+				
+			if(($key % 3 == 2) OR (count($projects)-1 == $key)) echo '</div >'; ?>
 			<?php }
 		} ?>
 
-	</section>
+		</section>
 
 
 

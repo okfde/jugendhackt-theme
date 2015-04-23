@@ -155,7 +155,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-size: 1.125em;
+	font-size: 18px;
 }
 
 h4, .h4 {
@@ -179,6 +179,7 @@ h5, .h5 {
 	text-transform: uppercase;
 	cursor: pointer;
 	margin-bottom: 20px;
+	white-space: nowrap;
 	
 	&:active {
 	}	
@@ -313,11 +314,21 @@ ul.cta-links {
 	.svg-twitter;
 	.svg-twitter-dims;
 }
+
 .social-nav-gplus a {
 	.svg-gplus;
 	.svg-gplus-dims;
 }
 
+.social-nav-betterplace a {
+	.svg-betterplace;
+	.svg-betterplace-dims;
+}
+
+.social-nav-newsletter a {
+	.svg-newsletter;
+	.svg-newsletter-dims;
+}
 
 /*********************
 07. NAVIGATION STYLES
@@ -490,10 +501,75 @@ and more scalable.
 		padding: 50px;
 	}
 
+	.teaser-wrap {
+		position: relative;
+		margin-bottom: 20px;
+
+		.teaser-body {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 25px;
+			background: RGBA(255,255,255,0.7);
+			
+			height: 100%;
+			width: 100%;
+
+			p { margin: 0 };
+		}
+
+		&:hover {
+			.teaser-body {
+				display: block;
+			}
+		}
+	
+	}
+
+	.project-links {
+		h3 {
+			margin: 0;
+		}
+	}
+
 	.teaser-item {
 
 		h2 {
-			margin-bottom: 1em;	
+			margin-bottom: 0.5em;	
+		}
+
+		.badge:after {
+			display: inline-block;
+			content: "";
+
+			-webkit-transform: translateY(6px);			
+			transform: translateY(6px);
+			margin-left: 10px;
+		}
+
+		.badge-black:after {
+			.svg-star;
+			.svg-star-dims;
+		}
+
+		.badge-primary:after {
+			.svg-star-primary;
+			.svg-star-primary-dims;
+		}
+
+		.badge-secondary:after {
+			.svg-star-secondary;
+			.svg-star-secondary-dims;
+		}
+
+		h3 {
+			margin: 0;
+		}
+
+		img {
+			margin-top: 0 !important;
+			display: block;
 		}
 	}
 
@@ -503,13 +579,6 @@ and more scalable.
 	}
 
 	.teaser-item-events {
-		img {
-			margin-top: 0 !important;
-		}
-
-		h2 {
-			margin-bottom: 0;
-		}
 		
 		.teaser-body-left {
 			float: left;
@@ -789,6 +858,44 @@ and more scalable.
 
 }
 
+.content-more {
+	
+	display: none;
+	
+	p:first-child {
+		margin-top: 0;
+	}
+}
+
+.more-toggle {
+
+	font-size: 1.125em;
+
+}
+
+
+.accordion {
+	h1, h2, h3, h4 {
+		// display: inline-block;
+		margin: 0;
+	}
+}
+
+.faq-nav {
+	h1, h2, h3, h4 {
+		margin: 0;
+		text-transform: uppercase;
+	}
+	padding-top: 20px;
+	padding-bottom: 16px;
+}
+
+.partner-group {
+	img {
+		vertical-align: middle;
+		margin: 0 20px 20px 20px;
+	}
+}
 
 /*=============================
 =            Forms            =

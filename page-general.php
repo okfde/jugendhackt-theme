@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: GP Multi-field
+Template Name: Page General (Rückblick)
 */
 
 get_header(); 

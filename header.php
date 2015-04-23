@@ -31,10 +31,11 @@
 	<!-- wordpress head functions -->
 	<?php wp_head(); ?>
 	<!-- end of wordpress head -->
-
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.fitvids.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/slick.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.collapse.js"></script>
+
 
 </head>
 

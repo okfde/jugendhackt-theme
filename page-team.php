@@ -1,5 +1,7 @@
 <?php 
-
+/*
+Template Name: Page Team
+*/
 get_header(); 
 
 ?>
@@ -21,7 +23,7 @@ get_header();
 
 				<section class="entry-content clearfix" itemprop="articleBody">
 					<?php the_content(); 
-
+					echo "TBD: Filtering";
 
 					$region_parent_obj = get_term_by('name', 'region', 'page_category');
 					$region_parent_id = $region_parent_obj->term_id;
@@ -62,12 +64,12 @@ get_header();
 
 
 		$team_members = get_children( $args );
-
+		$team_members = array_values($team_members);
+		
 		if( !empty($team_members) ) {
 
 			foreach ($team_members as $key => $member) {
 
-			// keys need to be reset
 			if($key % 3 == 0 ) echo '<div class="row clearfix">';
 				
 				include('partials/team-member.php');
