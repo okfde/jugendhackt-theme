@@ -52,7 +52,7 @@ get_header();
 			</article> <!-- end article -->
 		</section>
 	
-		<section class="twelvecol first entry-content" >
+		<section class="twelvecol first entry-content team-items" >
 		
 		<?php 
 
@@ -70,11 +70,11 @@ get_header();
 
 			foreach ($team_members as $key => $member) {
 
-			if($key % 3 == 0 ) echo '<div class="row clearfix">';
+			// if($key % 3 == 0 ) echo '<div class="row clearfix">';
 				
 				include('partials/team-member.php');
 			
-			if(($key % 3 == 2) OR count($team_members)-1 == $key) echo '</div>'; 
+			// if(($key % 3 == 2) OR count($team_members)-1 == $key) echo '</div>'; 
 
 			}
 		} ?>

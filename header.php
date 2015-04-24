@@ -35,7 +35,7 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.fitvids.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/slick.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.collapse.js"></script>
-
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.mixitup.min.js"></script>
 
 </head>
 
