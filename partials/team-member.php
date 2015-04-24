@@ -4,7 +4,6 @@
 		
 		// badge ?
 		$badge = get_field('team_badges', $member->ID);
-		var_dump($badge);
 		if(!empty($badge)) { 
 			$badgeClasses = 'badge ' . $badge;
 		}
@@ -48,9 +47,13 @@
 
 	// categories 
 	$categories = get_the_terms( $member->ID,'page_category' );
-	$categories = array_values($categories);
 
-	if(!empty($categories)) { ?>
+	if(!empty($categories)) { 
+
+		$categories = array_values($categories);
+
+		?>
+
 		<div class="member-region">
 			<h3> Wo: 
 				<?php

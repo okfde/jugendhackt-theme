@@ -1178,6 +1178,9 @@ and more scalable.
 .teaser-item-events a.button:last-child {
   margin-bottom: 0px;
 }
+.team-items .teaser-item:nth-child(3n+4) {
+  clear: left;
+}
 .custom-layout-wrapper > div {
   background-color: #ffffff;
   padding: 25px;
@@ -1195,8 +1198,8 @@ and more scalable.
   margin-bottom: 1.5em;
 }
 /*********************
-		TEASER ICONS
-		*********************/
+	TEASER ICONS
+	*********************/
 .withicon {
   position: relative;
 }

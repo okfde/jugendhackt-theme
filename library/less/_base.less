@@ -607,6 +607,14 @@ and more scalable.
 
 	}
 
+	.team-items {
+		.teaser-item {
+			&:nth-child(3n+4) {
+			clear: left;
+			}
+		}
+	}
+
 
 	.custom-layout-wrapper>div {
 		background-color: @color2;
@@ -624,9 +632,10 @@ and more scalable.
 		p { margin-top: 0em; margin-bottom: 1.5em; }
 	}
 
-		/*********************
-		TEASER ICONS
-		*********************/
+	/*********************
+	TEASER ICONS
+	*********************/
+
 		.withicon {
 			position: relative;
 		}
