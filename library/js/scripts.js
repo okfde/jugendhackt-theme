@@ -60,8 +60,9 @@ jQuery(document).ready(function($) {
           accordion: true,
           persist: false
         }
-    ); // Initializing plugin
+    ); 
 
+    $('.team-items').mixItUp();
 
     /*
     Responsive jQuery is a tricky thing.

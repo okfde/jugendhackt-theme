@@ -14,16 +14,13 @@ get_header();
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
-		<section class="twelvecol first clearfix">
-			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix withicon'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+		<section class="twelvecol background-panel background-panel__slim first clearfix">
 
-				<header class="article-header">
-					<h2 class="page-title" itemprop="headline"><?php the_title(); ?></h2>
-				</header> <!-- end article header -->
+				<div class="entry-content clearfix" itemprop="articleBody">
+					
+					<span class="h2 filter" data-filter="all" >Alle </span>
 
-				<section class="entry-content clearfix" itemprop="articleBody">
-					<?php the_content(); 
-					echo "TBD: Filtering";
+					<?php
 
 					$region_parent_obj = get_term_by('name', 'region', 'page_category');
 					$region_parent_id = $region_parent_obj->term_id;
@@ -35,21 +32,22 @@ get_header();
 						'hide_empty'               => 1,
 						'hierarchical'             => 1,
 						'taxonomy'                 => 'page_category',
-
 					); 
 
 					$categories = get_categories( $args );
 					
 					if(!empty($categories)) {
-						foreach ($categories as $key => $value) {
-							echo $value->name;
+						foreach ($categories as $key => $value) { ?>
+							
+							<span class="h2 filter" data-filter=".<?php echo $value->slug; ?>" > <?php echo $value->name;  ?> </span>
+
+						<? 	
 						}
 					}
 
 					?>					
-				</section> <!-- end article section -->
+				</div> <!-- end article section -->
 
-			</article> <!-- end article -->
 		</section>
 	
 		<section class="twelvecol first entry-content team-items" >
@@ -58,10 +56,11 @@ get_header();
 
 		$args = array(
 			'post_parent' => $post->ID,
+			'orderby' => 'menu_order',
+			'order' => 'ASC',
 			'post_type'   => 'page', 
 			'posts_per_page' => -1,
 			'post_status' => 'published' ); 
-
 
 		$team_members = get_children( $args );
 		$team_members = array_values($team_members);
@@ -69,15 +68,11 @@ get_header();
 		if( !empty($team_members) ) {
 
 			foreach ($team_members as $key => $member) {
-
-			// if($key % 3 == 0 ) echo '<div class="row clearfix">';
-				
 				include('partials/team-member.php');
-			
-			// if(($key % 3 == 2) OR count($team_members)-1 == $key) echo '</div>'; 
-
 			}
 		} ?>
+
+		<div class="gap"></gap>
 
 	</section>
 
