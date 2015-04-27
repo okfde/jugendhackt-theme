@@ -1,15 +1,28 @@
-<div class="attachment background-panel teaser-item <?php if($key % 3 == 0 )echo 'first'?> fourcol ">
-	
-	<?php 
-		
-		// badge ?
-		$badge = get_field('team_badges', $member->ID);
-		if(!empty($badge)) { 
-			$badgeClasses = 'badge ' . $badge;
+<?php 
+
+$badge = get_field('team_badges', $member->ID);
+if(!empty($badge)) { 
+	$badgeClasses = 'badge ' . $badge;
+}
+
+$categories = get_the_terms( $member->ID,'page_category' );
+$filterClasses = '';
+if(!empty($categories)){
+	$categories = array_values($categories);
+
+	// build the classes for filtering
+	foreach ($categories as $key5 => $category) {
+		$filterClasses .= $category->slug;
+		if( (count($categories) - 1) != $key5) { 
+			$filterClasses .= ' '; 
 		}
+	}
+}
 
-	?>
+?>
 
+<div class="mix <?php echo $filterClasses; ?> attachment background-panel teaser-item">
+	
 	<h2 class="<?php echo $badgeClasses; ?>"><?php echo get_the_title($member->ID) ?></h2>
 
 	<div class="teaser-wrap">
@@ -46,7 +59,6 @@
 	<?php
 
 	// categories 
-	$categories = get_the_terms( $member->ID,'page_category' );
 
 	if(!empty($categories)) { 
 

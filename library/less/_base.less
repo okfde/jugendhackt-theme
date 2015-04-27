@@ -577,6 +577,12 @@ and more scalable.
 		padding: 50px;
 		margin-bottom: 75px;
 	}
+	
+	.background-panel__slim {
+	
+		padding: 20px 25px 14px 25px;
+	
+	}
 
 	.teaser-item-events {
 		
@@ -608,19 +614,53 @@ and more scalable.
 	}
 
 	.team-items {
-		.teaser-item {
-			&:nth-child(3n+4) {
-			clear: left;
-			}
+
+		text-align: justify;
+		font-size: 0;
+
+		&:after{
+		  content: '';
+		  display: inline-block;
+		  width: 100%;
 		}
+		
+		.teaser-item , .gap {
+			display: inline-block;
+			vertical-align: top;			
+			width: 31.491712705%;
+			text-align: left;
+
+			h2 {
+				font-size: 28px;
+			}
+			
+			p {
+				font-size: 18px;
+			}
+
+		}
+
+		.mix{
+			display: none;
+		}
+
 	}
+
+	.filter {
+
+		cursor: pointer;
+		&.active {
+			color: @color3;
+		}
+
+	}
+
 
 
 	.custom-layout-wrapper>div {
 		background-color: @color2;
 		padding: 25px;
 		margin-bottom: 50px;
-
 	}
 
 	.custom-layout-wrapper>div>h2 {
@@ -894,9 +934,7 @@ and more scalable.
 	h1, h2, h3, h4 {
 		margin: 0;
 		text-transform: uppercase;
-	}
-	padding-top: 20px;
-	padding-bottom: 16px;
+	}	
 }
 
 .partner-group {

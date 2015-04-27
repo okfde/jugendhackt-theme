@@ -1162,6 +1162,9 @@ and more scalable.
   padding: 50px;
   margin-bottom: 75px;
 }
+.background-panel__slim {
+  padding: 20px 25px 14px 25px;
+}
 .teaser-item-events .teaser-body-left {
   float: left;
 }
@@ -1178,8 +1181,38 @@ and more scalable.
 .teaser-item-events a.button:last-child {
   margin-bottom: 0px;
 }
-.team-items .teaser-item:nth-child(3n+4) {
-  clear: left;
+.team-items {
+  text-align: justify;
+  font-size: 0;
+}
+.team-items:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+.team-items .teaser-item,
+.team-items .gap {
+  display: inline-block;
+  vertical-align: top;
+  width: 31.491712705%;
+  text-align: left;
+}
+.team-items .teaser-item h2,
+.team-items .gap h2 {
+  font-size: 28px;
+}
+.team-items .teaser-item p,
+.team-items .gap p {
+  font-size: 18px;
+}
+.team-items .mix {
+  display: none;
+}
+.filter {
+  cursor: pointer;
+}
+.filter.active {
+  color: #2aabe1;
 }
 .custom-layout-wrapper > div {
   background-color: #ffffff;
@@ -1397,10 +1430,6 @@ and more scalable.
 .accordion h3,
 .accordion h4 {
   margin: 0;
-}
-.faq-nav {
-  padding-top: 20px;
-  padding-bottom: 16px;
 }
 .faq-nav h1,
 .faq-nav h2,

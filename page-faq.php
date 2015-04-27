@@ -38,7 +38,7 @@ get_header();
 			if(!empty($categories)) {
 				foreach ($categories as $key => $value) { ?>
 				
-				<div class="<?php if($key % 3 == 0 )echo 'first'?> fourcol background-panel faq-nav clearfix">
+				<div class="<?php if($key % 3 == 0 )echo 'first'?> fourcol background-panel background-panel__slim faq-nav clearfix">
 					<h2><a href="#<?php echo $value->slug ?>"><?php echo $value->name ?></a></h2>
 				</div>
 				
