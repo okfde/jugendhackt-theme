@@ -13,7 +13,7 @@ get_header(); ?>
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<section>
-			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix withicon'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix withicon background-panel'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 				<header class="article-header">
 					<h2 class="page-title" itemprop="headline"></h2>
@@ -44,7 +44,7 @@ get_header(); ?>
 			$embed_desc = get_field('embed_description');
 
 			if($embed) { ?>
-			<div class="background-panel attachment">
+			<div class="background-panel">
 				<h2><?php echo $embed_title;?></h2>
 				<div class="">
 					<?php echo $embed;?>
@@ -64,7 +64,7 @@ get_header(); ?>
 			$video_desc = get_field('video_description');
 
 			if($video_embed) { ?>
-			<div class="background-panel attachment">
+			<div class="background-panel">
 				<h2><?php echo $video_title;?></h2>
 				<?php echo $video_embed;?>
 				<p>
@@ -78,7 +78,7 @@ get_header(); ?>
 			<?php
 			$attachments = new Attachments( 'my_attachments'); /* pass the instance name */ 
 			if( $attachments->exist() ) { ?>
-			<section class="attachment background-panel">
+			<section class="background-panel">
 				<div class="slick">
 					<?php
 					for ( $i = 0 ; $i < $attachments->total() ; $i++) { ?>

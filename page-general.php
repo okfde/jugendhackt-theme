@@ -16,13 +16,13 @@ get_header();
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
 		<section class="twelvecol first clearfix">
-			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix withicon'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix withicon background-panel'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 				<header class="article-header">
-					<h2 class="page-title" itemprop="headline"><?php the_title(); ?></h2>
+					<h2 class="page-title page-title__main" itemprop="headline"><?php the_title(); ?></h2>
 				</header> <!-- end article header -->
 
-				<section class="entry-content clearfix" itemprop="articleBody">
+				<section class="entry-content__main clearfix" itemprop="articleBody">
 					<?php the_content(); ?>						
 				</section> <!-- end article section -->
 

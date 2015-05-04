@@ -33,51 +33,55 @@ get_header();
 			function sort_category_slug  ($a, $b) {
 				return strcmp($a->slug,$b->slug);
 			}
+
 			usort($categories,'sort_category_slug');
+			if(!empty($categories)) { ?>
 			
-			if(!empty($categories)) {
+			<div class="fourcol first">
+				
+			<?php
 				foreach ($categories as $key => $value) { ?>
-				
-				<div class="<?php if($key % 3 == 0 )echo 'first'?> fourcol background-panel background-panel__slim faq-nav clearfix">
-					<h2><a href="#<?php echo $value->slug ?>"><?php echo $value->name ?></a></h2>
-				</div>
-				
+					<div class="faq-nav background-panel background-panel__slim">
+						<h2 class="filter" data-filter=".cat-<?php echo $value->term_id; ?>" ><?php echo $value->name ?></h2>
+					</div>
 				<?php
 				}
-			}
+			} ?>	
 
-			?>					
+			</div>
 
-		</div>
+			<div class="faq-groups mixitup-container eightcol last">
 
 		<?php 
 
 		$faqs = get_field('faq');
 		if(!empty($faqs)) {
 			foreach ($categories as $key => $category) { ?>
-				<section id="<?php echo $category->slug; ?>" class="twelvecol background-panel first entry-content" >
-				
-				<h2><?php echo $category->name; ?></h2>
-				
-				<div id="accordion-<?php  echo $category->slug; ?>" class="accordion" >
-					<?php 
-					foreach ($faqs as $key => $faq) {
-						foreach ($faq['faq_group'] as $key => $faq_group) {
-							if( $faq_group->term_id == $category->term_id ) {
-								echo '<h3>'.$faq['faq_question'] . '</h3>';
-								echo '<div>'.$faq['faq_answer'].'</div>';
+				<div class="background-panel mix cat-<?php  echo $category->term_id; ?> entry-content" >
+					
+					<h2><?php echo $category->name; ?></h2>
+					
+					<div id="accordion-<?php  echo $category->term_id; ?>" class="accordion" >
+						<?php 
+						foreach ($faqs as $key => $faq) {
+							foreach ($faq['faq_group'] as $key => $faq_group) {
+								if( $faq_group->term_id == $category->term_id ) {
+									echo '<h3>'.$faq['faq_question'] . '</h3>';
+									echo '<div>'.$faq['faq_answer'].'</div>';
+								}
 							}
 						}
-					}
-					?>
-				</div>
-				</section> 
+						?>
+					</div>
+				</div> 
 				<?php
 			}
 		}
 
 		?>
-	
+		</div>
+	</div>
+
 
 	<?php endwhile; else : ?>
 

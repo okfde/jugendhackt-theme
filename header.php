@@ -24,7 +24,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic' rel='stylesheet' type='text/css'>
 	<link href='<?php echo get_template_directory_uri(); ?>/library/css/ebisu.css' rel='stylesheet' type='text/css'>
 	<link href='<?php echo get_template_directory_uri(); ?>/library/css/slick.css' rel='stylesheet' type='text/css'>
-
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
@@ -35,7 +35,8 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.fitvids.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/slick.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.collapse.js"></script>
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.mixitup.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.mixitup.min.js"></script>																					
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/isotope.pkgd.min.js"></script>																					
 
 </head>
 
@@ -53,25 +54,26 @@
 					<div id="description">
 						<?php  bloginfo('description'); ?>
 					</div>
+					<i class="fa fa-2x fa-bars"></i>
 				</div>
 
-				<div id="metawrapper" class="clearfix">
-					<? if ( has_nav_menu('cta-links') ) { ?> 
-					<div class="cta-wrap uppercase ">
-						<?php bones_cta_links(); ?>								
-					</div>
-					<? } ?>
+				<div class="nav-wrapper">
+					<div id="metawrapper" class="clearfix">
+						<? if ( has_nav_menu('cta-links') ) { ?> 
+						<div class="cta-wrap uppercase ">
+							<?php bones_cta_links(); ?>								
+						</div>
+						<? } ?>
 
-					<nav role="navigation" class="social-nav-wrap" >
-						<?php bones_meta_links(); ?>
+						<nav role="navigation" class="social-nav-wrap" >
+							<?php bones_meta_links(); ?>
+						</nav>
+					</div>
+					
+					<nav role="navigation">
+						<?php bones_main_nav(); ?>
 					</nav>
 				</div>
-
-
-
-				<nav role="navigation">
-					<?php bones_main_nav(); ?>
-				</nav>
 
 			</div> <!-- end #inner-header -->
 

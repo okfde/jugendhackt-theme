@@ -145,6 +145,9 @@ upon your base.less styles.
 .header #logo {
   float: left;
 }
+.header .fa-bars {
+  bottom: 0;
+}
 .header #description {
   font-size: 30px;
   line-height: 1.25em;
@@ -306,6 +309,10 @@ values are commented out on each line.
 .last {
   float: right;
 }
+.oddendcol {
+  float: none;
+  margin: 0 auto;
+}
 /******************************************************************
 Site Name:
 Author:
@@ -325,9 +332,41 @@ GENERAL STYLES
 /*********************
 LAYOUT & GRID STYLES
 *********************/
+.fa-bars {
+  display: none;
+}
+.nav-wrapper {
+  width: inherit;
+}
+.background-panel {
+  padding: 50px;
+  margin-bottom: 75px;
+}
+.team-items .teaser-item {
+  text-align: left;
+}
+.team-items .teaser-item h2 {
+  font-size: 28px;
+}
+.team-items .teaser-item p {
+  font-size: 18px;
+}
+.isotope-container .grid-sizer,
+.isotope-container .teaser-item {
+  width: 48.25%;
+}
+.isotope-container .gutter-sizer {
+  width: 3.5%;
+}
 /*********************
 HEADER STYLES
 *********************/
+.header #inner-header {
+  padding-top: 50px;
+}
+.header .nav-wrapper {
+  display: block;
+}
 .header #description {
   font-size: 34px;
 }
@@ -473,6 +512,29 @@ LAYOUT & GRID STYLES
 *********************/
 .wrap {
   max-width: 1440px;
+}
+.isotope-container .grid-sizer,
+.isotope-container .teaser-item {
+  width: 31%;
+}
+.isotope-container .gutter-sizer {
+  width: 3.5%;
+}
+.teaser-item-events .teaser-body-left {
+  float: left;
+}
+.teaser-item-events .teaser-body-right {
+  float: right;
+}
+.teaser-item-events .button,
+.teaser-item-events a.button {
+  display: block;
+  margin-bottom: 5px;
+  color: white ;
+}
+.teaser-item-events .button:last-child,
+.teaser-item-events a.button:last-child {
+  margin-bottom: 0px;
 }
 /*********************
 HEADER STYLES

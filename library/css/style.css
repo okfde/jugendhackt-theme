@@ -746,7 +746,7 @@ body {
 03. LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 96%;
+  width: 93%;
   margin: 0 auto;
 }
 /*********************
@@ -877,12 +877,17 @@ h5,
 }
 .header #inner-header {
   position: relative;
-  padding-top: 50px;
+  padding-top: 15px;
   padding-bottom: 22px;
+}
+.header .nav-wrapper {
+  display: none;
+  width: 100%;
 }
 .header #logo {
   margin-bottom: 10px;
   margin-right: 20px;
+  position: relative;
 }
 .header #logo img {
   max-width: 100%;
@@ -890,11 +895,17 @@ h5,
   display: block;
 }
 .header #description {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.25em;
   margin: 0px;
   margin-top: -6px;
   margin-left: 25px;
+}
+.header .fa-bars {
+  position: absolute;
+  cursor: pointer;
+  bottom: -6px;
+  right: 0;
 }
 .header .cta-wrap {
   float: left;
@@ -909,6 +920,10 @@ h5,
 }
 .header .cta-wrap li:last-child {
   margin-right: 20px;
+}
+.header .cta-wrap .cta-secondary {
+  color: white;
+  background: #808080;
 }
 .header .cta-wrap a,
 .header .cta-wrap a:hover,
@@ -1030,8 +1045,7 @@ and more scalable.
 .page-navigation {
   text-align: center;
   background: #ffffff;
-  padding: 50px;
-  margin-bottom: 75px;
+  margin-bottom: 25px;
   padding: 25px;
 }
 .page-navigation ol {
@@ -1069,6 +1083,14 @@ and more scalable.
   margin: 0;
   padding: 20px 0 10px 0;
 }
+.background-panel {
+  padding: 25px;
+  margin-bottom: 25px;
+}
+.background-panel__slim {
+  padding: 20px 25px 14px 25px;
+  margin-bottom: 25px;
+}
 #content {
   background: url(../images/background.png);
   background-position: 50% 0%;
@@ -1078,8 +1100,6 @@ and more scalable.
 }
 .hentry {
   background-color: #ffffff;
-  padding: 50px;
-  margin-bottom: 75px;
 }
 .hentry:last-child {
   margin-bottom: 50px;
@@ -1087,7 +1107,7 @@ and more scalable.
 .hentry footer a,
 .hentry footer a:visited,
 .hentry footer a:active {
-  text-decoration: underline;
+  color: #2aabe1;
 }
 /* end .hentry */
 .attachment {
@@ -1110,7 +1130,8 @@ and more scalable.
   top: 0;
   left: 0;
   padding: 25px;
-  background: rgba(255, 255, 255, 0.7);
+  background: #2aabe1;
+  color: white;
   height: 100%;
   width: 100%;
 }
@@ -1122,6 +1143,10 @@ and more scalable.
 }
 .project-links h3 {
   margin: 0;
+}
+.teaser-item {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .teaser-item h2 {
   margin-bottom: 0.5em;
@@ -1158,22 +1183,9 @@ and more scalable.
   margin-top: 0 !important;
   display: block;
 }
-.background-panel {
-  padding: 50px;
-  margin-bottom: 75px;
-}
-.background-panel__slim {
-  padding: 20px 25px 14px 25px;
-}
-.teaser-item-events .teaser-body-left {
-  float: left;
-}
-.teaser-item-events .teaser-body-right {
-  float: right;
-}
 .teaser-item-events .button,
 .teaser-item-events a.button {
-  display: block;
+  display: inline-block;
   margin-bottom: 5px;
   color: white ;
 }
@@ -1181,35 +1193,28 @@ and more scalable.
 .teaser-item-events a.button:last-child {
   margin-bottom: 0px;
 }
-.team-items {
-  text-align: justify;
-  font-size: 0;
-}
-.team-items:after {
-  content: '';
-  display: inline-block;
-  width: 100%;
-}
-.team-items .teaser-item,
-.team-items .gap {
-  display: inline-block;
-  vertical-align: top;
-  width: 31.491712705%;
+.team-items .teaser-item {
   text-align: left;
 }
-.team-items .teaser-item h2,
-.team-items .gap h2 {
-  font-size: 28px;
+.team-items .teaser-item h2 {
+  font-size: 26px;
 }
-.team-items .teaser-item p,
-.team-items .gap p {
-  font-size: 18px;
+.team-items .teaser-item p {
+  font-size: 13px;
 }
-.team-items .mix {
+.isotope-container .grid-sizer,
+.isotope-container .teaser-item {
+  width: 100%;
+}
+.isotope-container .gutter-sizer {
+  width: 0;
+}
+.mixitup-container .mix {
   display: none;
 }
 .filter {
   cursor: pointer;
+  text-transform: uppercase;
 }
 .filter.active {
   color: #2aabe1;
@@ -1299,8 +1304,7 @@ and more scalable.
 }
 .archive-title {
   background: #ffffff;
-  padding: 50px;
-  margin-bottom: 75px;
+  padding: 25px;
   font-family: "Ebisu", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 400;
@@ -1330,12 +1334,12 @@ and more scalable.
 .byline a,
 .byline a:visited,
 .byline a:active {
-  text-decoration: underline;
+  color: #2aabe1;
 }
 .tags a,
 .tags a:visited,
 .tags a:active {
-  text-decoration: underline;
+  color: #2aabe1;
 }
 /* entry content */
 .entry-content {
@@ -1353,7 +1357,7 @@ and more scalable.
 .entry-content p a,
 .entry-content p a:visited,
 .entry-content p a:active {
-  text-decoration: underline;
+  color: #2aabe1;
 }
 .entry-content ul,
 .entry-content ol {
@@ -1422,7 +1426,9 @@ and more scalable.
 .content-more p:first-child {
   margin-top: 0;
 }
-.more-toggle {
+.more-toggle,
+.more-toggle:hover {
+  color: #2aabe1;
   font-size: 1.125em;
 }
 .accordion h1,
@@ -1436,11 +1442,27 @@ and more scalable.
 .faq-nav h3,
 .faq-nav h4 {
   margin: 0;
-  text-transform: uppercase;
+}
+.faq-groups .mix {
+  width: 100%;
 }
 .partner-group img {
   vertical-align: middle;
-  margin: 0 20px 20px 20px;
+  margin: 20px 40px 20px 40px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+}
+.partner-group img:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+.page-presse .page-title__main,
+.page-partner .page-title__main,
+.page-presse .entry-content__main,
+.page-partner .entry-content__main {
+  text-align: center;
 }
 /*=============================
 =            Forms            =
@@ -1454,8 +1476,8 @@ and more scalable.
 }
 .widget {
   background: #ffffff;
-  padding: 50px;
-  margin-bottom: 75px;
+  padding: 25px;
+  margin-bottom: 25px;
 }
 .widget img {
   max-width: 100%;
@@ -1476,6 +1498,9 @@ and more scalable.
   color: #ffffff;
   padding-bottom: 3em;
   padding-top: 1em;
+}
+.footer #inner-footer img {
+  vertical-align: middle;
 }
 .footer #inner-footer a {
   color: #ffffff;
@@ -1523,6 +1548,9 @@ upon your base.less styles.
 ******************************************************************/
   .header #logo {
     float: left;
+  }
+  .header .fa-bars {
+    bottom: 0;
   }
   .header #description {
     font-size: 30px;
@@ -1692,6 +1720,10 @@ values are commented out on each line.
   .last {
     float: right;
   }
+  .oddendcol {
+    float: none;
+    margin: 0 auto;
+  }
   /******************************************************************
 Site Name:
 Author:
@@ -1711,9 +1743,41 @@ GENERAL STYLES
   /*********************
 LAYOUT & GRID STYLES
 *********************/
+  .fa-bars {
+    display: none;
+  }
+  .nav-wrapper {
+    width: inherit;
+  }
+  .background-panel {
+    padding: 50px;
+    margin-bottom: 75px;
+  }
+  .team-items .teaser-item {
+    text-align: left;
+  }
+  .team-items .teaser-item h2 {
+    font-size: 28px;
+  }
+  .team-items .teaser-item p {
+    font-size: 18px;
+  }
+  .isotope-container .grid-sizer,
+  .isotope-container .teaser-item {
+    width: 48.25%;
+  }
+  .isotope-container .gutter-sizer {
+    width: 3.5%;
+  }
   /*********************
 HEADER STYLES
 *********************/
+  .header #inner-header {
+    padding-top: 50px;
+  }
+  .header .nav-wrapper {
+    display: block;
+  }
   .header #description {
     font-size: 34px;
   }
@@ -1867,6 +1931,29 @@ LAYOUT & GRID STYLES
 *********************/
   .wrap {
     max-width: 1440px;
+  }
+  .isotope-container .grid-sizer,
+  .isotope-container .teaser-item {
+    width: 31%;
+  }
+  .isotope-container .gutter-sizer {
+    width: 3.5%;
+  }
+  .teaser-item-events .teaser-body-left {
+    float: left;
+  }
+  .teaser-item-events .teaser-body-right {
+    float: right;
+  }
+  .teaser-item-events .button,
+  .teaser-item-events a.button {
+    display: block;
+    margin-bottom: 5px;
+    color: white ;
+  }
+  .teaser-item-events .button:last-child,
+  .teaser-item-events a.button:last-child {
+    margin-bottom: 0px;
   }
   /*********************
 HEADER STYLES

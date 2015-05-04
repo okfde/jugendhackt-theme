@@ -3,7 +3,7 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<section>
-		<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix withicon'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+		<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix withicon background-panel'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 			<header class="article-header">
 				<h2 class="page-title" itemprop="headline"><?php the_title(); ?></h2>

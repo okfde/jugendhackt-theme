@@ -33,6 +33,10 @@ jQuery(document).ready(function($) {
     $('.entry-content, .sidebar').fitVids();
     $('.entry-content').fitVids({ customSelector: "iframe[src*='maps.google']" });
 
+    $('.fa-bars').click(function(){
+        $('.nav-wrapper').slideToggle();
+    });
+
     $('.more-toggle').click(function(){
        
        var target = '#' + $(this).data('toggletarget');
@@ -62,7 +66,30 @@ jQuery(document).ready(function($) {
         }
     ); 
 
-    $('.team-items').mixItUp();
+    // FAQ Mixitup
+    $('.mixitup-container').mixItUp();
+
+    // Team Isotope
+    var  $container = $('.isotope-container').isotope({
+      masonry: {
+        columnWidth: '.grid-sizer',
+        gutter: '.gutter-sizer'
+      },
+      itemSelector: '.teaser-item',
+      percentPosition: true
+    });
+
+    // filter items on button click
+    $('#filters .filter').on( 'click', function() {
+      var filterValue = $(this).attr('data-filter');
+      $container.isotope({ filter: filterValue });
+      $('#filters .filter').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    $container.isotope('stamp',  $('#filters'));
+
+
 
     /*
     Responsive jQuery is a tricky thing.

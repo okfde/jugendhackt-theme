@@ -1,4 +1,4 @@
-<div class="attachment background-panel <?php if($key % 3 == 0 )echo 'first'?> fourcol teaser-item">
+<div class="background-panel <?php if($key % 3 == 0 )echo 'first'?> fourcol teaser-item">
 
 	<h2><?php echo get_the_title($project->ID) ?></h2>
 	

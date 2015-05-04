@@ -12,7 +12,7 @@ if(!empty($categories)){
 
 	// build the classes for filtering
 	foreach ($categories as $key5 => $category) {
-		$filterClasses .= $category->slug;
+		$filterClasses .= 'term-'.$category->term_id;
 		if( (count($categories) - 1) != $key5) { 
 			$filterClasses .= ' '; 
 		}
@@ -21,7 +21,7 @@ if(!empty($categories)){
 
 ?>
 
-<div class="mix <?php echo $filterClasses; ?> attachment background-panel teaser-item">
+<div class="mix <?php echo $filterClasses; ?> background-panel teaser-item">
 	
 	<h2 class="<?php echo $badgeClasses; ?>"><?php echo get_the_title($member->ID) ?></h2>
 
