@@ -3,7 +3,7 @@
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<!-- page content -->
 	<section class="first clearfix" >
-		<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix withicon'); ?> role="article" >
+		<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix withicon background-panel'); ?> role="article" >
 
 			<header class="article-header">
 				<h2 class="page-title" ><?php the_title(); ?></h2>

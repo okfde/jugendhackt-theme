@@ -89,7 +89,7 @@ body {
 *********************/
 
 .wrap {
-	width: 96%;
+	width: 93%;
 	margin: 0 auto;
 }
 
@@ -216,13 +216,19 @@ h5, .h5 {
 
 	#inner-header {
 		position: relative;
-		padding-top: 50px;
+		padding-top: 15px;
 		padding-bottom: 22px;
+	}
+
+	.nav-wrapper {
+		display: none;
+		width: 100%;
 	}
 
 	#logo {
 		margin-bottom: 10px;
 		margin-right: 20px;
+		position: relative;
 	}
 
 	#logo img {
@@ -232,12 +238,19 @@ h5, .h5 {
 	}
 	
 	#description {
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 1.25em;
 		margin: 0px;
 		margin-top: -6px;
 		margin-left: 25px;
 	}	
+
+	.fa-bars {
+		position: absolute;
+		cursor: pointer;
+		bottom: -6px;
+		right: 0;
+	}
 
 	.cta-wrap {
 
@@ -255,6 +268,11 @@ h5, .h5 {
 			&:last-child {
 				margin-right: 20px;
 			}
+		}
+
+		.cta-secondary {
+			color: white;
+			background: @color4;
 		}
 
 		a, a:hover, a:visited { color: @white; }
@@ -461,6 +479,17 @@ and more scalable.
 	padding: 20px 0 10px 0;
 }
 
+.background-panel {
+	padding: 25px;
+	margin-bottom: 25px;
+}
+
+.background-panel__slim {
+
+	padding: 20px 25px 14px 25px;
+	margin-bottom:25px;
+
+}
 
 #content {
 	
@@ -474,8 +503,6 @@ and more scalable.
 
 .hentry {
 	background-color: @color2;
-	padding: 50px;
-	margin-bottom: 75px;
 
 	&:last-child {
 		margin-bottom: 50px; 
@@ -485,7 +512,9 @@ and more scalable.
 
 	footer {
 		a, a:visited, a:active {
-			text-decoration: underline; 
+			//text-decoration: underline; 
+			color: @color3;
+
 		}
 	}
 
@@ -511,7 +540,8 @@ and more scalable.
 			top: 0;
 			left: 0;
 			padding: 25px;
-			background: RGBA(255,255,255,0.7);
+			background: @color3;
+			color: white;
 			
 			height: 100%;
 			width: 100%;
@@ -534,6 +564,10 @@ and more scalable.
 	}
 
 	.teaser-item {
+
+		padding-top: 40px;
+		padding-bottom: 40px;
+
 
 		h2 {
 			margin-bottom: 0.5em;	
@@ -573,29 +607,18 @@ and more scalable.
 		}
 	}
 
-	.background-panel {
-		padding: 50px;
-		margin-bottom: 75px;
-	}
-	
-	.background-panel__slim {
-	
-		padding: 20px 25px 14px 25px;
-	
-	}
-
 	.teaser-item-events {
 		
 		.teaser-body-left {
-			float: left;
+			//float: left;
 		}
 
 		.teaser-body-right {
-			float: right;
+			//float: right;
 		}
 
 		.button , a.button {
-			display: block;
+			display: inline-block;
 			margin-bottom: 5px;
 			color: white ;
 
@@ -614,41 +637,42 @@ and more scalable.
 	}
 
 	.team-items {
-
-		text-align: justify;
-		font-size: 0;
-
-		&:after{
-		  content: '';
-		  display: inline-block;
-		  width: 100%;
-		}
 		
-		.teaser-item , .gap {
-			display: inline-block;
-			vertical-align: top;			
-			width: 31.491712705%;
+		.teaser-item {
+			
 			text-align: left;
 
 			h2 {
-				font-size: 28px;
+				font-size: 26px;
 			}
 			
 			p {
-				font-size: 18px;
+				font-size: 13px;
 			}
 
 		}
 
-		.mix{
-			display: none;
+	}	
+
+
+	.isotope-container {
+		
+		.grid-sizer, .teaser-item {
+			width: 100%;
 		}
 
+		.gutter-sizer {
+			width: 0;
+		}
+	}
+
+	.mixitup-container .mix{
+		display: none;
 	}
 
 	.filter {
-
 		cursor: pointer;
+		text-transform: uppercase;
 		&.active {
 			color: @color3;
 		}
@@ -750,13 +774,15 @@ and more scalable.
 		.byline {
 			time {}
 			a, a:visited, a:active {
-				text-decoration: underline; 
+				// text-decoration: underline; 
+				color: @color3;
 			}
 		}
 
 		.tags {
 			a, a:visited, a:active {
-				text-decoration: underline; 
+				// text-decoration: underline;
+				color: @color3;
 			}
 		}
 
@@ -768,7 +794,9 @@ and more scalable.
 				line-height: 1.5em;
 				
 				a, a:visited, a:active {
-					text-decoration: underline; 
+					//text-decoration: underline; 
+					color: @color3;
+
 				}
 			}
 
@@ -916,8 +944,9 @@ and more scalable.
 	}
 }
 
-.more-toggle {
-
+.more-toggle , .more-toggle:hover {
+	
+	color: @color3;
 	font-size: 1.125em;
 
 }
@@ -933,16 +962,36 @@ and more scalable.
 .faq-nav {
 	h1, h2, h3, h4 {
 		margin: 0;
-		text-transform: uppercase;
 	}	
+}
+
+.faq-groups .mix {
+	width: 100%;
 }
 
 .partner-group {
 	img {
 		vertical-align: middle;
-		margin: 0 20px 20px 20px;
+		margin: 20px 40px 20px 40px;
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+		filter: gray;
+		filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+	
+	&:hover {
+		-webkit-filter: none;	
+		filter: none;
+	}
+
 	}
 }
+
+.page-presse , .page-partner {
+	.page-title__main, .entry-content__main {
+		text-align: center;
+	}
+}
+
 
 /*=============================
 =            Forms            =
@@ -1005,6 +1054,10 @@ and more scalable.
 		color: @white;
 		padding-bottom: 3em;
 		padding-top: 1em;
+
+		img {
+			vertical-align: middle;
+		}
 
 		a {
 			color: @white;

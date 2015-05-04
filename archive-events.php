@@ -38,8 +38,9 @@ $wp_query = new WP_Query( $args );
 				}
 
 				if($odd && ( count($wp_query->posts)-1 == $i  ) ) {
-					$colClasses = "last twelvecol"; 
-					$innerColClasses = array( 'first sixcol','last sixcol' );
+					// $colClasses = "last twelvecol"; 
+					// $innerColClasses = array( 'first sixcol','last sixcol' );
+					$colClasses = "first sixcol oddendcol";
 				}
 
 				?>

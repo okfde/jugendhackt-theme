@@ -4,6 +4,35 @@ Template Name: Page Team
 */
 get_header(); 
 
+// Get the categories 
+$region_parent_obj = get_term_by('name', 'region', 'page_category');
+$region_parent_id = $region_parent_obj->term_id;
+
+$args = array(
+	'child_of'                 => $region_parent_id,
+	'orderby'                  => 'name',
+	'order'                    => 'ASC',
+	'hide_empty'               => 1,
+	'hierarchical'             => 1,
+	'taxonomy'                 => 'page_category',
+); 
+
+$categories = get_categories( $args );
+
+
+// Get the team members
+$args = array(
+	'post_parent' => $post->ID,
+	'orderby' => 'menu_order',
+	'order' => 'ASC',
+	'post_type'   => 'page', 
+	'posts_per_page' => -1,
+	'post_status' => 'published' ); 
+
+$team_members = get_children( $args );
+$team_members = array_values($team_members);
+
+
 ?>
 
 <div id="content" data-speed="3" >
@@ -13,66 +42,31 @@ get_header();
 		<div id="main"  role="main">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		
-		<section class="twelvecol background-panel background-panel__slim first clearfix">
-
-				<div class="entry-content clearfix" itemprop="articleBody">
-					
-					<span class="h2 filter" data-filter="all" >Alle </span>
-
-					<?php
-
-					$region_parent_obj = get_term_by('name', 'region', 'page_category');
-					$region_parent_id = $region_parent_obj->term_id;
-
-					$args = array(
-						'child_of'                 => $region_parent_id,
-						'orderby'                  => 'name',
-						'order'                    => 'ASC',
-						'hide_empty'               => 1,
-						'hierarchical'             => 1,
-						'taxonomy'                 => 'page_category',
-					); 
-
-					$categories = get_categories( $args );
-					
-					if(!empty($categories)) {
-						foreach ($categories as $key => $value) { ?>
-							
-							<span class="h2 filter" data-filter=".<?php echo $value->slug; ?>" > <?php echo $value->name;  ?> </span>
-
-						<? 	
-						}
-					}
-
-					?>					
-				</div> <!-- end article section -->
-
-		</section>
 	
-		<section class="twelvecol first entry-content team-items" >
-		
+		<section class="isotope-container twelvecol first entry-content team-items" >
+		<div class="grid-sizer"></div>
+		<div class="gutter-sizer"></div>
+
+		<div id="filters" class="entry-content background-panel teaser-item" itemprop="articleBody">
+				
+			<h2 class="filter" data-filter="*" >Alle</h2>
+			<?php
+			if(!empty($categories)) {
+				foreach ($categories as $key => $value) { ?>
+					<h2 class="filter" data-filter=".term-<?php echo $value->term_id; ?>" > <?php echo $value->name;  ?> </h2>
+				<? 	
+				}
+			} ?>	
+
+		</div> <!-- end article section -->
+
 		<?php 
 
-		$args = array(
-			'post_parent' => $post->ID,
-			'orderby' => 'menu_order',
-			'order' => 'ASC',
-			'post_type'   => 'page', 
-			'posts_per_page' => -1,
-			'post_status' => 'published' ); 
-
-		$team_members = get_children( $args );
-		$team_members = array_values($team_members);
-		
 		if( !empty($team_members) ) {
-
 			foreach ($team_members as $key => $member) {
 				include('partials/team-member.php');
 			}
 		} ?>
-
-		<div class="gap"></gap>
 
 	</section>
 

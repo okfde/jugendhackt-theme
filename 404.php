@@ -6,7 +6,7 @@
 
 					<div id="main" class="eightcol first clearfix" role="main">
 
-						<article id="post-not-found" class="hentry clearfix">
+						<article id="post-not-found" class="background-panel clearfix">
 
 							<header class="article-header">
 

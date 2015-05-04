@@ -49,7 +49,7 @@ require_once('library/translation/translation.php'); // this comes turned off by
 
 // Thumbnail sizes
 add_image_size( 'panel-2col', 600, 350, true );
-add_image_size( 'partner-logo', 250,200, false);
+add_image_size( 'partner-logo', 9999,100, false);
 add_image_size( 'square-600', 500, 500, true);
 
 // add_image_size( 'bones-thumb-300', 300, 100, true );
@@ -370,6 +370,16 @@ function page_category() {
 // Hook into the 'init' action
 add_action( 'init', 'page_category', 0 );
 
+//Page Slug Body Class
+function add_slug_body_class( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+}
+
+add_filter( 'body_class', 'add_slug_body_class' );
 
 
 ?>
