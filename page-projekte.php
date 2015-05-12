@@ -2,99 +2,63 @@
 /*
 Template Name: Page Projekte
 */
-get_header(); ?>
+get_header(); 
+
+// Get the categories 
+$region_parent_obj = get_term_by('name', 'region', 'page_category');
+$region_parent_id = $region_parent_obj->term_id;
+
+$args = array(
+	'child_of'                 => $region_parent_id,
+	'orderby'                  => 'name',
+	'order'                    => 'ASC',
+	'hide_empty'               => 1,
+	'hierarchical'             => 1,
+	'taxonomy'                 => 'page_category',
+); 
+
+$categories = get_categories( $args );
+
+// Get the projects
+$projects = get_field('hackdash_projects');
+
+?>
 
 <div id="content" data-speed="3" >
 	<div id="inner-content" class="wrap clearfix">
 
 	
-	<div id="main" class="eightcol first clearfix" role="main">
+		<div id="main"  role="main">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<section>
-			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix withicon background-panel'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+	
+		<section class="isotope-container twelvecol first entry-content team-items" >
+		<div class="grid-sizer"></div>
+		<div class="gutter-sizer"></div>
 
-				<header class="article-header">
-					<h2 class="page-title page-title__main" itemprop="headline"><?php the_title(); ?></h2>
-				</header> <!-- end article header -->
+		<div id="filters" class="entry-content background-panel teaser-item" itemprop="articleBody">
+				
+			<h2 class="filter" data-filter="*" >Alle</h2>
+			<?php
+			if(!empty($categories)) {
+				foreach ($categories as $key => $value) { ?>
+					<h2 class="filter" data-filter=".term-<?php echo $value->term_id; ?>" > <?php echo $value->name;  ?> </h2>
+				<? 	
+				}
+			} ?>	
 
-				<section class="entry-content__main clearfix" itemprop="articleBody">
-					<?php the_content(); ?>						
-				</section> <!-- end article section -->
-
-
-			</article> <!-- end article -->
-		</section>
+		</div> <!-- end article section -->
 
 		<?php 
-		$custom_layout_content = get_field('custom_layout_content');
-		if($custom_layout_content) { ?>
-		<section class="custom-layout-wrapper entry-content clearfix">
-			<?php echo $custom_layout_content;?>
-		</section>
-		<?php } ?>
 
-		<section class="entry-content">
-			<?php 
-			// Get the Map Embed
+		if( !empty($projects) ) {
+			foreach ($projects as $key => $project) {
+				include('partials/project-teaser.php');
+			}
+		} ?>
 
-			$embed = get_field('embed');
-			$embed_title = get_field('embed_title');
-			$embed_desc = get_field('embed_description');
+	</section>
 
-			if($embed) { ?>
-			<div class="background-panel">
-				<h2><?php echo $embed_title;?></h2>
-				<div class="">
-					<?php echo $embed;?>
-				</div>
-				<p>
-					<?php echo $embed_desc;?>
-				</p>
-			</div>
-			<?php } ?>
-
-
-			<?php 
-			// Get the Map Embed
-
-			$video_embed = get_field('video_embedcode');
-			$video_title = get_field('video_title');
-			$video_desc = get_field('video_description');
-
-			if($video_embed) { ?>
-			<div class="background-panel">
-				<h2><?php echo $video_title;?></h2>
-				<?php echo $video_embed;?>
-				<p>
-					<?php echo $video_desc;?>
-				</p>
-			</div>
-			<?php } ?>
-
-		</section>
-
-			<?php
-			$attachments = new Attachments( 'my_attachments'); /* pass the instance name */ 
-			if( $attachments->exist() ) { ?>
-			<section class="background-panel">
-				<div class="slick">
-					<?php
-					for ( $i = 0 ; $i < $attachments->total() ; $i++) { ?>
-					<div class="">
-						<?php
-						echo $attachments->image( 'large', $i );
-						$caption = $attachments->field('caption',$i);
-						if(!empty($caption)){
-							echo '<p>'.$caption."</p>";
-						}?>
-					</div>
-					<?php }
-					?>
-				</div>
-			</section>
-
-			<?php } ?>
 
 
 	<?php endwhile; else : ?>
@@ -114,9 +78,6 @@ get_header(); ?>
 	<?php endif; ?>
 
 	</div> <!-- end #main -->
-
-	<?php get_sidebar(); ?>
-
 
 	</div> <!-- end #inner-content -->
 </div> <!-- end #content -->
