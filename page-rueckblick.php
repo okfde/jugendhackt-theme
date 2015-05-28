@@ -20,7 +20,9 @@ get_header();
 			'post_parent' => $post->ID,
 			'post_type'   => 'page', 
 			'posts_per_page' => -1,
-			'post_status' => 'published' ); 
+			'post_status' => 'published',
+			'orderby' => 'menu_order',
+			'order' => 'ASC' ); 
 
 
 		$reviews = get_children( $args );

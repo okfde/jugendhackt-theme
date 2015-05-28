@@ -23,7 +23,19 @@ get_header();
 				</header> <!-- end article header -->
 
 				<section class="entry-content__main clearfix" itemprop="articleBody">
-					<?php the_content(); ?>						
+					
+					<?php 
+					$content = get_the_content_by_id($post->ID);
+					$content = get_extended($content);
+					?>
+
+					<div class="content-main"><?php echo $content['main'];?></p></div>
+					
+					<?php if(!empty($content['extended'])) { ?>
+						<div class="content-more" id="more-<?php echo $post->ID ; ?>" ><p><?php echo $content['extended']; ?></div>
+						<a class="more-toggle" data-toggletarget="more-<?php echo $post->ID ; ?>">Mehr...</a>
+					<?php } ?>
+
 				</section> <!-- end article section -->
 
 			</article> <!-- end article -->
@@ -34,11 +46,29 @@ get_header();
 			if(!empty($leftcol)) { ?>
 
 			<section class="sixcol first background-panel entry-content clearfix">
-				<?php echo $leftcol; ?>
+					<?php 
+
+					$content = get_extended($leftcol); ?>
+					<div class="content-main"><?php echo $content['main'];?></p></div>
+					
+					<?php if(!empty($content['extended'])) { ?>
+						<div class="content-more" id="more-<?php echo $post->ID ; ?>-leftcol" ><p><?php echo $content['extended']; ?></div>
+						<a class="more-toggle" data-toggletarget="more-<?php echo $post->ID ; ?>-leftcol">Mehr...</a>
+					<?php } ?>
 			</section>
 
 			<section class="sixcol last background-panel entry-content clearfix">
-				<?php echo get_field('gp_rightcol'); ?>
+				<?php 
+
+				$rightcol = get_field('gp_rightcol');
+				$content = get_extended($rightcol); ?>
+				<div class="content-main"><?php echo $content['main'];?></p></div>
+				
+				<?php if(!empty($content['extended'])) { ?>
+					<div class="content-more" id="more-<?php echo $post->ID ; ?>-rightcol" ><p><?php echo $content['extended']; ?></div>
+					<a class="more-toggle" data-toggletarget="more-<?php echo $post->ID ; ?>-rightcol">Mehr...</a>
+				<?php } ?>
+
 			</section>
 		<?php } ?>
 
@@ -47,8 +77,17 @@ get_header();
 			if(!empty($rows)) { 
 
 					foreach ($rows as $key => $row) { ?>
-						<section class="twelvecol first background-panel entry-content" >
-						<?php echo $row['gp_rows_row']; ?>
+						<section class="twelvecol first background-panel entry-content" >						
+						<?php $rowcontent = $row['gp_rows_row']; 
+
+						$content = get_extended($rowcontent); ?>
+						<div class="content-main"><?php echo $content['main'];?></p></div>
+						
+						<?php if(!empty($content['extended'])) { ?>
+							<div class="content-more" id="more-<?php echo $post->ID ; ?>-row-<?php echo $key; ?>" ><p><?php echo $content['extended']; ?></div>
+							<a class="more-toggle" data-toggletarget="more-<?php echo $post->ID ; ?>-row-<?php echo $key; ?>">Mehr...</a>
+						<?php } ?>
+
 						</section>
 
 					<?php } 

@@ -1,0 +1,91 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.less styles.
+
+******************************************************************/
+.header #logo {
+  float: left;
+}
+.header .fa-bars {
+  bottom: 0;
+}
+.header #description {
+  font-size: 30px;
+  line-height: 1.25em;
+  margin: 0px;
+  margin-top: -20px;
+  margin-left: 32px;
+}
+/*********************
+NAVIGATION STYLES
+*********************/
+.nav {
+  /* end  ul */
+}
+.nav ul {
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+.nav ul li {
+  float: left;
+  position: relative;
+  /*
+				plan your menus and drop-downs wisely.
+				*/
+}
+.nav ul li a {
+  /*
+					you can use hover styles here even though this size
+					has the possibility of being a mobile device.
+					*/
+}
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+.hero {
+  font-size: 64px;
+}
+/* entry content */
+.entry-content {
+  /* at this larger size, we can start to align images */
+}
+.entry-content .alignleft,
+.entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+.entry-content .alignright,
+.entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+.entry-content .aligncenter,
+.entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+/* end .entry-content */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* end .footer-links */
