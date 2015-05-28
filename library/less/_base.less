@@ -532,7 +532,7 @@ and more scalable.
 
 	.teaser-wrap {
 		position: relative;
-		margin-bottom: 20px;
+		// margin-bottom: 20px;
 
 		.teaser-body {
 			display: none;
@@ -568,33 +568,15 @@ and more scalable.
 		padding-top: 40px;
 		padding-bottom: 40px;
 
+		iframe {
+			display: block;
+		}
 
 		h2 {
-			margin-bottom: 0.5em;	
-		}
-
-		.badge:after {
-			display: inline-block;
-			content: "";
-
-			-webkit-transform: translateY(6px);			
-			transform: translateY(6px);
-			margin-left: 10px;
-		}
-
-		.badge-black:after {
-			.svg-star;
-			.svg-star-dims;
-		}
-
-		.badge-primary:after {
-			.svg-star-primary;
-			.svg-star-primary-dims;
-		}
-
-		.badge-secondary:after {
-			.svg-star-secondary;
-			.svg-star-secondary-dims;
+			margin-bottom: 0.5em;
+			&:last-child {
+				margin-bottom: 0;
+			}	
 		}
 
 		h3 {
@@ -603,11 +585,113 @@ and more scalable.
 
 		img {
 			margin-top: 0 !important;
+			margin-bottom: 0 !important;
 			display: block;
 		}
+
+		&.badge:after {
+			content:"";
+			display: block;
+			position: absolute;
+			top: 21px;
+			right: -21px;
+		}
+
+		&.badge-world:after {
+			.svg-weltverbessern_flag;
+			.svg-weltverbessern_flag-dims;
+		}
+
+		&.badge-innovation:after {
+			.svg-innovation_flag;
+			.svg-innovation_flag-dims;
+		}
+
+		&.badge-code:after {
+			.svg-bestercode_flag;
+			.svg-bestercode_flag-dims;
+		}
+
+		&.badge-design:after {
+			.svg-bestesdesign_flag;
+			.svg-bestesdesign_flag-dims;
+		}
+
+		&.badge-special:after {
+			.svg-sonderpreis_flag;
+			.svg-sonderpreis_flag-dims;
+		}
+
+		&.badge-audience:after {
+			.svg-publikumspreis_flag;
+			.svg-publikumspreis_flag-dims;
+		}
+
+		.badge-legend {
+
+				color: @color3;
+				max-height: 50px;
+
+				&:before {
+				content:"";
+				display: inline-block;
+				margin-right: 10px;
+				-webkit-transform: translateY(16px);			
+				transform: translateY(16px);
+			}
+		}
+
+		.badge-legend-world:before {
+			.svg-weltverbessern;
+			.svg-weltverbessern-dims;
+		}
+
+		.badge-legend-innovation:before {
+			.svg-innovation;
+			.svg-innovation-dims;
+		}
+
+		.badge-legend-code:before {
+			.svg-bestercode;
+			.svg-bestercode-dims;
+		}
+
+		.badge-legend-design:before {
+			.svg-bestesdesign;
+			.svg-bestesdesign-dims;
+		}
+
+		.badge-legend-special:before {
+			.svg-sonderpreis;
+			.svg-sonderpreis-dims;
+		}
+
+		.badge-legend-audience:before {
+			.svg-publikumspreis;
+			.svg-publikumspreis-dims;
+		}
+
+		.teaser-meta  {
+
+			a, a:hover, a:focus, a:visited {
+				color: @color3;
+			}
+			
+			margin-top: 15px;
+			margin-bottom: -10px;
+
+			h3, a {
+				font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+			}
+		}		
+
 	}
 
 	.teaser-item-events {
+
+		.teaser-image {
+			margin-bottom: 25px;
+		}
 		
 		.teaser-body-left {
 			//float: left;
@@ -637,7 +721,11 @@ and more scalable.
 	}
 
 	.team-items {
-		
+
+		.team-member {
+			padding-top: 40px;
+		}
+
 		.teaser-item {
 			
 			text-align: left;
@@ -648,6 +736,20 @@ and more scalable.
 			
 			p {
 				font-size: 13px;
+			}
+
+			.badge:after {
+				display: inline-block;
+				content: "";
+
+				-webkit-transform: translateY(4px);			
+				transform: translateY(4px);
+				margin-left: 10px;
+			}
+
+			.badge-black:after {
+				.svg-featured;
+				.svg-featured-dims;
 			}
 
 		}
@@ -957,6 +1059,14 @@ and more scalable.
 		// display: inline-block;
 		margin: 0;
 	}
+
+	> br {
+		display: none;
+	}
+
+	.accordion-content {
+		margin-bottom: 10px;
+	}
 }
 
 .faq-nav {
@@ -996,9 +1106,28 @@ and more scalable.
 /*=============================
 =            Forms            =
 =============================*/
+// increase specificity to comeby css load order (default ninja forms style after this)
+#content {
 
+	.list-radio-wrap.label-left ul li, 
+	.list-radio-wrap.label-right ul li, 
+	.list-checkbox-wrap.label-left ul li, 
+	.list-checkbox-wrap.label-right ul li {
 
+		margin-bottom: 10px;
 
+	}
+
+	.field-wrap .ninja-forms-field {
+		margin-left: 0; 	
+	}
+
+	.ninja-forms-form-wrap .list-checkbox-wrap ul label, .ninja-forms-form-wrap .list-radio-wrap ul label {
+		text-indent: -20px;
+		padding-left: 20px;
+	}
+
+}
 /*-----  End of Forms  ------*/
 
 

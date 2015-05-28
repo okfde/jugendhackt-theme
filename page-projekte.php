@@ -22,6 +22,21 @@ $categories = get_categories( $args );
 // Get the projects
 $projects = get_field('hackdash_projects');
 
+// Extract all Badges in use -> build the legend
+foreach ($projects as $key => $project) {
+	$allBadges[] = $project['project_badge'][0];
+}
+$allBadges = array_unique($allBadges);
+
+$field = get_field_object('hackdash_projects');
+
+// get the proper names for badge choices
+foreach ($field['sub_fields'] as $key => $subfield) {
+	if($subfield['name'] === 'project_badge'){
+		$choiceNames = $subfield['choices'];
+	}
+}
+
 ?>
 
 <div id="content" data-speed="3" >
@@ -32,20 +47,31 @@ $projects = get_field('hackdash_projects');
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
-		<section class="isotope-container twelvecol first entry-content team-items" >
+		<section class="isotope-container twelvecol first entry-content" >
 		<div class="grid-sizer"></div>
 		<div class="gutter-sizer"></div>
 
 		<div id="filters" class="entry-content background-panel teaser-item" itemprop="articleBody">
 				
 			<h2 class="filter" data-filter="*" >Alle</h2>
-			<?php
+			<?php 
 			if(!empty($categories)) {
-				foreach ($categories as $key => $value) { ?>
-					<h2 class="filter" data-filter=".term-<?php echo $value->term_id; ?>" > <?php echo $value->name;  ?> </h2>
-				<? 	
+					foreach ($categories as $key => $value) { ?>
+						<h2 class="filter" data-filter=".term-<?php echo $value->term_id; ?>" > <?php echo $value->name;  ?> </h2>
+					<? 	
 				}
-			} ?>	
+			} 
+
+			?> 
+
+			<div class="badge-legend-wrap">
+				<?php
+				foreach ($allBadges as $key => $badge) { ?>
+					<h3 class="badge-legend badge-legend-<?php echo $badge; ?>" > <?php echo $choiceNames[$badge]; ?> </h3>
+				<?php }
+				?>	
+			</div>
+
 
 		</div> <!-- end article section -->
 
