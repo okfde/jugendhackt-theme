@@ -50,14 +50,13 @@ get_header();
 		<?php
 		
 		$projects = get_field('about_projects');
-
 		if( !empty($projects) ) {
 
 			foreach ($projects as $key => $project) {
 
 			if($key % 3 == 0 ) echo '<div class="row clearfix">';
 			
-				include('partials/project-teaser.php');
+				include('partials/about-project-teaser.php');
 				
 			if(($key % 3 == 2) OR (count($projects)-1 == $key)) echo '</div >'; ?>
 			<?php }
