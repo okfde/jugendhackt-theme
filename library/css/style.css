@@ -1281,14 +1281,17 @@ and more scalable.
 }
 .teaser-item .badge-legend {
   color: #2aabe1;
-  max-height: 50px;
+  position: relative;
+  margin-left: 60px;
+  min-height: 50px;
+  padding-top: 15px;
 }
 .teaser-item .badge-legend:before {
   content: "";
   display: inline-block;
-  margin-right: 10px;
-  -webkit-transform: translateY(16px);
-  transform: translateY(16px);
+  position: absolute;
+  left: -60px;
+  top: 0;
 }
 .teaser-item .badge-legend-world:before {
   background: url(svg/sprite.css-e252d530.svg) no-repeat;
@@ -2171,9 +2174,6 @@ HEADER STYLES
   .header #logo {
     margin-bottom: 0;
   }
-  .header #metawrapper {
-    float: right;
-  }
   .header .cta-wrap li {
     margin-bottom: 0;
   }
@@ -2310,7 +2310,7 @@ on larger screens.
     margin-top: 61px;
   }
   #metawrapper {
-    margin-left: 200px;
+    float: right;
   }
 }
 /*

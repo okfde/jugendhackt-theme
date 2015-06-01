@@ -630,14 +630,17 @@ and more scalable.
 		.badge-legend {
 
 				color: @color3;
-				max-height: 50px;
+				position: relative;
+				margin-left: 60px;
+				min-height: 50px;
+				padding-top: 15px;
 
 				&:before {
 				content:"";
 				display: inline-block;
-				margin-right: 10px;
-				-webkit-transform: translateY(16px);			
-				transform: translateY(16px);
+				position: absolute;
+				left: -60px;
+				top: 0;
 			}
 		}
 
