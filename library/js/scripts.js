@@ -53,6 +53,19 @@ jQuery(document).ready(function($) {
 
     });
 
+    $('.faq-accordion').collapse(
+        {
+          show: function() {
+            this.slideDown(300);
+          },
+          hide: function() {
+            this.slideUp(300);
+          },
+          accordion: true,
+          persist: false
+        }
+    ); 
+
     // FAQ Mixitup
     $('.mixitup-container').mixItUp();
 

@@ -1619,6 +1619,9 @@ and more scalable.
 .accordion .accordion-content {
   margin-bottom: 10px;
 }
+.faq-nav.background-panel {
+  padding-bottom: 40px;
+}
 .faq-nav h1,
 .faq-nav h2,
 .faq-nav h3,

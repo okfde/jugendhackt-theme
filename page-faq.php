@@ -61,7 +61,7 @@ get_header();
 					
 					<h2><?php echo $category->name; ?></h2>
 					
-					<div id="accordion-<?php  echo $category->term_id; ?>" class="accordion" >
+					<div id="accordion-<?php  echo $category->term_id; ?>" class="faq-accordion" >
 						<?php 
 						foreach ($faqs as $key => $faq) {
 							foreach ($faq['faq_group'] as $key => $faq_group) {
