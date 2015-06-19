@@ -1,6 +1,8 @@
 <?php 
 
 $badge = $project['project_badge'];
+unset($badgeClasses);
+
 if(!empty($badge)) { 
 	$badgeClasses = 'badge badge-'.$badge[0];
 }
@@ -25,14 +27,23 @@ if(!empty($categories)){
 <div class="background-panel teaser-item <?php echo $filterClasses; ?> <?php echo $badgeClasses; ?>">
 
 	<div class="teaser-wrap">
-		<?php echo $project['project_hackdash_embed']; ?>	
+		<?php echo $project['project_hackdash_embed']; ?>
 	</div>
+	
+	<div class="teaser-meta">
 
-	<?php
+		<?php
 
-	$links = $project['project_links'];
-	if(!empty($links)){ ?>
-		<div class="teaser-meta">
+		$links = $project['project_links'];
+		$contributors = $project['project_contributors'];
+
+		if(!empty($contributors)){ ?>
+			<h3 class="project-who">
+				<?php echo 'Wer: ' . $contributors; ?>
+			</h3>
+		<?php }
+
+		if(!empty($links) || !empty($contributors) ){ ?>
 			<div class="project-links"> 
 				<h3>
 				<?php
@@ -43,7 +54,7 @@ if(!empty($categories)){
 					<?php if($key1 != (count($links)-1)) { echo ', ';} } ?>
 				</h3>
 			</div>
-		</div>
-	<?php } ?>
-
+		<?php } ?>
+	
+	</div>
 </div>
