@@ -18,7 +18,7 @@
 						</div>
 
 						<div class="last sixcol" >
-							<p class="ph"><span>Kooperationspartner</span></p>
+							<p class="ph"><span>Partner</span></p>
 							<div class="coops clearfix">
 								<?php
 								
