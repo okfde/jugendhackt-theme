@@ -67,7 +67,7 @@ foreach ($field['sub_fields'] as $key => $subfield) {
 			<div class="badge-legend-wrap">
 				<?php
 				foreach ($allBadges as $key => $badge) { ?>
-					<h3 class="badge-legend badge-legend-<?php echo $badge; ?>" > <?php echo $choiceNames[$badge]; ?> </h3>
+					<h3 class="badge-legend badge-legend-<?php echo $badge; ?> filter" data-filter=".badge-<?php echo $badge; ?>" > <?php echo $choiceNames[$badge]; ?> </h3>
 				<?php }
 				?>	
 			</div>
