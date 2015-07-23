@@ -56,6 +56,34 @@ if($event_fields['event_facts']) {
 				</section>
 				<?php } ?>
 
+				<?php 
+
+				$partner_groups = get_field('partner_groups');
+				
+				if(!empty($partner_groups)) {
+					foreach ($partner_groups as $key => $partner_group) { ?>
+						
+						<section class="twelvecol background-panel first entry-content partner-group" >
+						<h2><?php echo $partner_group['partner_group_title']; ?></h2> 
+
+						<?php 					
+
+							foreach ($partner_group['partners'] as $partner) { ?>
+								<a href=" <?php echo $partner['partner_link']; ?> ">
+									<img src="<?php echo $partner['partner_image']['sizes']['partner-logo']; ?> " alt=""> 
+								</a>
+
+							<?php
+							 }
+						?>
+						</section> 
+
+						<?php
+					}
+				}
+
+				?>
+
 
 			</div>
 
