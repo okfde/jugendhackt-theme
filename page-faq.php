@@ -16,11 +16,10 @@ get_header();
 		
 			<?php 
 
-			$region_parent_obj = get_term_by('name', 'zielgruppe', 'page_category');
-			$region_parent_id = $region_parent_obj->term_id;
+			$filter_cat_id = get_field('faq_filter_cat');
 
 			$args = array(
-				'child_of'                 => $region_parent_id,
+				'child_of'                 => $filter_cat_id,
 				'orderby'                  => 'name',
 				'order'                    => 'ASC',
 				'hide_empty'               => 0,
@@ -38,7 +37,7 @@ get_header();
 			if(!empty($categories)) { ?>
 			
 			<div class="fourcol first">
-				
+
 			<?php
 				foreach ($categories as $key => $value) { ?>
 					<div class="faq-nav background-panel background-panel__slim">
