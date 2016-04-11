@@ -21,7 +21,7 @@
 	<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic' rel='stylesheet' type='text/css'>
 	<link href='<?php echo get_template_directory_uri(); ?>/library/css/ebisu.css' rel='stylesheet' type='text/css'>
 	<link href='<?php echo get_template_directory_uri(); ?>/library/css/slick.css' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
