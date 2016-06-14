@@ -58,7 +58,7 @@ foreach ($field['sub_fields'] as $key => $subfield) {
 			if(!empty($categories)) {
 					foreach ($categories as $key => $value) { ?>
 						<h2 class="filter" data-filter=".term-<?php echo $value->term_id; ?>" > <?php echo $value->name;  ?> </h2>
-					<? 	
+					<?php 	
 				}
 			} 
 
