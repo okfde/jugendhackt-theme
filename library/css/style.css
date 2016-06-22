@@ -1973,7 +1973,8 @@ LAYOUT & GRID STYLES
     font-size: 28px;
   }
   .team-items .teaser-item p {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.3;
   }
   .isotope-container .grid-sizer,
   .isotope-container .teaser-item {
