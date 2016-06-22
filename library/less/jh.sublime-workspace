@@ -1,0 +1,611 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pos",
+				"position"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"comm",
+				"comm-section	Comment - Full section comment"
+			],
+			[
+				"dis",
+				"disc"
+			],
+			[
+				"list-st",
+				"list-style-type"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"git: lo",
+				"Git: Log Current File"
+			],
+			[
+				"html",
+				"Tidy HTML"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/page-projekte.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/page-team.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/page-about.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/library/js/scripts.js",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/page-faq.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/library/less/_base.less",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/library/less/_1030up.less",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/library/less/_1240up.less",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/functions.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/single-events.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/library/bones.php",
+		"/Users/Alex/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/Alex/Dropbox/project-teaser.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/footer.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/partials/team-member.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/library/less/_mixins.less",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/partials/layout-custom.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/page-sidebar.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/library/less/_normalize.less",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/library/less/_481up.less",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/library/less/_768up.less",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/archive-events.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/header.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/index.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/archive.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/library/translation/translation.php",
+		"/Users/Alex/Documents/Websites/jugendhackt/wp-content/themes/jugend-hackt/.gitignore",
+		"/Users/Alex/Documents/Websites/hackyourcity/about/index.html",
+		"/Users/Alex/Documents/Websites/hackyourcity/_layouts/lab.html",
+		"/Users/Alex/Documents/Websites/hackyourcity/_sass/_overrides.scss",
+		"/Users/Alex/Documents/Websites/hackyourcity/_includes/header.html",
+		"/Users/Alex/Documents/Websites/hackyourcity/_includes/head.html",
+		"/Users/Alex/Documents/Websites/hackyourcity/_includes/footer.html",
+		"/Users/Alex/Documents/Websites/hackyourcity/_sass/bootstrap/_variables.scss",
+		"/Users/Alex/Documents/Websites/hackyourcity/labs/dresden-leipzig/index.html",
+		"/Users/Alex/Documents/Websites/hackyourcity/_faqs/faq2.md",
+		"/Users/Alex/Documents/Websites/hackyourcity/index.html",
+		"/Users/Alex/Documents/Websites/hackyourcity/_faqs/q2.md",
+		"/Users/Alex/Documents/Websites/hackyourcity/.gitignore",
+		"/Users/Alex/Documents/Websites/h4c/bootstrap-sass-3.3.4/.gitignore",
+		"/Users/Alex/Documents/Websites/h4c/site/js/vendor/jquery.sticky-kit.js",
+		"/Users/Alex/Documents/Websites/h4c/test/_sass/_base.scss",
+		"/Users/Alex/Documents/Websites/h4c/site/_includes/modules/faqs.html",
+		"/Users/Alex/Documents/Websites/h4c/site/_config.yml",
+		"/Users/Alex/Documents/Websites/h4c/site/_faq/q3.md",
+		"/Users/Alex/Documents/Websites/h4c/site/about/index.html",
+		"/Users/Alex/Documents/Websites/h4c/site/_faq/q1.md",
+		"/Users/Alex/Documents/Websites/h4c/site/_faq/q2.md",
+		"/Users/Alex/Documents/Websites/h4c/site/_sass/_base.scss",
+		"/Users/Alex/Documents/Websites/h4c/site/_sass/_mixins.scss",
+		"/Users/Alex/Documents/Websites/h4c/site/_sass/bootstrap/_variables.scss",
+		"/Users/Alex/Documents/Websites/h4c/site/_includes/footer.html",
+		"/Users/Alex/Documents/Websites/h4c/site/_sass/_variables.scss",
+		"/Users/Alex/Documents/Websites/h4c/site/_sass/_overrides.scss",
+		"/Users/Alex/Documents/Websites/h4c/site/labs/berlin/index.html",
+		"/Users/Alex/Documents/Websites/h4c/site/css/main.scss",
+		"/Users/Alex/Documents/Websites/h4c/site/_includes/modules/hashtags.html",
+		"/Users/Alex/Documents/Websites/h4c/site/about.md",
+		"/Users/Alex/Documents/Websites/h4c/site/_includes/head.html",
+		"/Users/Alex/Documents/Websites/cwa/site/wp-content/themes/codeweekawards/header.php",
+		"/Users/Alex/Documents/Websites/h4c/site/_site/css/main.css",
+		"/Users/Alex/Documents/Websites/h4c/site/_sass/breakpoints/_screen-sm.scss",
+		"/Users/Alex/Documents/Websites/h4c/site/_sass/breakpoints/_screen-lg.scss",
+		"/Users/Alex/Documents/Websites/cwa/site/wp-content/themes/codeweekawards/library/js/app/Controller.js",
+		"/Users/Alex/Documents/Websites/h4c/site/js/main.js",
+		"/Users/Alex/Documents/Websites/h4c/site/_sass/_slick.scss",
+		"/Users/Alex/Documents/Websites/h4c/site/_sass/_slick-theme.scss",
+		"/Users/Alex/Documents/Websites/h4c/site/img/svg/h4c_logo_ber_small.svg",
+		"/Users/Alex/Documents/Websites/h4c/site/labs/dortmund-wuppertal/index.html",
+		"/Users/Alex/Documents/Websites/h4c/site/_layouts/lab.html",
+		"/Users/Alex/Documents/Websites/h4c/site/_layouts/page.html",
+		"/Users/Alex/Documents/Websites/h4c/site/index.html",
+		"/Users/Alex/Documents/Websites/h4c/site/_layouts/default.html",
+		"/Users/Alex/Documents/Websites/h4c/site/labs/karlsruhe/index.html",
+		"/Users/Alex/Documents/Websites/h4c/site/labs/dresden-leipzig/index.html",
+		"/Users/Alex/Documents/Websites/h4c/bootstrap-sass-3.3.4/package.json"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"font",
+			"button-prim",
+			"button",
+			"form",
+			"button",
+			"button-prim",
+			"button-",
+			"style",
+			"ul",
+			"ul ",
+			"ul",
+			"entry",
+			"ul",
+			"span",
+			"logo-",
+			"sm",
+			"xs",
+			"Two",
+			"container",
+			"comment block",
+			"8",
+			"<?php echo get_template_directory_uri(); ?>/library/images/favicons",
+			"thumbnail-label",
+			"../../typo3conf/ext/ppk_wj15/Resources/Public/Fonts/",
+			"$lab1_primary",
+			"box",
+			"shadow",
+			"panel-border",
+			"border-radius",
+			"@",
+			"$",
+			"...",
+			"@",
+			"span",
+			"240",
+			"640",
+			"a href=\"#\">",
+			"</a>",
+			"<a href=\"#\">",
+			"4",
+			"lab-page",
+			"/about",
+			"0"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "jh.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"bone",
+				"library/bones.php"
+			],
+			[
+				"functio",
+				"functions.php"
+			],
+			[
+				"base",
+				"library/less/_base.less"
+			],
+			[
+				"faq",
+				"page-faq.php"
+			],
+			[
+				"scrip",
+				"library/js/scripts.js"
+			],
+			[
+				"foot",
+				"footer.php"
+			],
+			[
+				"footer",
+				"footer.php"
+			],
+			[
+				"team",
+				"partials/team-member.php"
+			],
+			[
+				"proje",
+				"page-projekte.php"
+			],
+			[
+				"function",
+				"functions.php"
+			],
+			[
+				"bones",
+				"library/bones.php"
+			],
+			[
+				"mix",
+				"library/less/_mixins.less"
+			],
+			[
+				"nor",
+				"library/less/_normalize.less"
+			],
+			[
+				"less",
+				"library/less/_1030up.less"
+			],
+			[
+				"481",
+				"library/less/_481up.less"
+			],
+			[
+				"768",
+				"library/less/_768up.less"
+			],
+			[
+				"page-side",
+				"page-sidebar.php"
+			],
+			[
+				"bnes",
+				"library/bones.php"
+			],
+			[
+				"event",
+				"single-events.php"
+			],
+			[
+				"js",
+				"library/js/scripts.js"
+			],
+			[
+				"archi",
+				"archive-events.php"
+			],
+			[
+				"bae",
+				"library/less/_base.less"
+			],
+			[
+				"mxin",
+				"library/less/_mixins.less"
+			],
+			[
+				"index",
+				"index.php"
+			],
+			[
+				"48",
+				"library/less/_481up.less"
+			],
+			[
+				"78",
+				"library/less/_768up.less"
+			],
+			[
+				"1030",
+				"library/less/_1030up.less"
+			],
+			[
+				"header",
+				"header.php"
+			],
+			[
+				".git",
+				".gitignore"
+			],
+			[
+				"archive",
+				"archive-events.php"
+			],
+			[
+				"head",
+				"_includes/head.html"
+			],
+			[
+				"heade",
+				"_includes/header.html"
+			],
+			[
+				"ove",
+				"_sass/_overrides.scss"
+			],
+			[
+				"lab",
+				"_layouts/lab.html"
+			],
+			[
+				"about",
+				"about/index.html"
+			],
+			[
+				"_var",
+				"_sass/bootstrap/_variables.scss"
+			],
+			[
+				"",
+				"css/main.scss"
+			],
+			[
+				"bas",
+				"_sass/_base.scss"
+			],
+			[
+				"main",
+				"css/main.scss"
+			],
+			[
+				"main.",
+				"js/main.js"
+			],
+			[
+				"q2",
+				"_faqs/q2.md"
+			],
+			[
+				"stick",
+				"site/js/vendor/jquery.sticky-kit.js"
+			],
+			[
+				"varia",
+				"site/_sass/_variables.scss"
+			],
+			[
+				"confi",
+				"site/_config.yml"
+			],
+			[
+				"q3",
+				"site/_faq/q3.md"
+			],
+			[
+				"q1",
+				"site/_faq/q1.md"
+			],
+			[
+				"config",
+				"site/_config.yml"
+			],
+			[
+				"ov",
+				"site/_sass/_overrides.scss"
+			],
+			[
+				"abou",
+				"site/about/index.html"
+			],
+			[
+				"_vari",
+				"site/_sass/_variables.scss"
+			],
+			[
+				"_variabe",
+				"site/_sass/bootstrap/_variables.scss"
+			],
+			[
+				"var",
+				"site/_sass/_variables.scss"
+			],
+			[
+				"varial",
+				"site/_sass/bootstrap/_variables.scss"
+			],
+			[
+				"main.j",
+				"site/js/main.js"
+			],
+			[
+				"slick-",
+				"site/_sass/_slick-theme.scss"
+			],
+			[
+				"_slick-th",
+				"site/_sass/_slick-theme.scss"
+			],
+			[
+				"slick",
+				"site/_sass/_slick.scss"
+			],
+			[
+				"berlin",
+				"site/labs/berlin/index.html"
+			],
+			[
+				"over",
+				"site/_sass/_overrides.scss"
+			],
+			[
+				"vara",
+				"site/_sass/_variables.scss"
+			],
+			[
+				"route",
+				"laravel/app/routes.php"
+			],
+			[
+				"login",
+				"laravel/app/views/pages/login.blade.php"
+			],
+			[
+				"manage",
+				"laravel/app/views/pages/manage.blade.php"
+			],
+			[
+				"layout",
+				"laravel/app/views/layouts/layout.blade.php"
+			],
+			[
+				"user",
+				"laravel/app/controllers/UserController.php"
+			],
+			[
+				"register",
+				"laravel/app/views/pages/register.blade.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 266.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
