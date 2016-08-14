@@ -67,7 +67,17 @@ jQuery(document).ready(function($) {
     ); 
 
     // FAQ Mixitup
-    $('.mixitup-container').mixItUp();
+    var hash = window.location.hash;
+    var noHash=hash.replace("#","");
+    var filterLookup = {'Teilnehmerinnen':'.cat-20',
+                        'Eltern': '.cat-19',
+                        'Allgemein': '.cat-21',
+    }
+    if (hash && noHash in filterLookup) {
+        $('.mixitup-container').mixItUp('filter', filterLookup[noHash]);
+    } else {
+        $('.mixitup-container').mixItUp();
+    }
 
     // Team Isotope
     var  $container = $('.isotope-container').isotope({
