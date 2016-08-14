@@ -66,18 +66,18 @@ jQuery(document).ready(function($) {
         }
     ); 
 
-    // FAQ Mixitup
     var hash = window.location.hash;
     var noHash=hash.replace("#","");
     var filterLookup = {'Teilnehmerinnen':'.cat-20',
                         'Eltern': '.cat-19',
                         'Allgemein': '.cat-21',
-    }
-    if (hash && noHash in filterLookup) {
-        $('.mixitup-container').mixItUp('filter', filterLookup[noHash]);
-    } else {
-        $('.mixitup-container').mixItUp();
-    }
+			'Berlin' : '.term-18',
+			'Nord' : '.term-40',
+			'Ost' : '.term-16',
+			'Österreich' : '.term-48',
+			'Schweiz' : '.term-47',
+			'Süd' : '.term-17',
+			'West' : '.term-39'}
 
     // Team Isotope
     var  $container = $('.isotope-container').isotope({
@@ -96,9 +96,15 @@ jQuery(document).ready(function($) {
       $('#filters .filter').removeClass('active');
       $(this).addClass('active');
     });
-
     $container.isotope('stamp',  $('#filters'));
 
+    if (hash && noHash in filterLookup) {
+        // FAQ Mixitup
+        $('.mixitup-container').mixItUp('filter', filterLookup[noHash]);
+        $("#filters .filter[data-filter='"+ filterLookup[noHash] +"']")[0].click()
+    } else {
+        $('.mixitup-container').mixItUp();
+    }
     /*
     Responsive jQuery is a tricky thing.
     There's a bunch of different ways to handle
