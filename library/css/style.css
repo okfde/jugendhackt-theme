@@ -1542,8 +1542,16 @@ and more scalable.
 .entry-content ol {
   padding-left: 38px;
 }
+.entry-content ul a,
+.entry-content ol a,
+.entry-content ul a:visited,
+.entry-content ol a:visited,
+.entry-content ul a:active,
+.entry-content ol a:active {
+  color: #2aabe1;
+}
 .entry-content ul {
-  list-style-type: disc;
+  list-style-type: square;
 }
 .entry-content ol {
   list-style-type: decimal;
@@ -1555,7 +1563,7 @@ and more scalable.
   margin-bottom: 1.5em;
 }
 .entry-content img {
-  margin: 25px 0;
+  margin: 0.33em 0;
   max-width: 100%;
   height: auto;
 }
@@ -1575,7 +1583,6 @@ and more scalable.
 /* end .entry-content */
 .wp-caption {
   max-width: 100%;
-  background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
@@ -1585,7 +1592,7 @@ and more scalable.
   width: 100%;
 }
 .wp-caption p.wp-caption-text {
-  font-size: 0.85em;
+  font-size: 0.7em;
   margin: 4px 0 7px;
   text-align: center;
 }
