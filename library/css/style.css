@@ -1575,7 +1575,6 @@ and more scalable.
 /* end .entry-content */
 .wp-caption {
   max-width: 100%;
-  background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
@@ -1585,7 +1584,7 @@ and more scalable.
   width: 100%;
 }
 .wp-caption p.wp-caption-text {
-  font-size: 0.85em;
+  font-size: 0.7em;
   margin: 4px 0 7px;
   text-align: center;
 }
