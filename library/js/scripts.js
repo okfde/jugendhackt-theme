@@ -136,27 +136,29 @@ jQuery(document).ready(function($) {
 
 
         /**
- * Author: gnomjogson
- * Date: 16.04.13
- * Created: 20:57
- **/
+         * Author: gnomjogson
+         * Date: 16.04.13
+         * Created: 20:57
+         **/
 
- var $content = $('#content');
+         var    $content    = $('#content'),
+                $window     = $(window);
 
- $(window).scroll(function(){
+         $window.scroll(function(){
+            window.requestAnimationFrame(function(){        
+                var scrollTop = $window.scrollTop();
+                var speed = $content.data('speed')*(scrollTop/8000);
+                var scrollTop = $window.scrollTop();
+                
+                if(scrollTop > 800 ) scrollTop = 800;
+                var yPos = -(scrollTop * speed);
+                //console.log("yPos -> " + yPos);
+                var coords = '50% '+ yPos + 'px';
+                $content.css("background-position", coords);  
+            })
+        })
 
-    var scrollTop = $(window).scrollTop();
-    var speed = $content.data('speed')*(scrollTop/8000);
-    var scrollTop = $(window).scrollTop();
-    if(scrollTop > 800 ) scrollTop = 800;
-    var yPos = -(scrollTop * speed);
-    //console.log("yPos -> " + yPos);
-    var coords = '50% '+ yPos + 'px';
-    $content.css("background-position", coords);
-
-})
-
-}
+    }
 
 /* off the bat large screen actions */
 if (responsive_viewport > 1030) {
