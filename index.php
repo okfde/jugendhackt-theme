@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<!-- test -->
 <div id="content" data-speed="5" >
 
 	<div id="inner-content" class="wrap clearfix">
