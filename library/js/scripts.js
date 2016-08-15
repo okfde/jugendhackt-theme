@@ -150,7 +150,7 @@ jQuery(document).ready(function($) {
     var scrollTop = $(window).scrollTop();
     if(scrollTop > 800 ) scrollTop = 800;
     var yPos = -(scrollTop * speed);
-    console.log("yPos -> " + yPos);
+    //console.log("yPos -> " + yPos);
     var coords = '50% '+ yPos + 'px';
     $content.css("background-position", coords);
 
