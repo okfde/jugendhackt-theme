@@ -66,6 +66,7 @@ jQuery(document).ready(function($) {
         }
     ); 
 
+<<<<<<< HEAD
     var hash = window.location.hash;
     var noHash=hash.replace("#","");
     var filterLookup = {'Teilnehmerinnen':'.cat-20',
@@ -78,6 +79,10 @@ jQuery(document).ready(function($) {
 			'Schweiz' : '.term-47',
 			'Süd' : '.term-17',
 			'West' : '.term-39'}
+=======
+    // FAQ Mixitup
+    $('.mixitup-container').mixItUp();
+>>>>>>> master
 
     // Team Isotope
     var  $container = $('.isotope-container').isotope({
@@ -96,6 +101,7 @@ jQuery(document).ready(function($) {
       $('#filters .filter').removeClass('active');
       $(this).addClass('active');
     });
+<<<<<<< HEAD
     $container.isotope('stamp',  $('#filters'));
 
     if (hash && noHash in filterLookup) {
@@ -105,6 +111,11 @@ jQuery(document).ready(function($) {
     } else {
         $('.mixitup-container').mixItUp();
     }
+=======
+
+    $container.isotope('stamp',  $('#filters'));
+
+>>>>>>> master
     /*
     Responsive jQuery is a tricky thing.
     There's a bunch of different ways to handle
@@ -136,6 +147,7 @@ jQuery(document).ready(function($) {
 
 
         /**
+<<<<<<< HEAD
          * Author: gnomjogson
          * Date: 16.04.13
          * Created: 20:57
@@ -159,6 +171,29 @@ jQuery(document).ready(function($) {
         })
 
     }
+=======
+ * Author: gnomjogson
+ * Date: 16.04.13
+ * Created: 20:57
+ **/
+
+ var $content = $('#content');
+
+ $(window).scroll(function(){
+
+    var scrollTop = $(window).scrollTop();
+    var speed = $content.data('speed')*(scrollTop/8000);
+    var scrollTop = $(window).scrollTop();
+    if(scrollTop > 800 ) scrollTop = 800;
+    var yPos = -(scrollTop * speed);
+    console.log("yPos -> " + yPos);
+    var coords = '50% '+ yPos + 'px';
+    $content.css("background-position", coords);
+
+})
+
+}
+>>>>>>> master
 
 /* off the bat large screen actions */
 if (responsive_viewport > 1030) {
@@ -205,4 +240,8 @@ if (responsive_viewport > 1030) {
            else if( !enabled ){ restoreZoom(); } }
            w.addEventListener( "orientationchange", restoreZoom, false );
            w.addEventListener( "devicemotion", checkTilt, false );
+<<<<<<< HEAD
        })( this );
+=======
+       })( this );
+>>>>>>> master
