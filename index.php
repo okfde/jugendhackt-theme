@@ -49,12 +49,9 @@
 
 							if(!is_single()) { ?>
 								
-<<<<<<< HEAD
+
 								<a href="<?php the_permalink(); ?>#disqus_thread">Kommentare</a>
 =======
-								<a href="<?php the_permalink(); ?>#disqus_thread">Kommetare</a>
->>>>>>> master
-								
 							<?php
 							}
 						 ?>
@@ -110,8 +107,4 @@ $(document).ready(function(){
 });
 </script>
 
-<<<<<<< HEAD
 <?php get_footer(); ?>
-=======
-<?php get_footer(); ?>
->>>>>>> master
