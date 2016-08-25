@@ -51,7 +51,7 @@
 								
 
 								<a href="<?php the_permalink(); ?>#disqus_thread">Kommentare</a>
-=======
+
 							<?php
 							}
 						 ?>
