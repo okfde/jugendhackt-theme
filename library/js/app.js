@@ -1,7 +1,6 @@
 angular.module('jugendHackt', [])
 
 
-
 .directive('jhProjectTeaser',[
 
 	function(){
