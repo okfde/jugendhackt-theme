@@ -30,7 +30,10 @@ if(!empty($categories)){
 	hack-dash-id = "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>"
 >
 
-	working...
+	HackDashData:
+	<pre>
+	{{hackDashData | json}}
+	</pre>
 
 	<!-- <div class="teaser-wrap">
 		<?php echo $project['project_hackdash_embed']; ?>
