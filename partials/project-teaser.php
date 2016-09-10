@@ -28,15 +28,35 @@ if(!empty($categories)){
 	class = "background-panel teaser-item <?php echo $filterClasses; ?> <?php echo $badgeClasses; ?>"
 	jh-project-teaser
 	hack-dash-id = "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>"
+	you-tube-id  = "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>" 
 >
-	{{test}}
-	HackDashData {{!!hackDashData}}:
-	<pre>{{hackDashData | json}}</pre>
+	<div ng-if = "!ready" class = "loading"> loading ... </div>
 
-	<!-- <div class="teaser-wrap">
-		<?php echo $project['project_hackdash_embed']; ?>
+	{{youTubeId}}
+
+	<div ng-if = "ready">
+			<h6>{{hackDashData.title}}</h6>
+
+			<img src = "https://hackdash.org{{hackDashData.cover}}"/>
+
+			<div 
+				class 		= "teaser-wrap" 
+				style 		= "background-image:url(https://i.ytimg.com/vi/{{youTubeId}}/hqdefault.jpg)"
+				ng-click	= "play = true"
+			>
+				<iframe 
+					ng-if		= "play"
+					width		= "560" 
+					height		= "315" 
+					src			= "https://www.youtube.com/embed/Q5bD7OZgMWM" 
+					frameborder	=	"0" 
+					allowfullscreen
+				></iframe>
+			</div>
+			
 	</div>
-	
+
+	<!--
 	<div class="teaser-meta">
 
 		<?php

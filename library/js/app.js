@@ -12,22 +12,27 @@ angular.module('jugendHackt', [])
 
 			link: function(scope, element, attrs){
 
-				var id_in_embed_snippet  = attrs.hackDashId.match(/hackdash\.org\/embed\/projects\/([a-zA-Z0-9]+)[^a-zA-Z0-9]/)
+				var hd_id_in_embed_snippet  = attrs.hackDashId.match(/hackdash\.org\/embed\/projects\/([a-zA-Z0-9]+)[^a-zA-Z0-9]/)
+					yt_id_in_embed_snippet  = attrs.youtTubeId.match(/youtube\.com\/embed\/([a-zA-Z0-9]+)[^a-zA-Z0-9]/)
 
-				if(id_in_embed_snippet != null){
-					scope.hackDashId = id_in_embed_snippet[1]
+				if(hd_id_in_embed_snippet != null){
+					scope.hackDashId = hd_id_in_embed_snippet[1]
 				} else {
 					scope.hashDashId = attrs.hackDashId
 				}
-				
-				console.log('$scope.hackDashId', scope.hackDashId)
 
-				scope.test = 'test'
+				if(yt_id_in_embed_snippet != null){
+					scope.youTubeId = yt_id_in_embed_snippet[1]
+				} else {
+					scope.youTubeId = attrs.youtTubeId
+				}
+				
+				scope.play = false
 
 				$http.get('https://hackdash.org/api/v2/projects/'+scope.hackDashId)
 				.then(function(result){
 					scope.hackDashData = result.data
-					console.log(scope.hackDashData)
+					scope.ready = true
 				})
 
 			}
