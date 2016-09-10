@@ -1,3 +1,5 @@
+console.log('DING')
+
 /*
 Bones Scripts File
 Author: Eddie Machado
