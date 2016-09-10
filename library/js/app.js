@@ -8,11 +8,13 @@ angular.module('jugendHackt', [])
 		return {
 			restrict: 	"AE",
 			scope:		{
-							teaserData : "<"
+							teaserData : "<",
+							hackDashId : "<",
 						},
 
 			link: function($scope){
-				console.dir($scope.teasetData)
+				console.log('TeaserData:', $scope.teaserData)
+				console.log('hackDashId:', $scope.hackDashId)
 			}
 		}
 	}
