@@ -27,7 +27,7 @@ angular.module('jugendHackt', [])
 				.then(function(result){
 					$scope.hackDashData = result.data
 					console.log($scope.hackDashData)
-					$scope.$digets()
+					$scope.$digest()
 				})
 
 			}
