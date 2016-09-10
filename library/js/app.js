@@ -15,7 +15,7 @@ angular.module('jugendHackt', [])
 				console.log('TeaserData:', $scope.teaserData)
 				console.log('hackDashId:', $scope.hackDashId)
 
-				var id_in_embed_snippet  = $scope.hackDashId.match(/hackdash.org\/embed\/projects\/(.*)\?/g)
+				var id_in_embed_snippet  = $scope.hackDashId.match(/hackdash.org\/embed\/projects\/(.+)\?/g)
 
 				if(id_in_embed_snippet != null){
 					console.dir(id_in_embed_snippet)
