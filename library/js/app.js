@@ -23,11 +23,12 @@ angular.module('jugendHackt', [])
 				
 				console.log('$scope.hackDashId', $scope.hackDashId)
 
+				$scope.test = 'test'
+
 				$http.get('https://hackdash.org/api/v2/projects/'+$scope.hackDashId)
 				.then(function(result){
 					$scope.hackDashData = result.data
 					console.log($scope.hackDashData)
-					$scope.$digest()
 				})
 
 			}

@@ -29,7 +29,7 @@ if(!empty($categories)){
 	jh-project-teaser
 	hack-dash-id = "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>"
 >
-
+	{{test}}
 	HackDashData {{!!hackDashData}}:
 	<pre>{{hackDashData | json}}</pre>
 
