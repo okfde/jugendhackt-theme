@@ -36,7 +36,10 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/slick.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.collapse.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.mixitup.min.js"></script>																					
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/isotope.pkgd.min.js"></script>																					
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/isotope.pkgd.min.js"></script>	
+
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/app.js"></script>																					
 
 </head>
 

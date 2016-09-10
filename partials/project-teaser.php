@@ -24,7 +24,10 @@ if(!empty($categories)){
 
 ?>
 
-<div class="background-panel teaser-item <?php echo $filterClasses; ?> <?php echo $badgeClasses; ?>">
+<div 
+	class = "background-panel teaser-item <?php echo $filterClasses; ?> <?php echo $badgeClasses; ?>"
+	jh-project-teaser
+>
 
 	working...
 
