@@ -27,7 +27,7 @@ if(!empty($categories)){
 <div 
 	class = "background-panel teaser-item <?php echo $filterClasses; ?> <?php echo $badgeClasses; ?>"
 	jh-project-teaser
-	hack-dash-id = "<?php echo $project['project_hackdash_embed']; ?>"
+	hack-dash-id = "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>"
 >
 
 	working...
