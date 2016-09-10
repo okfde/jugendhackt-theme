@@ -26,7 +26,9 @@ if(!empty($categories)){
 
 <div class="background-panel teaser-item <?php echo $filterClasses; ?> <?php echo $badgeClasses; ?>">
 
-	<div class="teaser-wrap">
+	working...
+
+	<!-- <div class="teaser-wrap">
 		<?php echo $project['project_hackdash_embed']; ?>
 	</div>
 	
@@ -56,5 +58,5 @@ if(!empty($categories)){
 			</div>
 		<?php } ?>
 	
-	</div>
+	</div> -->
 </div>
