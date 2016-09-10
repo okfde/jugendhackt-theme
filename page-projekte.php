@@ -75,6 +75,8 @@ foreach ($field['sub_fields'] as $key => $subfield) {
 
 		</div> <!-- end article section -->
 
+		<!-- project teasers-->
+
 		<?php 
 
 		if( !empty($projects) ) {
