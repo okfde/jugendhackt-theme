@@ -33,22 +33,20 @@ if(!empty($categories)){
 >
 	<div ng-if = "!ready" class = "loading"> loading ... </div>
 
-	{{youTubeId}}
+	<h5 ng-if = "ready">{{hackDashData.title}}</h5>
 
-	<div ng-if = "ready">
-			<h5>{{hackDashData.title}}</h5>
-
-			<div 
-				class 		= "teaser-wrap" 
-				style 		= "background-image:url(https://i.ytimg.com/vi/{{youTubeId}}/hqdefault.jpg)"
-				ng-click	= "play = true"
-			>
-				<iframe 
-					frameborder	=	"0" 
-					allowfullscreen
-				></iframe>
-			</div>
+	<div 
+		class 		= "teaser-wrap" 
+		style 		= "background-image:url(https://i.ytimg.com/vi/{{youTubeId}}/hqdefault.jpg)"
+		ng-click	= "play = true"
+	>
+		<iframe 
+			frameborder	=	"0" 
+			allowfullscreen
+		></iframe>
+	</div>
 			
+	<div ng-if = "ready">
 	</div>
 
 	<!--
