@@ -40,13 +40,15 @@ angular.module('jugendHackt', [])
 					iframe[0].height 	= wrapper[0].clientWidth*0.5625					
 				}
 
-				resizeIframe()
-				angular.element(window).on('resize', resizeIframe)
 
 				scope.play = function(){
 					if(!iframe[0]) 			return null
 					if(!scope.youtubeId) 	return null
+					if(scope.open)			return null
+					scope.open = true
+					resizeIframe()
 					iframe[0].src = "https://www.youtube.com/embed/"+scope.youtubeId
+					angular.element(window).on('resize', resizeIframe)
 				}
 
 				if(scope.hackDashId){
