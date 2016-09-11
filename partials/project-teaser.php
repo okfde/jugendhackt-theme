@@ -33,7 +33,7 @@ if(!empty($categories)){
 >
 	<div ng-if = "!ready" class = "loading"> loading ... </div>
 
-	<h4 ng-if = "ready">{{hackDashData.title}}</h4>
+	<h3 ng-if = "ready">{{hackDashData.title}}</h3>
 
 	<div 
 		class 		= "teaser-wrap" 

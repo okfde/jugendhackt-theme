@@ -37,7 +37,7 @@ angular.module('jugendHackt', [])
 				function resizeIframe(){
 					if(!iframe[0]) return null
 					iframe[0].width 	= wrapper[0].clientWidth
-					iframe[0].height 	= wrapper[0].clientWidth*0.5625					
+					iframe[0].height 	= wrapper[0].clientHeight
 				}
 
 
