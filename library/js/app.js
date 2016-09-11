@@ -31,6 +31,7 @@ angular.module('jugendHackt', [])
 					wrapper	= iframe.parent()
 
 				function resizeIframe(){
+					if(!iframe[0]) return null
 					iframe[0].width 	= wrapper[0].clientWidth
 					iframe[0].height 	= wrapper[0].clientWidth*0.5625					
 				}
@@ -39,6 +40,7 @@ angular.module('jugendHackt', [])
 				angular.element(window).on('resize', resizeIframe)
 
 				scope.play = function(){
+					if(!iframe[0]) return null
 					iframe[0].src = "https://www.youtube.com/embed/"+scope.youtubeId
 				}
 

@@ -37,7 +37,7 @@ if(!empty($categories)){
 
 	<div 
 		class 		= "teaser-wrap" 
-		style 		= "background-image:url(https://i.ytimg.com/vi/{{youTubeId}}/hqdefault.jpg); cursor:pointer"
+		style 		= "background-image:url(https://i.ytimg.com/vi/{{youTubeId}}/hqdefault.jpg)"
 		ng-click	= "play()"
 	>
 		<iframe 

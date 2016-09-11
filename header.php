@@ -24,6 +24,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic' rel='stylesheet' type='text/css'>
 	<link href='<?php echo get_template_directory_uri(); ?>/library/css/ebisu.css' rel='stylesheet' type='text/css'>
 	<link href='<?php echo get_template_directory_uri(); ?>/library/css/slick.css' rel='stylesheet' type='text/css'>
+	<link href='<?php echo get_template_directory_uri(); ?>/library/css/extra.css' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -39,7 +40,8 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/isotope.pkgd.min.js"></script>	
 
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/angular.min.js"></script>
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/app.js"></script>																					
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/app.js"></script>	
+
 
 </head>
 
