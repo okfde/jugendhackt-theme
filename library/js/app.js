@@ -30,6 +30,9 @@ angular.module('jugendHackt', [])
 										?	attrs.youTubeId
 										:	undefined
 				}
+
+				scope.jhAuthors = attrs.jhAuthors
+				scope.jhLinks 	= scope.$eval(attrs.jhLinks)
 				
 				var iframe 	= element.find('iframe'),
 					wrapper	= iframe.parent()

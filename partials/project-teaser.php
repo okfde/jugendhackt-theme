@@ -29,11 +29,13 @@ if(!empty($categories)){
 	jh-project-teaser
 	hack-dash-id 	= "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>"
 	you-tube-id  	= "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>" 
-	jh-authors		= "<?php echo htmlspecialchars($contributors) ?>"
+	jh-authors		= "<?php echo htmlspecialchars($project['project_contributors']) ?>"
+	jh-links		= "<?php echo htmlspecialchars(json_encode($project['project_links'])) ?>"
+
 >
 	<div ng-if = "!ready" class = "loading"> loading ... </div>
 
-	<h3 ng-if = "ready">{{hackDashData.title}}</h3>
+	<h2 ng-if = "ready">{{hackDashData.title}}</h2>
 
 	<div 
 		class 		= "teaser-wrap" 
@@ -47,8 +49,16 @@ if(!empty($categories)){
 			allowfullscreen
 		></iframe>
 	</div>
-			
-	<div ng-if = "ready">
+	
+	<h3 class="project-who">
+		Wer: {{jhAuthors}}
+	</h3>
+
+	<div class="project-links"> 
+		<h3 ng-repeat = " (title, url) in links">
+			{{title}} <br/>
+			{{url}}
+		</h3>
 	</div>
 
 	<!--
