@@ -63,9 +63,14 @@ if(!empty($categories)){
 		</h3>
 
 		<div class="project-links"> 
-			<h3 ng-repeat = " (title, url) in jhLinks">
-				{{title}} <br/>
-				{{url}}
+			<h3 ng-repeat = " link in jhLinks">
+				<a 
+					class	= "h3" 
+					href	= "{{link.project_links_url}}"
+				>
+					{{link.project_links_title}}
+					{{$last ? '' : ','}}
+				</a>
 			</h3>
 		</div>
 
