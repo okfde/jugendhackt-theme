@@ -27,7 +27,7 @@ angular.module('jugendHackt', [])
 					scope.youTubeId = attrs.youtTubeId
 				}
 				
-				var iframe 	= element.find(iframe),
+				var iframe 	= element.find('iframe'),
 					wrapper	= iframe.parent()
 
 				function resizeIframe(){
