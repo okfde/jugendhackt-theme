@@ -44,7 +44,6 @@ if(!empty($categories)){
 				ng-click	= "play = true"
 			>
 				<iframe 
-					ng-if		= 	"play"
 					frameborder	=	"0" 
 					allowfullscreen
 				></iframe>
