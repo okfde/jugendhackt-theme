@@ -55,7 +55,7 @@ if(!empty($categories)){
 	</h3>
 
 	<div class="project-links"> 
-		<h3 ng-repeat = " (title, url) in links">
+		<h3 ng-repeat = " (title, url) in jhLinks">
 			{{title}} <br/>
 			{{url}}
 		</h3>

@@ -45,7 +45,6 @@ angular.module('jugendHackt', [])
 
 
 				scope.play = function(){
-					console.log('play!', iframe, scope.youTubeId, open)
 					if(!iframe[0]) 			return null
 					if(!scope.youTubeId) 	return null
 					if(scope.open)			return null
