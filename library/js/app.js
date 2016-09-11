@@ -18,7 +18,7 @@ angular.module('jugendHackt', [])
 				if(hd_id_in_embed_snippet != null){
 					scope.hackDashId = hd_id_in_embed_snippet[1]
 				} else {
-					scope.hashDashId = 	attrs.hackDashId.match(/^[a-zA-Z0-9_\-]+$/)
+					scope.hashDashId = 	attrs.hackDashId && attrs.hackDashId.match(/^[a-zA-Z0-9_\-]+$/)
 										?	attrs.hackDashId
 										:	undefined
 				}
@@ -26,8 +26,8 @@ angular.module('jugendHackt', [])
 				if(yt_id_in_embed_snippet != null){
 					scope.youTubeId = yt_id_in_embed_snippet[1]
 				} else {
-					scope.youTubeId = 	attrs.youtTubeId.match(/^[a-zA-Z0-9_\-]+$/)
-										?	attrs.youtTubeId
+					scope.youTubeId = 	attrs.youTubeId && attrs.youTubeId.match(/^[a-zA-Z0-9_\-]+$/)
+										?	attrs.youTubeId
 										:	undefined
 				}
 				
