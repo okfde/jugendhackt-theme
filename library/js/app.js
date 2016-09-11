@@ -18,13 +18,17 @@ angular.module('jugendHackt', [])
 				if(hd_id_in_embed_snippet != null){
 					scope.hackDashId = hd_id_in_embed_snippet[1]
 				} else {
-					scope.hashDashId = attrs.hackDashId
+					scope.hashDashId = 	attrs.hackDashId.match(/^[a-zA-Z0-9_\-]+$/)
+										?	attrs.hackDashId
+										:	undefined
 				}
 
 				if(yt_id_in_embed_snippet != null){
 					scope.youTubeId = yt_id_in_embed_snippet[1]
 				} else {
-					scope.youTubeId = attrs.youtTubeId
+					scope.youTubeId = 	attrs.youtTubeId.match(/^[a-zA-Z0-9_\-]+$/)
+										?	attrs.youtTubeId
+										:	undefined
 				}
 				
 				var iframe 	= element.find('iframe'),
@@ -40,17 +44,18 @@ angular.module('jugendHackt', [])
 				angular.element(window).on('resize', resizeIframe)
 
 				scope.play = function(){
-					if(!iframe[0]) return null
+					if(!iframe[0]) 			return null
+					if(!scope.youtubeId) 	return null
 					iframe[0].src = "https://www.youtube.com/embed/"+scope.youtubeId
 				}
 
-
-				$http.get('https://hackdash.org/api/v2/projects/'+scope.hackDashId)
-				.then(function(result){
-					scope.hackDashData = result.data
-					scope.ready = true
-				})
-
+				if(scope.hackDashId){
+					$http.get('https://hackdash.org/api/v2/projects/'+scope.hackDashId)
+					.then(function(result){
+						scope.hackDashData = result.data
+						scope.ready = true
+					})
+				}
 			}
 		}
 	}
