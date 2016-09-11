@@ -49,16 +49,26 @@ if(!empty($categories)){
 			allowfullscreen
 		></iframe>
 	</div>
-	
-	<h3 class="project-who">
-		Wer: {{jhAuthors}}
-	</h3>
 
-	<div class="project-links"> 
-		<h3 ng-repeat = " (title, url) in jhLinks">
-			{{title}} <br/>
-			{{url}}
+	<p>
+		{{hackDashData.description}}
+	</p>
+
+
+
+	<div class ="teaser-meta">
+	
+		<h3 class="project-who">
+			Wer: {{jhAuthors}}
 		</h3>
+
+		<div class="project-links"> 
+			<h3 ng-repeat = " (title, url) in jhLinks">
+				{{title}} <br/>
+				{{url}}
+			</h3>
+		</div>
+
 	</div>
 
 	<!--
