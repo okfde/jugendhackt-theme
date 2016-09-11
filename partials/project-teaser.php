@@ -33,12 +33,12 @@ if(!empty($categories)){
 >
 	<div ng-if = "!ready" class = "loading"> loading ... </div>
 
-	<h5 ng-if = "ready">{{hackDashData.title}}</h5>
+	<h4 ng-if = "ready">{{hackDashData.title}}</h4>
 
 	<div 
 		class 		= "teaser-wrap" 
-		style 		= "background-image:url(https://i.ytimg.com/vi/{{youTubeId}}/hqdefault.jpg)"
-		ng-click	= "play = true"
+		style 		= "background-image:url(https://i.ytimg.com/vi/{{youTubeId}}/hqdefault.jpg); cursor:pointer"
+		ng-click	= "play()"
 	>
 		<iframe 
 			frameborder	=	"0" 
