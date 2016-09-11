@@ -48,7 +48,7 @@ angular.module('jugendHackt', [])
 					if(scope.open)			return null
 					scope.open = true
 					resizeIframe()
-					iframe[0].src = "https://www.youtube.com/embed/"+scope.youtubeId+"?autoplay=1"
+					iframe[0].src = "https://www.youtube.com/embed/"+scope.youTubeId+"?autoplay=1"
 					angular.element(window).on('resize', resizeIframe)
 				}
 
