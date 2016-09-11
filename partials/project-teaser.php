@@ -37,8 +37,6 @@ if(!empty($categories)){
 	<div ng-if = "ready">
 			<h6>{{hackDashData.title}}</h6>
 
-			<img src = "https://hackdash.org{{hackDashData.cover}}"/>
-
 			<div 
 				class 		= "teaser-wrap" 
 				style 		= "background-image:url(https://i.ytimg.com/vi/{{youTubeId}}/hqdefault.jpg)"

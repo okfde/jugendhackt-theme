@@ -13,7 +13,7 @@ angular.module('jugendHackt', [])
 			link: function(scope, element, attrs){
 
 				var hd_id_in_embed_snippet  = (attrs.hackDashId	|| '').match(/hackdash\.org\/embed\/projects\/([a-zA-Z0-9]+)[^a-zA-Z0-9]/)
-					yt_id_in_embed_snippet  = (attrs.youTubeId 	|| '').match(/youtube\.com\/embed\/([a-zA-Z0-9]+)[^a-zA-Z0-9]/)
+					yt_id_in_embed_snippet  = (attrs.youTubeId 	|| '').match(/youtube\.com\/embed\/([a-zA-Z0-9_\-]+)[^a-zA-Z0-9_\-]/)
 
 				if(hd_id_in_embed_snippet != null){
 					scope.hackDashId = hd_id_in_embed_snippet[1]
