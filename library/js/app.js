@@ -27,7 +27,21 @@ angular.module('jugendHackt', [])
 					scope.youTubeId = attrs.youtTubeId
 				}
 				
-				scope.play = false
+				var iframe 	= element.find(iframe),
+					wrapper	= iframe.parent()
+
+				function resizeIframe(){
+					iframe[0].width 	= wrapper[0].clientWidth
+					iframe[0].height 	= wrapper[0].clientWidth*0.5625					
+				}
+
+				resizeIframe()
+				angular.element(window).on('resize', resizeIframe)
+
+				scope.play = function(){
+					iframe[0].src = "https://www.youtube.com/embed/"+scope.youtubeId
+				}
+
 
 				$http.get('https://hackdash.org/api/v2/projects/'+scope.hackDashId)
 				.then(function(result){

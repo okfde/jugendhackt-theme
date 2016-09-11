@@ -27,15 +27,16 @@ if(!empty($categories)){
 <div 
 	class = "background-panel teaser-item <?php echo $filterClasses; ?> <?php echo $badgeClasses; ?>"
 	jh-project-teaser
-	hack-dash-id = "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>"
-	you-tube-id  = "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>" 
+	hack-dash-id 	= "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>"
+	you-tube-id  	= "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>" 
+	jh-authors		= "<?php echo htmlspecialchars($contributors) ?>"
 >
 	<div ng-if = "!ready" class = "loading"> loading ... </div>
 
 	{{youTubeId}}
 
 	<div ng-if = "ready">
-			<h6>{{hackDashData.title}}</h6>
+			<h5>{{hackDashData.title}}</h5>
 
 			<div 
 				class 		= "teaser-wrap" 
@@ -43,10 +44,7 @@ if(!empty($categories)){
 				ng-click	= "play = true"
 			>
 				<iframe 
-					ng-if		= "play"
-					width		= "560" 
-					height		= "315" 
-					src			= "https://www.youtube.com/embed/Q5bD7OZgMWM" 
+					ng-if		= 	"play"
 					frameborder	=	"0" 
 					allowfullscreen
 				></iframe>
