@@ -50,9 +50,10 @@ if(!empty($categories)){
 		></iframe>
 	</div>
 
-	<p>
+	<div class = "description">
 		{{hackDashData.description}}
-	</p>
+	</div>
+	<a ng-href ="'https://hackdash.org/embed/projects/'+hackDashData._id">... mehr</a>
 
 
 

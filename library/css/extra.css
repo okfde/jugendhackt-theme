@@ -2,9 +2,12 @@
 	word-break: break-word;
 }
 
-[jh-project-teaser] p {
-	text-align:				justify;
-	opacity:				0.95;
+[jh-project-teaser] .description {
+	opacity:				0.9;
+	font-size:				0.9em;
+	line-height:			1.4em;
+	max-height:				14em;
+	overflow:				hidden;
 }
 
 [jh-project-teaser] .teaser-wrap {
