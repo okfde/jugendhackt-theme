@@ -4,10 +4,17 @@
 
 [jh-project-teaser] .description {
 	opacity:				0.9;
-	font-size:				0.9em;
+	margin-top:				1em;
+	font-size:				1em;
 	line-height:			1.4em;
 	max-height:				14em;
 	overflow:				hidden;
+}
+
+[jh-project-teaser] .description + a {
+	display:				block;
+	text-align:				right;
+	color:					#2aabe1;
 }
 
 [jh-project-teaser] .teaser-wrap {

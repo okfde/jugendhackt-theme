@@ -53,7 +53,7 @@ if(!empty($categories)){
 	<div class = "description">
 		{{hackDashData.description}}
 	</div>
-	<a ng-href ="'https://hackdash.org/embed/projects/'+hackDashData._id">... mehr</a>
+	<a ng-href ="{{'https://hackdash.org/embed/projects/'+hackDashData._id}}">... mehr</a>
 
 
 
