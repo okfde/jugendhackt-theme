@@ -1,5 +1,10 @@
 [jh-project-teaser] .teaser-wrap {
-	background-size: 	contain;
-	background-repeat: 	no-repeat;
-	cursor:				pointer;
+	background-size: 		contain;
+	background-repeat: 		no-repeat;
+	background-position:	50% 50%;
+	cursor:					pointer;
+}
+
+[jh-project-teaser] iframe {
+	cursor:					pointer;
 }
