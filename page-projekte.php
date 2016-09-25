@@ -23,19 +23,19 @@ $categories = get_categories( $args );
 $projects = get_field('hackdash_projects');
 
 // Extract all Badges in use -> build the legend
-foreach ($projects as $key => $project) {
-	$allBadges[] = $project['project_badge'][0];
-}
-$allBadges = array_unique($allBadges);
+// foreach ($projects as $key => $project) {
+// 	$allBadges[] = $project['project_badge'][0];
+// }
+// $allBadges = array_unique($allBadges);
 
 $field = get_field_object('hackdash_projects');
 
 // get the proper names for badge choices
-foreach ($field['sub_fields'] as $key => $subfield) {
-	if($subfield['name'] === 'project_badge'){
-		$choiceNames = $subfield['choices'];
-	}
-}
+// foreach ($field['sub_fields'] as $key => $subfield) {
+// 	if($subfield['name'] === 'project_badge'){
+// 		$choiceNames = $subfield['choices'];
+// 	}
+// }
 
 ?>
 
@@ -64,13 +64,13 @@ foreach ($field['sub_fields'] as $key => $subfield) {
 
 			?> 
 
-			<div class="badge-legend-wrap">
+			<!-- <div class="badge-legend-wrap">
 				<?php
 				foreach ($allBadges as $key => $badge) { ?>
 					<h3 class="badge-legend badge-legend-<?php echo $badge; ?> filter" data-filter=".badge-<?php echo $badge; ?>" > <?php echo $choiceNames[$badge]; ?> </h3>
 				<?php }
 				?>	
-			</div>
+			</div> -->
 
 
 		</div> <!-- end article section -->
