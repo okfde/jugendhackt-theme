@@ -1,11 +1,11 @@
 <?php 
 
-$badge = $project['project_badge'];
-unset($badgeClasses);
+// $badge = $project['project_badge'];
+// unset($badgeClasses);
 
-if(!empty($badge)) { 
-	$badgeClasses = 'badge badge-'.$badge[0];
-}
+// if(!empty($badge)) { 
+// 	$badgeClasses = 'badge badge-'.$badge[0];
+// }
 
 $categories = $project['project_region'];
 
@@ -25,7 +25,7 @@ if(!empty($categories)){
 ?>
 
 <div 
-	class = "background-panel teaser-item <?php echo $filterClasses; ?> <?php echo $badgeClasses; ?>"
+	class = "background-panel teaser-item <?php echo $filterClasses; ?>"
 	jh-project-teaser
 	hack-dash-id 	= "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>"
 	you-tube-id  	= "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>" 
