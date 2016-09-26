@@ -4,6 +4,7 @@ angular.module('jugendHackt', [])
 .directive('jhProjectTeaser',[
 
 	'$http',
+	'$timeout',
 
 	function($http){
 		return {
@@ -59,7 +60,12 @@ angular.module('jugendHackt', [])
 					.then(function(result){
 						scope.hackDashData = result.data
 						scope.ready = true
+						return $timeout(100)
 					})
+					.then(function(){
+						$('.mixitup-container').mixItUp();
+					})
+
 				}
 			}
 		}
