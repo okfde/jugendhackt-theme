@@ -94,7 +94,10 @@ jQuery(document).ready(function($) {
 				hashFirst: function(el){
 					var matches = window.location.hash.match(/#([^?$]*)/)
 						id 		= matches && matches[1]
-					return el.id ==  id ? 0 : 1
+
+					if(el.id == "filters") return 0
+						
+					return el.id ==  id ? 1 : 2
 				}
 			},
 			sortBy : ['hashFirst', 'original-order']
