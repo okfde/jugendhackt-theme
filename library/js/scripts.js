@@ -92,14 +92,13 @@ jQuery(document).ready(function($) {
 			percentPosition: true,
 			getSortData: {
 				hashFirst: function(el){
-					console.log(window.location.hash)
 					var matches = window.location.hash.match(/#([^?$]*)/)
 						id 		= matches && matches[1]
 					console.log(id)
-					return el.id ==  id ? 1 : 0
+					return el.id ==  id ? 0 : 1
 				}
 			},
-			sortBy : ['hashFirst']
+			sortBy : ['hashFirst', 'original-order']
 		});
 
 
