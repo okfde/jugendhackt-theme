@@ -22,7 +22,7 @@ if(!empty($categories)){
 	}
 }
 
-	var_dump($project)
+	echo "ID: ".$project['id']
 
 ?>
 
