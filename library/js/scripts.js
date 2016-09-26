@@ -94,8 +94,7 @@ jQuery(document).ready(function($) {
 				hashFirst: function(el){
 					var matches = window.location.hash.match(/#([^?$]*)/)
 						id 		= matches && matches[1]
-					console.log(id)
-					return el.id ==  id ? 0 : 1
+					return !id || el.id ==  id ? 0 : 1
 				}
 			},
 			sortBy : ['hashFirst', 'original-order']
