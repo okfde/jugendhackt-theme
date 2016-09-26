@@ -93,7 +93,10 @@ jQuery(document).ready(function($) {
 			getSortData: {
 				hashFirst: function(el){
 					console.log(window.location.hash)
-					return el.id == window.location.hash ? 1 : 0
+					var matches = window.location.hash.match(/#([^?$]*)/)
+						id 		= matches && matches[1]
+					console.log(id)
+					return el.id ==  id ? 1 : 0
 				}
 			},
 			sortBy : ['hashFirst']
