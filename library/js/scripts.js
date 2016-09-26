@@ -91,14 +91,13 @@ jQuery(document).ready(function($) {
 			itemSelector: '.teaser-item',
 			percentPosition: true,
 			getSortData: {
-				hashFirst: function(){
-					
+				hashFirst: function(el){
+					return el.id == "window.location.hash" ? 1 : 0
 				}
-			}
+			},
+			sortBy : ['hashFirst', 'original-order']
 		});
 
-
-		console.log(window.location.hash)
 
 		// filter items on button click
 		$('#filters .filter').on( 'click', function() {

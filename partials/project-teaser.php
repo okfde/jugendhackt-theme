@@ -21,14 +21,12 @@ if(!empty($categories)){
 		}
 	}
 }
-
-	echo "ID: ".$project['id']
-
 ?>
 
 
 <div 
-	class = "background-panel teaser-item <?php echo $filterClasses; ?>"
+	class 			= "background-panel teaser-item <?php echo $filterClasses; ?>"
+	id				= "<?php echo htmlspecialchars($project['id']) ?>"
 	jh-project-teaser
 	hack-dash-id 	= "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>"
 	you-tube-id  	= "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>" 
