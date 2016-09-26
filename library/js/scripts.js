@@ -96,12 +96,16 @@ jQuery(document).ready(function($) {
 						id 		= matches && matches[1]
 
 					if(el.id == "filters") return 0
-						
+
 					return el.id ==  id ? 1 : 2
 				}
 			},
 			sortBy : ['hashFirst', 'original-order']
 		});
+
+		$(window).on('hashchange', function() {
+			$container.isotope('updateSortData').isotope()
+		})
 
 
 		// filter items on button click
