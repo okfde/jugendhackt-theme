@@ -60,10 +60,13 @@ angular.module('jugendHackt', [])
 					.then(function(result){
 						scope.hackDashData = result.data
 						scope.ready = true
-						return $timeout(100)
+						return $timeout(200)
 					})
 					.then(function(){
-						$('.mixitup-container').mixItUp();
+						console.log('done')
+						var container = $('.isotope-container')
+
+						if(container.length && container.isotope) container.isotope()
 					})
 
 				}
