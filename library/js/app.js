@@ -6,7 +6,7 @@ angular.module('jugendHackt', [])
 	'$http',
 	'$timeout',
 
-	function($http){
+	function($http, $timeout){
 		return {
 			restrict: 	"AE",
 			scope:		true,
