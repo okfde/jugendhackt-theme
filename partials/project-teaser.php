@@ -22,7 +22,10 @@ if(!empty($categories)){
 	}
 }
 
+	var_dump($project)
+
 ?>
+
 
 <div 
 	class = "background-panel teaser-item <?php echo $filterClasses; ?>"

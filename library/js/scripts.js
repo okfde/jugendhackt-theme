@@ -89,8 +89,16 @@ jQuery(document).ready(function($) {
 				gutter: '.gutter-sizer'
 			},
 			itemSelector: '.teaser-item',
-			percentPosition: true
+			percentPosition: true,
+			getSortData: {
+				hashFirst: function(){
+					
+				}
+			}
 		});
+
+
+		console.log(window.location.hash)
 
 		// filter items on button click
 		$('#filters .filter').on( 'click', function() {
