@@ -63,7 +63,6 @@ angular.module('jugendHackt', [])
 						return $timeout(200)
 					})
 					.then(function(){
-						console.log('done')
 						var container = $('.isotope-container')
 
 						if(container.length && container.isotope) container.isotope()
