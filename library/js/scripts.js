@@ -85,8 +85,8 @@ jQuery(document).ready(function($) {
 		// Team Isotope
 		var  $container = $('.isotope-container').isotope({
 			masonry: {
-				columnWidth: '.grid-sizer',
-				gutter: '.gutter-sizer'
+				columnWidth: 	'.grid-sizer',
+				gutter: 		'.gutter-sizer'
 			},
 			itemSelector: '.teaser-item',
 			percentPosition: true,
@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
 				hashFirst: function(el){
 					var matches = window.location.hash.match(/#([^?$]*)/)
 						id 		= matches && matches[1]
-					return !id || el.id ==  id ? 0 : 1
+					return el.id ==  id ? 0 : 1
 				}
 			},
 			sortBy : ['hashFirst', 'original-order']
