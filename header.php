@@ -3,7 +3,7 @@
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js" ng-app ="jugendHackt"><!--<![endif]-->
 
 <head>
 	<meta charset="utf-8">
@@ -24,6 +24,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic' rel='stylesheet' type='text/css'>
 	<link href='<?php echo get_template_directory_uri(); ?>/library/css/ebisu.css' rel='stylesheet' type='text/css'>
 	<link href='<?php echo get_template_directory_uri(); ?>/library/css/slick.css' rel='stylesheet' type='text/css'>
+	<link href='<?php echo get_template_directory_uri(); ?>/library/css/extra.css' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -36,7 +37,11 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/slick.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.collapse.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.mixitup.min.js"></script>																					
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/isotope.pkgd.min.js"></script>																					
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/isotope.pkgd.min.js"></script>	
+
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/app.js"></script>	
+
 
 </head>
 

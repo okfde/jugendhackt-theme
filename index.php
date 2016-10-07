@@ -48,8 +48,9 @@
 
 							if(!is_single()) { ?>
 								
-								<a href="<?php the_permalink(); ?>#disqus_thread">Kommetare</a>
-								
+
+								<a href="<?php the_permalink(); ?>#disqus_thread">Kommentare</a>
+
 							<?php
 							}
 						 ?>
