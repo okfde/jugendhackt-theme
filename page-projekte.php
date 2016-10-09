@@ -32,7 +32,7 @@ $args = array(
 	'orderby'                  => 'name',
 	'order'                    => 'ASC',
 	'hide_empty'               => 0,
-	'hierarchical'             => 0,
+	'hierarchical'             => 1,
 	'taxonomy'                 => 'page_category',
 ); 
 
@@ -40,6 +40,8 @@ $years = get_categories( $args );
 
 
 var_dump($years);
+
+var_dump(get_categories());
 
 // Get the projects
 $projects = get_field('hackdash_projects');
