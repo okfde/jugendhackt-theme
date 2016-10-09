@@ -5,8 +5,8 @@ Template Name: Page Projekte
 get_header(); 
 
 // Get the categories for regions:
-$region_parent_obj = get_term_by('name', 'region', 'page_category');
-$region_parent_id = $region_parent_obj->term_id;
+$region_parent_obj	= get_term_by('name', 'region', 'page_category');
+$region_parent_id 	= $region_parent_obj->term_id;
 
 $args = array(
 	'child_of'                 => $region_parent_id,
@@ -18,6 +18,24 @@ $args = array(
 ); 
 
 $regions = get_categories( $args );
+
+
+// Get the categories for years:
+
+$year_parent_obj 	= get_term_by('name', 'jahr', 'page_category');
+$year_parent_id 	= $year_parent_obj->term_id;
+
+$args = array(
+	'child_of'                 => $year_parent_id,
+	'orderby'                  => 'name',
+	'order'                    => 'ASC',
+	'hide_empty'               => 1,
+	'hierarchical'             => 1,
+	'taxonomy'                 => 'page_category',
+); 
+
+$years = get_categories( $args );
+
 
 var_dump($regions);
 
