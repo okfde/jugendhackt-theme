@@ -55,11 +55,6 @@ foreach (get_categories( $args ) as $key => $value) {
 
 
 
-var_dump($years);
-var_dump($regions);
-
-
-
 // Get the projects
 $projects = get_field('hackdash_projects');
 
