@@ -128,7 +128,7 @@ jQuery(document).ready(function($) {
 
 			filter_settings.region = filter_settings.region == '*' ? '' : filter_settings.region			
 
-			filter	= 	(filter_settings.region + filter_settings.year) || '*'
+			var filter	= 	(filter_settings.region + filter_settings.year) || '*'
 							
 			console.log('region', filter)
 
@@ -144,7 +144,7 @@ jQuery(document).ready(function($) {
 
 			filter_settings.year = filter_settings.year == '*' ? '' : filter_settings.year			
 
-			filter	= 	(filter_settings.year + filter_settings.year) || '*'
+			var filter	= 	(filter_settings.region + filter_settings.year) || '*'
 							
 
 			console.log('year', filter)
