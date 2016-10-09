@@ -17,7 +17,14 @@ $args = array(
 	'taxonomy'                 => 'page_category',
 ); 
 
-$regions = get_categories( $args );
+
+$regions = Array();
+
+foreach (get_categories( $args ) as $key => $value) { 
+	$regions[$value->slug] = $value->name
+}
+
+
 
 
 // Get the categories for years:
@@ -36,7 +43,15 @@ $args = array(
 	'taxonomy'                 => 'page_category',
 ); 
 
-$years = get_categories( $args );
+$years = Array();
+
+foreach (get_categories( $args ) as $key => $value) { 
+	$years[] = $value->name
+}
+
+var_dump($years);
+var_dump($regions);
+
 
 
 // Get the projects
