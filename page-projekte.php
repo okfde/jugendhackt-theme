@@ -92,7 +92,7 @@ $field = get_field_object('hackdash_projects');
 					if(!empty($years)) {
 							foreach ($years as $key => $year) { 
 				?>
-								<a class="filter" data-filter-year = ".year-<?php echo $year ?>" > <?php echo $year  ?> </a>
+								<a class="filter" data-filter-year = ".filter-me-as-<?php echo $year ?>" > <?php echo $year  ?> </a>
 				<?php 	
 						}
 					} 
@@ -103,7 +103,7 @@ $field = get_field_object('hackdash_projects');
 			<?php 
 			if(!empty($regions)) {
 					foreach ($regions as $key => $region) { ?>
-						<h2 class="filter" data-filter-region=".region-<?php echo $key ?>" > <?php echo $region  ?> </h2>
+						<h2 class="filter" data-filter-region=".filter-me-as-<?php echo $key ?>" > <?php echo $region  ?> </h2>
 					<?php 	
 				}
 			} 

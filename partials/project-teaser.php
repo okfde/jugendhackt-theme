@@ -17,7 +17,7 @@ if(!empty($categories)){
 
 	// build the classes for filtering
 	foreach ($categories as $key5 => $category) {
-		$filterClasses .= 'term-'.$category->slug;
+		$filterClasses .= 'filter-me-as-'.$category->slug;
 		if( (count($categories) - 1) != $key5) { 
 			$filterClasses .= ' '; 
 		}
