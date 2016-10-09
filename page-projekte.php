@@ -104,7 +104,7 @@ $field = get_field_object('hackdash_projects');
 
 			<br/>
 
-			<h2 class="filter-year active" data-filter="*" >Alle</h2>
+			<h2 class="filter-region active" data-filter-region="*" >Alle</h2>
 			<?php 
 			if(!empty($regions)) {
 					foreach ($regions as $key => $region) { ?>
