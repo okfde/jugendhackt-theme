@@ -31,8 +31,8 @@ $args = array(
 	'child_of'                 => $year_parent_id,
 	'orderby'                  => 'name',
 	'order'                    => 'ASC',
-	'hide_empty'               => 1,
-	'hierarchical'             => 1,
+	'hide_empty'               => 0,
+	'hierarchical'             => 0,
 	'taxonomy'                 => 'page_category',
 ); 
 
