@@ -4,7 +4,7 @@ Template Name: Page Projekte
 */
 get_header(); 
 
-// Get the categories 
+// Get the categories for regions:
 $region_parent_obj = get_term_by('name', 'region', 'page_category');
 $region_parent_id = $region_parent_obj->term_id;
 
@@ -17,7 +17,9 @@ $args = array(
 	'taxonomy'                 => 'page_category',
 ); 
 
-$categories = get_categories( $args );
+$regions = get_categories( $args );
+
+var_dump($regions);
 
 // Get the projects
 $projects = get_field('hackdash_projects');
@@ -55,8 +57,8 @@ $field = get_field_object('hackdash_projects');
 				
 			<h2 class="filter" data-filter="*" >Alle</h2>
 			<?php 
-			if(!empty($categories)) {
-					foreach ($categories as $key => $value) { ?>
+			if(!empty($regions)) {
+					foreach ($regions as $key => $value) { ?>
 						<h2 class="filter" data-filter=".term-<?php echo $value->term_id; ?>" > <?php echo $value->name;  ?> </h2>
 					<?php 	
 				}
