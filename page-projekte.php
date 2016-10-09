@@ -22,8 +22,10 @@ $regions = get_categories( $args );
 
 // Get the categories for years:
 
-$year_parent_obj 	= get_term_by('name', 'jahr', 'page_category');
+$year_parent_obj 	= get_term_by('slug', 'year', 'page_category');
 $year_parent_id 	= $year_parent_obj->term_id;
+
+var_dump($year_parent_obj);
 
 $args = array(
 	'child_of'                 => $year_parent_id,
@@ -37,7 +39,7 @@ $args = array(
 $years = get_categories( $args );
 
 
-var_dump($regions);
+var_dump($years);
 
 // Get the projects
 $projects = get_field('hackdash_projects');
