@@ -39,10 +39,6 @@ $args = array(
 $years = get_categories( $args );
 
 
-var_dump($years);
-
-var_dump(get_categories());
-
 // Get the projects
 $projects = get_field('hackdash_projects');
 
@@ -70,6 +66,19 @@ $field = get_field_object('hackdash_projects');
 		<div id="main"  role="main">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+		<div class = "background-panel">
+		<?php 
+			if(!empty($regions)) {
+					foreach ($years as $key => $value) { 
+		?>
+						<a class="filter" data-filter=".year-<?php echo $value->term_id; ?>" > <?php echo $value->name;  ?> </a>
+		<?php 	
+				}
+			} 
+		?> 
+
+		</div>
 	
 		<section class="isotope-container twelvecol first entry-content" >
 		<div class="grid-sizer"></div>
