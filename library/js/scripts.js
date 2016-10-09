@@ -115,7 +115,7 @@ jQuery(document).ready(function($) {
 		$('#filters .filter').on( 'click', function() {
 			var filterValue = $(this).attr('data-filter')
 
-			ilter_settings.misc = filterValue
+			filter_settings.misc = filterValue
 
 			filter	= 		filter_settings.misc 
 						+ 	(
@@ -133,7 +133,7 @@ jQuery(document).ready(function($) {
 		$('#filters .filter-year').on( 'click', function() {
 			var year = $(this).attr('data-filter-year')
 
-			if(year)		filter_settings.year = year
+			filter_settings.year = year
 
 			filter	= 		filter_settings.misc 
 						+ 	(
