@@ -130,7 +130,6 @@ jQuery(document).ready(function($) {
 
 			var filter	= 	(filter_settings.region + filter_settings.year) || '*'
 							
-			console.log('region', filter)
 
 			$container.isotope({ filter: filter });
 
@@ -146,8 +145,6 @@ jQuery(document).ready(function($) {
 
 			var filter	= 	(filter_settings.region + filter_settings.year) || '*'
 							
-
-			console.log('year', filter)
 
 			$container.isotope({ filter: filter });
 
