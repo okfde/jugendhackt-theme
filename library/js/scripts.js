@@ -128,8 +128,6 @@ jQuery(document).ready(function($) {
 			filter	= 	(filter_settings.region + 	filter_settings.year) || '*'
 							
 
-			console.log(filter)
-
 			$container.isotope({ filter: filter });
 
 			$('#filters .filter-region').removeClass('active');
