@@ -118,7 +118,10 @@ jQuery(document).ready(function($) {
 
 
 
-		var filter_settings = {}
+		var filter_settings 	= 	{
+										region: '*',
+										year:	'*'
+									}
 
 		$('#filters .filter-region').on( 'click', function() {
 			filter_settings.region = $(this).attr('data-filter-region')||'*'
