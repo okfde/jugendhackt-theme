@@ -73,6 +73,18 @@ $field = get_field_object('hackdash_projects');
 
 		<div id="filters" class="entry-content background-panel teaser-item" itemprop="articleBody">
 				
+			<div class = "years">
+				<?php 
+					if(!empty($years)) {
+							foreach ($years as $key => $value) { 
+				?>
+								<a class="filter" data-filter=".term-<?php echo $value->term_id; ?>" > <?php echo $value->name;  ?> </a>
+				<?php 	
+						}
+					} 
+				?> 
+			</div>
+
 			<h2 class="filter" data-filter="*" >Alle</h2>
 			<?php 
 			if(!empty($regions)) {
@@ -84,17 +96,6 @@ $field = get_field_object('hackdash_projects');
 
 			?> 
 
-			<div>
-				<?php 
-					if(!empty($regions)) {
-							foreach ($years as $key => $value) { 
-				?>
-								<h3 class="filter" data-filter=".year-<?php echo $value->term_id; ?>" > <?php echo $value->name;  ?> </h3>
-				<?php 	
-						}
-					} 
-				?> 
-			</div>
 
 			<!-- <div class="badge-legend-wrap">
 				<?php

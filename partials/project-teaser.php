@@ -11,29 +11,15 @@ $categories = $project['project_region'];
 
 var_dump($categories);
 
-$region_parent_obj	= get_term_by('name', 'region', 'page_category');
-$region_parent_id 	= $region_parent_obj->term_id;
-
-$year_parent_obj 	= get_term_by('slug', 'year', 'page_category');
-$year_parent_id 	= $year_parent_obj->term_id;
-
 $filterClasses = '';
 if(!empty($categories)){
 	$categories = array_values($categories);
 
 	// build the classes for filtering
 	foreach ($categories as $key5 => $category) {
-		//regions:
-		if($category->parent == $region_parent_id){
-			$filterClasses .= 'term-'.$category->term_id;
-			if( (count($categories) - 1) != $key5) { 
-				$filterClasses .= ' '; 
-			}
-		}
-
-		//year:
-		if($category->parent == $year_parent_id){
-			$year = $category->name;
+		$filterClasses .= 'term-'.$category->term_id;
+		if( (count($categories) - 1) != $key5) { 
+			$filterClasses .= ' '; 
 		}
 	}
 }
@@ -41,7 +27,6 @@ if(!empty($categories)){
 
 
 <div 
-	ng-if			= "!year || year == <?php $year ?>"
 	class 			= "background-panel teaser-item <?php echo $filterClasses; ?>"
 	id				= "<?php echo htmlspecialchars($project['id']) ?>"
 	jh-project-teaser
