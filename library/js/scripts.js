@@ -108,13 +108,48 @@ jQuery(document).ready(function($) {
 		})
 
 
+		var filter_settings = {}
+
+
 		// filter items on button click
 		$('#filters .filter').on( 'click', function() {
-			var filterValue = $(this).attr('data-filter');
-			$container.isotope({ filter: filterValue });
+			var filterValue = $(this).attr('data-filter')
+
+			ilter_settings.misc = filterValue
+
+			filter	= 		filter_settings.misc 
+						+ 	(
+								filter_settings.year
+								?	'.year-'+filter_settings.year
+								:	''
+							)
+
+			$container.isotope({ filter: filter });
+
 			$('#filters .filter').removeClass('active');
 			$(this).addClass('active');
 		});
+
+		$('#filters .filter-year').on( 'click', function() {
+			var year = $(this).attr('data-filter-year')
+
+			if(year)		filter_settings.year = year
+
+			filter	= 		filter_settings.misc 
+						+ 	(
+								filter_settings.year
+								?	'.year-'+filter_settings.year
+								:	''
+							)
+
+			$container.isotope({ filter: filter });
+
+			$('#filters .filter-year').removeClass('active');
+			$(this).addClass('active');
+		});
+
+
+
 
 		$container.isotope('stamp',  $('#filters'));
 
