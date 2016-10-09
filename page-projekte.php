@@ -67,19 +67,6 @@ $field = get_field_object('hackdash_projects');
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<div class = "background-panel">
-		<?php 
-			if(!empty($regions)) {
-					foreach ($years as $key => $value) { 
-		?>
-						<a class="filter" data-filter=".year-<?php echo $value->term_id; ?>" > <?php echo $value->name;  ?> </a>
-		<?php 	
-				}
-			} 
-		?> 
-
-		</div>
-	
 		<section class="isotope-container twelvecol first entry-content" >
 		<div class="grid-sizer"></div>
 		<div class="gutter-sizer"></div>
@@ -96,6 +83,18 @@ $field = get_field_object('hackdash_projects');
 			} 
 
 			?> 
+
+			<div>
+				<?php 
+					if(!empty($regions)) {
+							foreach ($years as $key => $value) { 
+				?>
+								<h3 class="filter" data-filter=".year-<?php echo $value->term_id; ?>" > <?php echo $value->name;  ?> </h3>
+				<?php 	
+						}
+					} 
+				?> 
+			</div>
 
 			<!-- <div class="badge-legend-wrap">
 				<?php

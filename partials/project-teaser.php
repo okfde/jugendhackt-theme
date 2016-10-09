@@ -9,6 +9,8 @@
 
 $categories = $project['project_region'];
 
+var_dump($categories)
+
 $filterClasses = '';
 if(!empty($categories)){
 	$categories = array_values($categories);
