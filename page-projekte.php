@@ -87,12 +87,12 @@ $field = get_field_object('hackdash_projects');
 		<div id="filters" class="entry-content background-panel teaser-item" itemprop="articleBody">
 				
 			<div class = "filter-years">
-				<a class="filter" data-filter-year ="*" >alle</a>
+				<a class="filter-year" data-filter-year ="*" >alle</a>
 				<?php 
 					if(!empty($years)) {
 							foreach ($years as $key => $year) { 
 				?>
-								<a class="filter" data-filter-year = ".filter-me-as-<?php echo $year ?>" > <?php echo $year  ?> </a>
+								<a class="filter-year" data-filter-year = ".filter-me-as-<?php echo $year ?>" > <?php echo $year  ?> </a>
 				<?php 	
 						}
 					} 
@@ -103,7 +103,7 @@ $field = get_field_object('hackdash_projects');
 			<?php 
 			if(!empty($regions)) {
 					foreach ($regions as $key => $region) { ?>
-						<h2 class="filter" data-filter-region=".filter-me-as-<?php echo $key ?>" > <?php echo $region  ?> </h2>
+						<h2 class="filter-region" data-filter-region=".filter-me-as-<?php echo $key ?>" > <?php echo $region  ?> </h2>
 					<?php 	
 				}
 			} 
