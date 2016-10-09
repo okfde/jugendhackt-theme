@@ -24,7 +24,13 @@ foreach (get_categories( $args ) as $key => $value) {
 	$regions[$value->slug] = $value->name;
 }
 
+$order = array('berlin', 'oestereich', 'schweiz', 'nord', 'ost', 'sued', 'west');
 
+uksort($regions, function ($a, $b) use ($order) {
+    $pos_a = array_search($a, $order);
+    $pos_b = array_search($b, $order);
+    return $pos_a - $pos_b;
+});
 
 
 // Get the categories for years:
@@ -46,6 +52,8 @@ $years = array();
 foreach (get_categories( $args ) as $key => $value) { 
 	$years[] = $value->name;
 }
+
+
 
 var_dump($years);
 var_dump($regions);
@@ -98,6 +106,8 @@ $field = get_field_object('hackdash_projects');
 					} 
 				?> 
 			</div>
+
+			<br/>
 
 			<h2 class="filter" data-filter="*" >Alle</h2>
 			<?php 
