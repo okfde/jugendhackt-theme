@@ -21,7 +21,7 @@ $args = array(
 $regions = array();
 
 foreach (get_categories( $args ) as $key => $value) { 
-	$regions[$value->slug] = $value->name
+	$regions[$value->slug] = $value->name;
 }
 
 
@@ -46,7 +46,7 @@ $args = array(
 $years = array();
 
 foreach (get_categories( $args ) as $key => $value) { 
-	$years[] = $value->name
+	$years[] = $value->name;
 }
 
 var_dump($years);
