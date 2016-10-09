@@ -123,13 +123,13 @@ jQuery(document).ready(function($) {
 		$('#filters .filter-region').on( 'click', function() {
 			filter_settings.region = $(this).attr('data-filter-region')
 
-			filter_settings.region = filter_settings.region == '*' ? undefined : filter_settings.region			
+			filter_settings.region = filter_settings.region == '*' ? '' : filter_settings.region			
 
 			filter	= 	(filter_settings.region + 	filter_settings.year) || '*'
 							
 
 			console.log(filter)
-			
+
 			$container.isotope({ filter: filter });
 
 			$('#filters .filter-region').removeClass('active');
@@ -140,7 +140,7 @@ jQuery(document).ready(function($) {
 		$('#filters .filter-year').on( 'click', function() {
 			filter_settings.year = $(this).attr('data-filter-year')
 
-			filter_settings.year = filter_settings.year == '*' ? undefined : filter_settings.year			
+			filter_settings.year = filter_settings.year == '*' ? '' : filter_settings.year			
 
 			filter	= 	(filter_settings.year + 	filter_settings.year) || '*'
 							
