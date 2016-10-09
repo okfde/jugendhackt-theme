@@ -18,7 +18,7 @@ $args = array(
 ); 
 
 
-$regions = Array();
+$regions = array();
 
 foreach (get_categories( $args ) as $key => $value) { 
 	$regions[$value->slug] = $value->name
@@ -43,7 +43,7 @@ $args = array(
 	'taxonomy'                 => 'page_category',
 ); 
 
-$years = Array();
+$years = array();
 
 foreach (get_categories( $args ) as $key => $value) { 
 	$years[] = $value->name
