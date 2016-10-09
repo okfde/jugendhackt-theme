@@ -108,45 +108,47 @@ jQuery(document).ready(function($) {
 		})
 
 
-		var filter_settings = {}
-
-
 		// filter items on button click
 		$('#filters .filter').on( 'click', function() {
-			var filterValue = $(this).attr('data-filter')
-
-			filter_settings.misc = filterValue
-
-			filter	= 		filter_settings.misc 
-						+ 	(
-								filter_settings.year
-								?	'.year-'+filter_settings.year
-								:	''
-							)
-
-			$container.isotope({ filter: filter });
-
+			var filterValue = $(this).attr('data-filter');
+			$container.isotope({ filter: filterValue });
 			$('#filters .filter').removeClass('active');
 			$(this).addClass('active');
 		});
 
+
+
+		var filter_settings = {}
+
+		$('#filters .filter-region').on( 'click', function() {
+			filter_settings.region = $(this).attr('data-filter-region')
+
+			filter_settings.region = filter_settings.region == '*' ? undefined : filter_settings.region			
+
+			filter	= 	(filter_settings.region + 	filter_settings.year) || '*'
+							
+
+			$container.isotope({ filter: filter });
+
+			$('#filters .filter-region').removeClass('active');
+			$(this).addClass('active');
+		});
+
+
 		$('#filters .filter-year').on( 'click', function() {
-			var year = $(this).attr('data-filter-year')
+			filter_settings.year = $(this).attr('data-filter-year')
 
-			filter_settings.year = year
+			filter_settings.year = filter_settings.year == '*' ? undefined : filter_settings.year			
 
-			filter	= 		filter_settings.misc 
-						+ 	(
-								filter_settings.year
-								?	'.year-'+filter_settings.year
-								:	''
-							)
+			filter	= 	(filter_settings.year + 	filter_settings.year) || '*'
+							
 
 			$container.isotope({ filter: filter });
 
 			$('#filters .filter-year').removeClass('active');
 			$(this).addClass('active');
 		});
+
 
 
 

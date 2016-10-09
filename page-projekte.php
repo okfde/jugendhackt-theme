@@ -32,13 +32,11 @@ foreach (get_categories( $args ) as $key => $value) {
 $year_parent_obj 	= get_term_by('slug', 'year', 'page_category');
 $year_parent_id 	= $year_parent_obj->term_id;
 
-var_dump($year_parent_obj);
-
 $args = array(
 	'child_of'                 => $year_parent_id,
 	'orderby'                  => 'name',
 	'order'                    => 'ASC',
-	'hide_empty'               => 0,
+	'hide_empty'               => 1,
 	'hierarchical'             => 1,
 	'taxonomy'                 => 'page_category',
 ); 
@@ -89,11 +87,12 @@ $field = get_field_object('hackdash_projects');
 		<div id="filters" class="entry-content background-panel teaser-item" itemprop="articleBody">
 				
 			<div class = "filter-years">
+				<a class="filter" data-filter-year ="*" >alle</a>
 				<?php 
 					if(!empty($years)) {
-							foreach ($years as $key => $value) { 
+							foreach ($years as $key => $year) { 
 				?>
-								<a class="filter" data-filter-year="<?php echo $value->name; ?>" > <?php echo $value->name;  ?> </a>
+								<a class="filter" data-filter-year = ".year-<?php echo $year ?>" > <?php echo $year  ?> </a>
 				<?php 	
 						}
 					} 
@@ -103,8 +102,8 @@ $field = get_field_object('hackdash_projects');
 			<h2 class="filter" data-filter="*" >Alle</h2>
 			<?php 
 			if(!empty($regions)) {
-					foreach ($regions as $key => $value) { ?>
-						<h2 class="filter" data-filter=".term-<?php echo $value->term_id; ?>" > <?php echo $value->name;  ?> </h2>
+					foreach ($regions as $key => $region) { ?>
+						<h2 class="filter" data-filter-region=".region-<?php echo $key ?>" > <?php echo $region  ?> </h2>
 					<?php 	
 				}
 			} 
