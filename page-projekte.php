@@ -87,7 +87,7 @@ $field = get_field_object('hackdash_projects');
 		<div id="filters" class="entry-content background-panel teaser-item" itemprop="articleBody">
 				
 			<div class = "filter-years">
-				<a class="filter-year" data-filter-year ="*" >alle</a>
+				<a class="filter-year" data-filter-year ="*" >[alle]</a>
 				<?php 
 					if(!empty($years)) {
 							foreach ($years as $key => $year) { 

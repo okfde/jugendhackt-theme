@@ -121,7 +121,7 @@ jQuery(document).ready(function($) {
 		var filter_settings = {}
 
 		$('#filters .filter-region').on( 'click', function() {
-			filter_settings.region = $(this).attr('data-filter-region')
+			filter_settings.region = $(this).attr('data-filter-region')||'*'
 
 			filter_settings.region = filter_settings.region == '*' ? '' : filter_settings.region			
 
@@ -138,7 +138,7 @@ jQuery(document).ready(function($) {
 
 
 		$('#filters .filter-year').on( 'click', function() {
-			filter_settings.year = $(this).attr('data-filter-year')
+			filter_settings.year = $(this).attr('data-filter-year')|| '*'
 
 			filter_settings.year = filter_settings.year == '*' ? '' : filter_settings.year			
 
