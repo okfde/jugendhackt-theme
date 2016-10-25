@@ -4,9 +4,9 @@ Template Name: Page Projekte
 */
 get_header(); 
 
-// Get the categories 
-$region_parent_obj = get_term_by('name', 'region', 'page_category');
-$region_parent_id = $region_parent_obj->term_id;
+// Get the categories for regions:
+$region_parent_obj	= get_term_by('name', 'region', 'page_category');
+$region_parent_id 	= $region_parent_obj->term_id;
 
 $args = array(
 	'child_of'                 => $region_parent_id,
@@ -17,7 +17,43 @@ $args = array(
 	'taxonomy'                 => 'page_category',
 ); 
 
-$categories = get_categories( $args );
+
+$regions = array();
+
+foreach (get_categories( $args ) as $key => $value) { 
+	$regions[$value->slug] = $value->name;
+}
+
+$order = array('berlin', 'oestereich', 'schweiz', 'nord', 'ost', 'sued', 'west');
+
+uksort($regions, function ($a, $b) use ($order) {
+    $pos_a = array_search($a, $order);
+    $pos_b = array_search($b, $order);
+    return $pos_a - $pos_b;
+});
+
+
+// Get the categories for years:
+
+$year_parent_obj 	= get_term_by('slug', 'year', 'page_category');
+$year_parent_id 	= $year_parent_obj->term_id;
+
+$args = array(
+	'child_of'                 => $year_parent_id,
+	'orderby'                  => 'name',
+	'order'                    => 'ASC',
+	'hide_empty'               => 0,
+	'hierarchical'             => 1,
+	'taxonomy'                 => 'page_category',
+); 
+
+$years = array();
+
+foreach (get_categories( $args ) as $key => $value) { 
+	$years[] = $value->name;
+}
+
+
 
 // Get the projects
 $projects = get_field('hackdash_projects');
@@ -46,23 +82,39 @@ $field = get_field_object('hackdash_projects');
 		<div id="main"  role="main">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	
+
 		<section class="isotope-container twelvecol first entry-content" >
 		<div class="grid-sizer"></div>
 		<div class="gutter-sizer"></div>
 
 		<div id="filters" class="entry-content background-panel teaser-item" itemprop="articleBody">
 				
-			<h2 class="filter" data-filter="*" >Alle</h2>
+			<div class = "filter-years">
+				<a class="filter-year active" data-filter-year ="*" >[alle]</a>
+				<?php 
+					if(!empty($years)) {
+							foreach ($years as $key => $year) { 
+				?>
+								<a class="filter-year" data-filter-year = ".filter-me-as-<?php echo $year ?>" > <?php echo $year  ?> </a>
+				<?php 	
+						}
+					} 
+				?> 
+			</div>
+
+			<br/>
+
+			<h2 class="filter-region active" data-filter-region="*" >Alle</h2>
 			<?php 
-			if(!empty($categories)) {
-					foreach ($categories as $key => $value) { ?>
-						<h2 class="filter" data-filter=".term-<?php echo $value->term_id; ?>" > <?php echo $value->name;  ?> </h2>
+			if(!empty($regions)) {
+					foreach ($regions as $key => $region) { ?>
+						<h2 class="filter-region" data-filter-region=".filter-me-as-<?php echo $key ?>" > <?php echo $region  ?> </h2>
 					<?php 	
 				}
 			} 
 
 			?> 
+
 
 			<!-- <div class="badge-legend-wrap">
 				<?php

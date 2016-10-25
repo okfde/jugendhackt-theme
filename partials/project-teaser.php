@@ -15,7 +15,7 @@ if(!empty($categories)){
 
 	// build the classes for filtering
 	foreach ($categories as $key5 => $category) {
-		$filterClasses .= 'term-'.$category->term_id;
+		$filterClasses .= 'filter-me-as-'.$category->slug;
 		if( (count($categories) - 1) != $key5) { 
 			$filterClasses .= ' '; 
 		}
@@ -54,7 +54,6 @@ if(!empty($categories)){
 	<div class = "description">
 		{{hackDashData.description}}
 	</div>
-	abc
 	<a ng-href ="{{'https://hackdash.org/embed/projects/'+hackDashData._id}}">... mehr auf hackdash</a>
 
 

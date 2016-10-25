@@ -1,5 +1,13 @@
 angular.module('jugendHackt', [])
 
+.controller('jhProjects',[
+
+	'$scope', 
+
+	function($scope){
+		
+	}
+])
 
 .directive('jhProjectTeaser',[
 

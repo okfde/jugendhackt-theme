@@ -116,6 +116,46 @@ jQuery(document).ready(function($) {
 			$(this).addClass('active');
 		});
 
+
+
+		var filter_settings 	= 	{
+										region: '',
+										year:	''
+									}
+
+		$('#filters .filter-region').on( 'click', function() {
+			filter_settings.region = $(this).attr('data-filter-region')||''
+
+			filter_settings.region = filter_settings.region == '*' ? '' : filter_settings.region			
+
+			var filter	= 	(filter_settings.region + filter_settings.year) || '*'
+							
+
+			$container.isotope({ filter: filter });
+
+			$('#filters .filter-region').removeClass('active');
+			$(this).addClass('active');
+		});
+
+
+		$('#filters .filter-year').on( 'click', function() {
+			filter_settings.year = $(this).attr('data-filter-year') || ''
+
+			filter_settings.year = filter_settings.year == '*' ? '' : filter_settings.year			
+
+			var filter	= 	(filter_settings.region + filter_settings.year) || '*'
+							
+
+			$container.isotope({ filter: filter });
+
+			$('#filters .filter-year').removeClass('active');
+			$(this).addClass('active');
+		});
+
+
+
+
+
 		$container.isotope('stamp',  $('#filters'));
 
 		if (hash && noHash in filterLookup) {

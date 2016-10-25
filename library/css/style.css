@@ -1391,11 +1391,15 @@ and more scalable.
 .mixitup-container .mix {
   display: none;
 }
-.filter {
+.filter,
+.filter-year,
+.filter-region {
   cursor: pointer;
   text-transform: uppercase;
 }
-.filter.active {
+.filter.active,
+.filter-year.active,
+.filter-region.active  {
   color: #2aabe1;
 }
 .custom-layout-wrapper > div {
