@@ -381,4 +381,15 @@ function add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_body_class' );
 
 
+
+// Allow upload of these files types:
+
+add_filter('upload_mimes', 'jugendhackt_extra_mimes');
+
+function eigene_upload_mimes( $jugendhackt_extra_mimes ){
+  $mimes['zip']  = 'application/zip';
+  return $mimes;
+}
+
+
 ?>
