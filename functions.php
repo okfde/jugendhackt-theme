@@ -386,7 +386,7 @@ add_filter( 'body_class', 'add_slug_body_class' );
 
 add_filter('upload_mimes', 'jugendhackt_extra_mimes');
 
-function eigene_upload_mimes( $jugendhackt_extra_mimes ){
+function jugendhackt_extra_mimes( $mimes ){
   $mimes['zip']  = 'application/zip';
   return $mimes;
 }
