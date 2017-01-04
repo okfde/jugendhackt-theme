@@ -2,6 +2,14 @@
 	word-break: break-word;
 }
 
+.teaser-item .image {
+	width:					100%;
+	max-width:				100%;
+	padding-top:			100%;
+	background-size:		cover;
+	background-position:	50% 50%;
+}
+
 [jh-project-teaser] .description {
 	opacity:				0.9;
 	margin-top:				1em;
