@@ -30,7 +30,8 @@ if(!empty($categories)){
 			<a href="<?php the_permalink();?>">
 				<?php
 					$attachment_id = get_post_thumbnail_id($member->ID);
-					echo "<div class = \"image\" style = \"background-image:url('$attachment')\"></div>";
+					var_dump($attachment_id);
+					echo "<div class = \"image\" style = \"background-image:url('$attachment_id')\"></div>";
 					echo wp_get_attachment_image( $attachment_id,'square-600',false); 
 				?>
 			</a>
