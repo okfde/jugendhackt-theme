@@ -19,8 +19,6 @@ if(!empty($categories)){
 	}
 }
 
-echo "ABC"
-
 ?>
 
 <div class="mix <?php echo $filterClasses; ?> background-panel teaser-item team-member">
@@ -31,10 +29,10 @@ echo "ABC"
 		<div class="teaser-image">
 			<a href="<?php the_permalink();?>">
 				<?php
-					$attachment_id = get_post_thumbnail_id($member->ID);
-					var_dump($attachment_id);
-					echo "<div class = \"image\" style = \"background-image:url('$attachment_id')\"></div>";
-					echo wp_get_attachment_image( $attachment_id,'square-600',false); 
+					$url = get_the_post_thumbnail_url($member->ID);
+					echo "<div class = \"image\" style = \"background-image:url('$url')\"></div>";
+					//$attachment_id = get_post_thumbnail_id($member->ID);
+					//echo wp_get_attachment_image( $attachment_id,'square-600',false); 
 				?>
 			</a>
 		</div>
