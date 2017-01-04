@@ -19,6 +19,8 @@ if(!empty($categories)){
 	}
 }
 
+echo "ABC"
+
 ?>
 
 <div class="mix <?php echo $filterClasses; ?> background-panel teaser-item team-member">
