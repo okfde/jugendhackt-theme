@@ -29,7 +29,7 @@ if(!empty($categories)){
 		<div class="teaser-image">
 			<a href="<?php the_permalink();?>">
 				<?php
-					$url = get_the_post_thumbnail_url($member->ID);
+					$url = get_the_post_thumbnail_url($member->ID, array(300, 300));
 					echo "<div class = \"image\" style = \"background-image:url('$url')\"></div>";
 					//$attachment_id = get_post_thumbnail_id($member->ID);
 					//echo wp_get_attachment_image( $attachment_id,'square-600',false); 
