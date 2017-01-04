@@ -60,8 +60,6 @@ $team_members = array_values($team_members);
 
 		</div> <!-- end article section -->
 
-		123
-		
 		<?php 
 
 		if( !empty($team_members) ) {
