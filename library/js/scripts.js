@@ -71,9 +71,14 @@ jQuery(document).ready(function($) {
 								'pressematerial' : '.cat-56',
 								'pressekontakt': '.cat-57',
 								'pressestimmen' : '.cat-58',
+								'2020': '.faq-2020',
+								'2019': '.faq-2019',
+								'2018': '.faq-2018',
+								'2017': '.faq-2017',
 								'2016': '.faq-2016',
 								'2015': '.faq-2015',
 								'2014': '.faq-2014',
+								'2013': '.faq-2013',
 							}
 
 
