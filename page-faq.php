@@ -72,6 +72,10 @@ get_header();
 							foreach ($faq['faq_group'] as $key => $faq_group) {
 								if( $faq_group->term_id == $category->term_id ) {
 									$string = strtolower($faq['faq_question']);
+								    $string = preg_replace("/ü/", "ue", $string);
+								    $string = preg_replace("/ä/", "ae", $string);
+								    $string = preg_replace("/ö/", "oe", $string);
+								    $string = preg_replace("/ß/", "ss", $string);
 								    $string = preg_replace("/[^a-z0-9_\s-]/", "", $string);
 								    $string = preg_replace("/[\s-]+/", " ", $string);
 								    $string = preg_replace("/[\s_]/", "-", $string);
