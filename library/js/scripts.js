@@ -68,18 +68,16 @@ jQuery(document).ready(function($) {
 								'Schweiz' : '.term-47',
 								'Süd' : '.term-17',
 								'West' : '.term-39',
-								'Material' : '.cat-56',
-								'Kontakt': '.cat-57',
-								'Pressestimmen' : '.cat-58',
+								'pressematerial' : '.cat-56',
+								'pressekontakt': '.cat-57',
+								'pressestimmen' : '.cat-58',
 								'2016': '.faq-2016',
 								'2015': '.faq-2015',
 								'2014': '.faq-2014',
 							}
 
-		console.log('.faq-accordion h3'+filterLookup[noHashSub])
 
 		if(filterLookup[noHashSub]){
-			console.log('w45')
 			$('.faq-accordion h3'+filterLookup[noHashSub]).addClass('open')
 		}
 
@@ -175,9 +173,7 @@ jQuery(document).ready(function($) {
 
 		$container.isotope('stamp',  $('#filters'));
 
-		console.log(hash, noHash, noHashSub)
 		if (hash && noHash in filterLookup) {
-			console.log(filterLookup[noHash])
 				// FAQ Mixitup
 				$('.mixitup-container').mixItUp()
 				$('.mixitup-container').mixItUp('filter', filterLookup[noHash]);
@@ -227,7 +223,6 @@ jQuery(document).ready(function($) {
 								
 								if(scrollTop > 800 ) scrollTop = 800;
 								var yPos = -(scrollTop * speed);
-								//console.log("yPos -> " + yPos);
 								var coords = '50% '+ yPos + 'px';
 								$content.css("background-position", coords);  
 						})
