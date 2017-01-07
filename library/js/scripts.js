@@ -76,10 +76,11 @@ jQuery(document).ready(function($) {
 								'2014': '.faq-2014',
 							}
 
-		console.log('.faq-accordion h3 '+filterLookup[noHashSub])
+		console.log('.faq-accordion h3'+filterLookup[noHashSub])
 
 		if(filterLookup[noHashSub]){
-			$('.faq-accordion h3 '+filterLookup[noHashSub]).addClass('open')
+			console.log('w45')
+			$('.faq-accordion h3'+filterLookup[noHashSub]).addClass('open')
 		}
 
 		$('.faq-accordion').collapse(
