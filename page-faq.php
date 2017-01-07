@@ -77,7 +77,7 @@ get_header();
 								    $string = preg_replace("/[\s_]/", "-", $string);
 						?>
 									<h3 
-										class ="qes-<?php echo $string;?>"
+										class ="faq-<?php echo $string;?>"
 									>	
 										<?php echo $faq['faq_question']; ?> 
 									</h3>
