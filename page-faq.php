@@ -40,11 +40,10 @@ get_header();
 
 			<?php
 				foreach ($categories as $key => $value) { 
-					var_dump($value);
 			?>
 					<div class="faq-nav background-panel background-panel__slim">
 						<h2 
-							class		= "filter {{ ('' | hashMatch) ? 'active' : ''}}" 
+							class		= "filter {{ ('<?php echo $value->slug; ?>' | hashMatch) ? 'active' : ''}}" 
 							data-filter	= ".cat-<?php echo $value->term_id; ?>" 
 						>
 							<?php echo $value->name ?>
