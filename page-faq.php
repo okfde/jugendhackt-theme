@@ -70,6 +70,7 @@ get_header();
 						<?php 
 						foreach ($faqs as $key => $faq) {
 							foreach ($faq['faq_group'] as $key => $faq_group) {
+								var_dump($faq);
 								if( $faq_group->term_id == $category->term_id ) {
 									echo '<h3>'.$faq['faq_question'] . '</h3>';
 									echo '<div>'.$faq['faq_answer'].'</div>';
