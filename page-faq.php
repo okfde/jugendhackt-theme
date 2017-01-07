@@ -43,7 +43,7 @@ get_header();
 			?>
 					<div class="faq-nav background-panel background-panel__slim">
 						<h2 
-							class		= "filter {{ ('<?php echo $value->slug; ?>' | hashMatch) ? 'active' : ''}}" 
+							class		= "filter" 
 							data-filter	= ".cat-<?php echo $value->term_id; ?>" 
 						>
 							<?php echo $value->name ?>

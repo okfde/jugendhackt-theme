@@ -79,7 +79,10 @@ jQuery(document).ready(function($) {
 								'Österreich' : '.term-48',
 								'Schweiz' : '.term-47',
 								'Süd' : '.term-17',
-								'West' : '.term-39'
+								'West' : '.term-39',
+								'Material' : '.cat-56',
+								'Pressestimmen' : '.cat-55',
+								'Pressinformationen': '.cat-54',
 							}
 
 		// Team Isotope
