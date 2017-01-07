@@ -163,7 +163,7 @@ jQuery(document).ready(function($) {
 
 		console.log(hash, noHash)
 		if (hash && noHash in filterLookup) {
-			console.log('faq')
+			console.log(filterLookup[noHash])
 				// FAQ Mixitup
 				$('.mixitup-container').mixItUp()
 				$('.mixitup-container').mixItUp('filter', filterLookup[noHash]);
