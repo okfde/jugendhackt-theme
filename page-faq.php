@@ -70,9 +70,8 @@ get_header();
 						<?php 
 						foreach ($faqs as $key => $faq) {
 							foreach ($faq['faq_group'] as $key => $faq_group) {
-								var_dump($faq);
 								if( $faq_group->term_id == $category->term_id ) {
-									$string = strtolower($string);
+									$string = strtolower($faq['faq_question']);
 								    $string = preg_replace("/[^a-z0-9_\s-]/", "", $string);
 								    $string = preg_replace("/[\s-]+/", " ", $string);
 								    $string = preg_replace("/[\s_]/", "-", $string);
