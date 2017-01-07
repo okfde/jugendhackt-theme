@@ -73,10 +73,11 @@ jQuery(document).ready(function($) {
 								'Pressinformationen': '.cat-54',
 							}
 
-		if(noHashSub){
-			$('.faq-accordion h2 '+filterLookup).addClass('open')
-		}
 		console.log('.faq-accordion h2 '+filterLookup[noHashSub])
+
+		if(filterLookup[noHashSub]){
+			$('.faq-accordion h2 '+filterLookup[noHashSub]).addClass('open')
+		}
 
 		$('.faq-accordion').collapse(
 				{
