@@ -54,19 +54,6 @@ jQuery(document).ready(function($) {
 
 		});
 
-		$('.faq-accordion').collapse(
-				{
-					show: function() {
-						this.slideDown(300);
-					},
-					hide: function() {
-						this.slideUp(300);
-					},
-					accordion: true,
-					persist: false
-				}
-		); 
-
 		var hash 		= 	window.location.hash.split('/')[0];
 		var noHash		=	hash.replace("#","");
 		var noHashSub 	=  	window.location.hash.split('/')[1];
@@ -85,6 +72,26 @@ jQuery(document).ready(function($) {
 								'Pressestimmen' : '.cat-55',
 								'Pressinformationen': '.cat-54',
 							}
+
+		$('.faq-accordion h2 '+filterLookup).addClass('open')
+
+		console.log('.faq-accordion h2 '+filterLookup)
+
+		$('.faq-accordion').collapse(
+				{
+					show: function() {
+						this.slideDown(300);
+					},
+					hide: function() {
+						this.slideUp(300);
+					},
+					accordion: true,
+					persist: false
+				}
+		); 
+
+		$('.faq-accordion').collapse('open')
+
 
 		// Team Isotope
 		var  $container = $('.isotope-container').isotope({

@@ -64,7 +64,7 @@ get_header();
 			foreach ($categories as $key => $category) { ?>
 				<div class="background-panel mix cat-<?php  echo $category->term_id; ?> entry-content" >
 					
-					<h2><?php echo $category->name; ?></h2>
+					<h2 class = "<?php  echo $category->term_id; ?>"><?php echo $category->name; ?></h2>
 					
 					<div id="accordion-<?php  echo $category->term_id; ?>" class="faq-accordion" >
 						<?php 
