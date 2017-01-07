@@ -71,9 +71,9 @@ jQuery(document).ready(function($) {
 								'Material' : '.cat-56',
 								'Pressestimmen' : '.cat-55',
 								'Pressinformationen': '.cat-54',
-								'2016': 'faq-2016',
-								'2015': 'faq-2015',
-								'2014': 'faq-2014',
+								'2016': '.faq-2016',
+								'2015': '.faq-2015',
+								'2014': '.faq-2014',
 							}
 
 		console.log('.faq-accordion h3 '+filterLookup[noHashSub])
