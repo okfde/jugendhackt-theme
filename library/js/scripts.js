@@ -165,7 +165,8 @@ jQuery(document).ready(function($) {
 		if (hash && noHash in filterLookup) {
 			console.log('faq')
 				// FAQ Mixitup
-				$('.mixitup-container').mixItUp().filter(filterLookup[noHash]);
+				$('.mixitup-container').mixItUp()
+				$('.mixitup-container').mixItUp('filter', filterLookup[noHash]);
 				$("#filters .filter[data-filter='"+ filterLookup[noHash] +"']")[0].click()
 		} else {
 				$('.mixitup-container').mixItUp();
