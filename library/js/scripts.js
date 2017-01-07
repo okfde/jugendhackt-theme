@@ -168,7 +168,7 @@ jQuery(document).ready(function($) {
 				// FAQ Mixitup
 				$('.mixitup-container').mixItUp()
 				$('.mixitup-container').mixItUp('filter', filterLookup[noHash]);
-				$("#filters .filter[data-filter='"+ filterLookup[noHash] +"']")[0].click()
+				$("#faq-filters .filter[data-filter='"+ filterLookup[noHash] +"']")[0].click()
 		} else {
 				$('.mixitup-container').mixItUp();
 		}

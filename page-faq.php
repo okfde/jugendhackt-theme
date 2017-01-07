@@ -36,7 +36,7 @@ get_header();
 			usort($categories,'sort_category_slug');
 			if(!empty($categories)) { ?>
 			
-			<div id = "filters" class="fourcol first">
+			<div id = "faq-filters" class="fourcol first">
 
 			<?php
 				foreach ($categories as $key => $value) { 
