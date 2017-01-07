@@ -69,7 +69,7 @@ jQuery(document).ready(function($) {
 
 		var hash 		= 	window.location.hash.split('/')[0];
 		var noHash		=	hash.replace("#","");
-		var nohashSub 	=  	window.location.hash.split('/')[1];
+		var noHashSub 	=  	window.location.hash.split('/')[1];
 		var filterLookup = {
 								'Teilnehmerinnen':'.cat-20',
 								'Eltern': '.cat-19',
