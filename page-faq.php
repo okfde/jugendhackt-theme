@@ -64,7 +64,7 @@ get_header();
 			foreach ($categories as $key => $category) { ?>
 				<div class="background-panel mix cat-<?php  echo $category->term_id; ?> entry-content" >
 					
-					<h2 class = "<?php  echo $category->term_id; ?>"><?php echo $category->name; ?></h2>
+					<h2><?php echo $category->name; ?></h2>
 					
 					<div id="accordion-<?php  echo $category->term_id; ?>" class="faq-accordion" >
 						<?php 
@@ -72,8 +72,21 @@ get_header();
 							foreach ($faq['faq_group'] as $key => $faq_group) {
 								var_dump($faq);
 								if( $faq_group->term_id == $category->term_id ) {
-									echo '<h3>'.$faq['faq_question'] . '</h3>';
-									echo '<div>'.$faq['faq_answer'].'</div>';
+									$string = strtolower($string);
+								    $string = preg_replace("/[^a-z0-9_\s-]/", "", $string);
+								    $string = preg_replace("/[\s-]+/", " ", $string);
+								    $string = preg_replace("/[\s_]/", "-", $string);
+						?>
+									<h3 
+										class ="qes-<?php echo $string;?>"
+									>	
+										<?php echo $faq['faq_question']; ?> 
+									</h3>
+
+									<div>
+										<?php echo $faq['faq_answer']; ?>	
+									</div>
+						<?php
 								}
 							}
 						}
