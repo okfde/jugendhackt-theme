@@ -158,8 +158,6 @@ jQuery(document).ready(function($) {
 
 		$container.isotope('stamp',  $('#filters'));
 
-		console.log(hash, noHash)
-
 		if (hash && noHash in filterLookup) {
 				// FAQ Mixitup
 				$('.mixitup-container').mixItUp('filter', filterLookup[noHash]);

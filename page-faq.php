@@ -39,9 +39,16 @@ get_header();
 			<div class="fourcol first">
 
 			<?php
-				foreach ($categories as $key => $value) { ?>
+				foreach ($categories as $key => $value) { 
+					var_dump($value);
+			?>
 					<div class="faq-nav background-panel background-panel__slim">
-						<h2 class="filter" data-filter=".cat-<?php echo $value->term_id; ?>" ><?php echo $value->name ?></h2>
+						<h2 
+							class		= "filter {{ ('' | hashMatch) ? 'active' : ''}}" 
+							data-filter	= ".cat-<?php echo $value->term_id; ?>" 
+						>
+							<?php echo $value->name ?>
+						</h2>
 					</div>
 				<?php
 				}

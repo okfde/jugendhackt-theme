@@ -81,3 +81,16 @@ angular.module('jugendHackt', [])
 		}
 	}
 ])
+
+.filter("hashMatch",[
+	'$location',
+
+	function($location){
+		return function(cat, sub){
+			var hash		= $location.hash().split('-')
+
+			return (!cat || hash[0] == cat) && (!sub || hash[1] == sub)
+
+		}
+	}
+])
