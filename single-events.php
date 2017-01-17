@@ -10,7 +10,7 @@ if($event_fields['event_facts']) {
 	$contentColClass = 'twelvecol';
 }
 
-	var_dump($event_fields);
+<?php wp_title(''); ?>
 
 ?>
 
