@@ -41,3 +41,17 @@
 	left:					0;
 	cursor:					pointer;
 }
+
+
+#searchform label {
+	display:				none;
+}
+
+#searchform label {
+	background:				#fff;
+	border:					2px solid #000;
+	display:				block;
+	padding:				0.3em;
+	box-sizing:				border-box;
+	width:					100%;
+}
