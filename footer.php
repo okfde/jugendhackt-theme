@@ -1,4 +1,7 @@
 			<footer class="footer" role="contentinfo">
+				<nav role="navigation">
+					<?php bones_footer_links(); ?>
+				</nav>
 				<div id="inner-footer" class="wrap clearfix">
 					
 					<?php 
@@ -8,12 +11,9 @@
 						$content = $content_post->post_content;
 						$content = apply_filters('the_content', $content);
 						$content = str_replace(']]>', ']]&gt;', $content);
-						?>
+					?>
 						
 						<div class="first sixcol" >
-							<nav role="navigation">
-								<?php bones_footer_links(); ?>
-							</nav>
 							<?php echo $content; ?>
 						</div>
 

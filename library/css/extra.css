@@ -55,3 +55,9 @@
 	box-sizing:				border-box;
 	width:					100%;
 }
+
+footer nav {
+	display:				block;
+	width:					100%;
+	background-color:		#fff;	
+}
