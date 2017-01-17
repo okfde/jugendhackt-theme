@@ -10,10 +10,10 @@ if($event_fields['event_facts']) {
 	$contentColClass = 'twelvecol';
 }
 
-<?php wp_title(''); ?>
 
 ?>
 
+<?php wp_title(''); ?>
 
 
 <div id="content" data-speed="3" >
