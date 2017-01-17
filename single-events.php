@@ -13,8 +13,6 @@ if($event_fields['event_facts']) {
 
 ?>
 
-<?php wp_title(''); ?>
-
 
 <div id="content" data-speed="3" >
 	<div id="inner-content" class="wrap clearfix">
@@ -26,7 +24,7 @@ if($event_fields['event_facts']) {
 			
 				<div class="row">
 					<section class="event-section-topic entry-content background-panel first <?php echo $contentColClass; ?>">
-						<h2>Herausforderung</h2>
+						<h2><?php wp_title(''); ?></h2>
 						<?php the_content() ?>
 					</section>
 
