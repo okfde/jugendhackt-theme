@@ -1,6 +1,6 @@
 			<footer class="footer" role="contentinfo">
 				<nav role="navigation " class = "clearfix">
-					<div clas = "wrap">
+					<div class = "wrap">
 						<?php bones_footer_links(); ?>
 					</div>
 				</nav>
