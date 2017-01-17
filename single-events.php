@@ -10,7 +10,11 @@ if($event_fields['event_facts']) {
 	$contentColClass = 'twelvecol';
 }
 
+	var_dump($event_fields);
+
 ?>
+
+
 
 <div id="content" data-speed="3" >
 	<div id="inner-content" class="wrap clearfix">
