@@ -93,6 +93,7 @@ $field = get_field_object('hackdash_projects');
 				<h2 class="filter-year active" data-filter-year ="*" >[alle]</h2>
 				<?php 
 					arsort($years);
+
 					var_dump($years);
 					if(!empty($years)) {
 							foreach ($years as $key => $year) { 
