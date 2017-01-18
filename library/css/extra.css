@@ -62,4 +62,7 @@ footer nav {
 	background-color:		#fff;	
 	font-weight:			bold;
 	padding:				1px 0;
+	font-size:				18px;
+	font-family:			"Ebisu",Helvetica,Arial,sans-serif;
+	text-transform:			uppercase;
 }
