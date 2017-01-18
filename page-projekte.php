@@ -89,7 +89,7 @@ $field = get_field_object('hackdash_projects');
 
 		<div id="filters" class="entry-content" itemprop="articleBody">
 				
-			<div class = "filter-years background-panel">
+			<div class = "filter-years background-panel teaser-item">
 				<h2 class="filter-year active" data-filter-year ="*" >[alle]</h2>
 				<?php 
 					arsort($years);
@@ -103,7 +103,7 @@ $field = get_field_object('hackdash_projects');
 
 			<br/>
 
-			<div class = "filter-regions background-panel">
+			<div class = "filter-regions background-panel teaser-item">
 
 				<h2 class="filter-region  active" data-filter-region="*" >Alle</h2><!--
 			 --><?php 
