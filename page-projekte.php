@@ -87,9 +87,9 @@ $field = get_field_object('hackdash_projects');
 		<div class="grid-sizer"></div>
 		<div class="gutter-sizer"></div>
 
-		<div id="filters" class="entry-content" itemprop="articleBody">
+		<div id="filters" class="entry-content teaser-item" itemprop="articleBody">
 				
-			<div class = "filter-years background-panel teaser-item">
+			<div class = "filter-years background-panel">
 				<h2 class="filter-year active" data-filter-year ="*" >[alle]</h2>
 				<?php 
 					arsort($years);
@@ -103,7 +103,7 @@ $field = get_field_object('hackdash_projects');
 
 			<br/>
 
-			<div class = "filter-regions background-panel teaser-item">
+			<div class = "filter-regions background-panel">
 
 				<h2 class="filter-region  active" data-filter-region="*" >Alle</h2><!--
 			 --><?php 
