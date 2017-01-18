@@ -72,8 +72,8 @@ footer nav {
 
 .filter-years {
 	margin-top:				-40px;
-	padding-top:			1em;
-	padding-bottom:			1em;
+	padding-top:			20px !important;
+	padding-bottom:			20px !important;
 }
 
 .filter-regions {
