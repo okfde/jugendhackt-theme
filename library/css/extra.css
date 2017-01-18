@@ -66,3 +66,17 @@ footer nav {
 	font-family:			"Ebisu",Helvetica,Arial,sans-serif;
 	text-transform:			uppercase;
 }
+
+
+/* extra social icons */
+
+#menu-meta a[href*="instagram.com"] {
+	display:				inline-block;
+	height:					25px;
+	width:					0;
+	background-image:		url('svg/instgram.svg');
+	background-repeat:		no-repeat;
+	background-size:		25px;
+	padding-left:			25px;
+	overflow:				hidden;
+}
