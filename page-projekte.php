@@ -103,7 +103,6 @@ $field = get_field_object('hackdash_projects');
 				?> 
 			</div>
 
-			<br/>
 
 			<div class = "filter-regions background-panel">
 
