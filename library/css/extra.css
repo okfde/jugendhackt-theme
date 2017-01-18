@@ -77,6 +77,8 @@ footer nav {
 .filter-year {
 	display:				inline-block;
 	margin-right:			1em;
+	font-weight:			bold;
+	font-size:				1.2em;
 }
 
 
