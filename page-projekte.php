@@ -87,7 +87,7 @@ $field = get_field_object('hackdash_projects');
 		<div class="grid-sizer"></div>
 		<div class="gutter-sizer"></div>
 
-		<div id="filters" class="entry-content teaser-item" itemprop="articleBody">
+		<div id="filters" class="entry-content" itemprop="articleBody">
 				
 			<div class = "filter-years background-panel">
 				<h2 class="filter-year active" data-filter-year ="*" >[alle]</h2>
@@ -105,8 +105,8 @@ $field = get_field_object('hackdash_projects');
 
 			<div class = "filter-regions background-panel">
 
-				<h2 class="filter-region  active" data-filter-region="*" >Alle</h2>
-				<?php 
+				<h2 class="filter-region  active" data-filter-region="*" >Alle</h2><!--
+			 --><?php 
 				if(!empty($regions)) {
 						foreach ($regions as $key => $region) { ?>
 							<h2 class="filter-region" data-filter-region=".filter-me-as-<?php echo $key ?>" > <?php echo $region  ?> </h2>
