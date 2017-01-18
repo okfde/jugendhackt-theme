@@ -70,13 +70,21 @@ footer nav {
 
 /* extra social icons */
 
-#menu-meta a[href*="instagram.com"] {
+#menu-meta a {
 	display:				inline-block;
 	height:					25px;
 	width:					0;
-	background-image:		url('svg/instagram.svg');
 	background-repeat:		no-repeat;
 	background-size:		25px;
 	padding-left:			25px;
 	overflow:				hidden;
+}
+
+#menu-meta a[href*="instagram.com"] {
+	background-image:		url('svg/instagram.svg');
+}
+
+
+#menu-meta a[href*="snapchat.com"] {
+	background-image:		url('svg/snapchat.svg');
 }
