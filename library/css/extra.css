@@ -68,6 +68,14 @@ footer nav {
 }
 
 
+/* projects */
+
+.filter-year {
+	display:				inline-block;
+	width:					50%;
+}
+
+
 /* extra social icons */
 
 #menu-meta a[href*="instagram.com"] {

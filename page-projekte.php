@@ -87,15 +87,17 @@ $field = get_field_object('hackdash_projects');
 		<div class="grid-sizer"></div>
 		<div class="gutter-sizer"></div>
 
-		<div id="filters" class="entry-content background-panel teaser-item" itemprop="articleBody">
+		<div id="filters" class="entry-content teaser-item" itemprop="articleBody">
 				
-			<div class = "filter-years">
-				<a class="filter-year active" data-filter-year ="*" >[alle]</a>
+			<div class = "filter-years background-panel">
+				<h2 class="filter-year active" data-filter-year ="*" >[alle]</h2>
 				<?php 
+					arsort($years);
+					var_dump($years);
 					if(!empty($years)) {
 							foreach ($years as $key => $year) { 
 				?>
-								<a class="filter-year" data-filter-year = ".filter-me-as-<?php echo $year ?>" > <?php echo $year  ?> </a>
+								<h2 class="filter-year" data-filter-year = ".filter-me-as-<?php echo $year ?>" > <?php echo $year  ?> </h2>
 				<?php 	
 						}
 					} 
@@ -104,16 +106,19 @@ $field = get_field_object('hackdash_projects');
 
 			<br/>
 
-			<h2 class="filter-region active" data-filter-region="*" >Alle</h2>
-			<?php 
-			if(!empty($regions)) {
-					foreach ($regions as $key => $region) { ?>
-						<h2 class="filter-region" data-filter-region=".filter-me-as-<?php echo $key ?>" > <?php echo $region  ?> </h2>
-					<?php 	
-				}
-			} 
+			<div class = "filter-regions background-panel">
 
-			?> 
+				<h2 class="filter-region  active" data-filter-region="*" >Alle</h2>
+				<?php 
+				if(!empty($regions)) {
+						foreach ($regions as $key => $region) { ?>
+							<h2 class="filter-region" data-filter-region=".filter-me-as-<?php echo $key ?>" > <?php echo $region  ?> </h2>
+						<?php 	
+					}
+				} 
+
+				?> 
+			</div>
 
 
 			<!-- <div class="badge-legend-wrap">
