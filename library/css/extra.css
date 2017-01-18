@@ -71,6 +71,10 @@ footer nav {
 /* projects */
 
 .filter-year {
+	margin-top:				-40px;
+}
+
+.filter-year {
 	display:				inline-block;
 	width:					50%;
 }
