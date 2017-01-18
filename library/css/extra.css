@@ -70,21 +70,39 @@ footer nav {
 
 /* extra social icons */
 
-#menu-meta a {
+#menu-meta a[href*="instagram.com"] {
 	display:				inline-block;
 	height:					25px;
 	width:					0;
-	background-repeat:		no-repeat;
-	background-size:		25px;
 	padding-left:			25px;
 	overflow:				hidden;
-}
-
-#menu-meta a[href*="instagram.com"] {
 	background-image:		url('svg/instagram.svg');
+	background-repeat:		no-repeat;
+	background-size:		contain;
 }
 
 
 #menu-meta a[href*="snapchat.com"] {
+	display:				inline-block;
+	height:					25px;
+	width:					0;
+	padding-left:			25px;
+	overflow:				hidden;
 	background-image:		url('svg/snapchat.svg');
+	background-repeat:		no-repeat;
+	background-size:		contain;
 }
+
+
+#menu-meta a[href*="youtube.com"] {
+	display:				inline-block;
+	height:					25px;
+	width:					0;
+	padding-left:			35px;
+	overflow:				hidden;
+	background-image:		url('svg/youtube.svg');
+	background-repeat:		no-repeat;
+	background-size:		contain;
+}
+
+
