@@ -25,17 +25,18 @@ if(!empty($categories)){
 
 
 <div 
-	id				= "<?php echo htmlspecialchars($project['id']) ?>"
 	class 			= "background-panel teaser-item <?php echo $filterClasses; ?>"
+	id				= "<?php echo htmlspecialchars($project['id']) ?>"
 	jh-project-teaser
 	hack-dash-id 	= "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>"
 	you-tube-id  	= "<?php echo htmlspecialchars($project['project_hackdash_embed']); ?>" 
 	jh-authors		= "<?php echo htmlspecialchars($project['project_contributors']) ?>"
 	jh-links		= "<?php echo htmlspecialchars(json_encode($project['project_links'])) ?>"
-	ng-if			= "ready"
->
 
-	<h2>{{hackDashData.title}}</h2>
+>
+	<div ng-if = "!ready" class = "loading"> loading ... </div>
+
+	<h2 ng-if = "ready">{{hackDashData.title}}</h2>
 
 	<div 
 		class 		= "teaser-wrap" 
