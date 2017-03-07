@@ -45,8 +45,8 @@
 	background-image:		url('svg/youtube_red.svg');
 	background-repeat:		no-repeat;
 	background-position:	50% 50%;
-	background-size:		15% auto;
-	opacity:				0.6;
+	background-size:		20% auto;
+	opacity:				0.65;
 }
 
 [jh-project-teaser] .teaser-wrap:hover:before{
