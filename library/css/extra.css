@@ -42,11 +42,11 @@
 	left:					0;
 	right:					0;
 	bottom:					0;
-	background-image:		url('svg/youtube.svg');
+	background-image:		url('svg/youtube_red.svg');
 	background-repeat:		no-repeat;
 	background-position:	50% 50%;
-	background-size:		5em auto;
-	opacity:				0.5;
+	background-size:		15% auto;
+	opacity:				0.6;
 }
 
 [jh-project-teaser] .teaser-wrap:hover:before{
