@@ -35,6 +35,24 @@
 	background-color:		#000;
 }
 
+[jh-project-teaser] .teaser-wrap:before {
+	content:				'';
+	position:				absolute;
+	top:					0;
+	left:					0;
+	right:					0;
+	bottom:					0;
+	background-image:		url('svg/youtube.svg');
+	background-repeat:		no-repeat;
+	background-position:	50% 50%;
+	background-size:		5em auto;
+	opacity:				0.5;
+}
+
+[jh-project-teaser] .teaser-wrap:hover:before{
+	opacity:				1;
+}
+
 [jh-project-teaser] iframe {
 	position:				absolute;
 	top:					0;
