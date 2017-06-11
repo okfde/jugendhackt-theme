@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE HTML>
 
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
@@ -16,7 +16,9 @@
 	<!-- mobile meta (hooray!) -->
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Jugendhackt ist ein Förderprogramm für programmierbegeisterte Menschen zwischen 12 und 18 Jahren">
+	<meta name="keywords" content="jugendhackt, jh, programmieren, coden">
 
 	<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
