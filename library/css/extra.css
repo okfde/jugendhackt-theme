@@ -145,3 +145,6 @@ footer nav {
 }
 
 
+.list-radio-wrap span ul li input, .list-checkbox-wrap span ul li input {
+	vertical-align:			middle;
+}
