@@ -46,11 +46,11 @@ usort($team_members, function ($a, $b) use ($points) {
 	$positions_b = get_field('team_positions', $b->ID);
 
 	foreach ($positions_a as $position) {
-		$pos_a = max($pos_a, $points[$position] || 0);
+		$pos_a = max($pos_a, $points[$position]);
 	}
 
 	foreach ($positions_b as $position) {
-		$pos_b = max($pos_b, $points[$position] || 0);
+		$pos_b = max($pos_b, $points[$position]);
 	}
 
 	if($pos_b - $pos_a == 0){
