@@ -28,10 +28,11 @@ $order = array('berlin', 'oestereich', 'schweiz', 'nord', 'ost', 'sued', 'west')
 
 uksort($regions, function ($a, $b) use ($order) {
 
-	echo $a.'\n';
+	echo $a.":";
+	echo array_search($a, $order)."\n";
     $pos_a = array_search($a, $order);
     $pos_b = array_search($b, $order);
-    return $pos_a - $pos_b;
+    return $pos_b - $pos_a;
 });
 
 var_dump($regions);
