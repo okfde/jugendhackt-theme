@@ -79,6 +79,15 @@ jQuery(document).ready(function($) {
 								'2015': '.faq-2015',
 								'2014': '.faq-2014',
 								'2013': '.faq-2013',
+
+								//Teamseite:
+								//'Berlin' : 	'.term-18', 	//doppelt
+								'Dresden': 		'.term-16',
+								'Hamburg': 		'.term-40',
+								'Köln':			'.term-39',
+								//'Österreich':	'.term-48', 	// doppelt
+								//'Schweiz' : 	'.term-47',		//doppelt
+								'Ulm':			'.term-17'
 							}
 
 
