@@ -26,11 +26,15 @@ foreach (get_categories( $args ) as $key => $value) {
 
 $order = array('berlin', 'oestereich', 'schweiz', 'nord', 'ost', 'sued', 'west');
 
-usort($regions, function ($a, $b) use ($order) {
+uksort($regions, function ($a, $b) use ($order) {
+
+	echo $a.'\n';
     $pos_a = array_search($a, $order);
     $pos_b = array_search($b, $order);
     return $pos_a - $pos_b;
 });
+
+var_dump($regions)
 
 
 // Get the categories for years:
