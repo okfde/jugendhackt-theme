@@ -37,7 +37,7 @@ uksort($regions, function ($a, $b) use ($order) {
     if($pos_a === false) $pos_a = count($order)+1;
     if($pos_b === false) $pos_b = count($order)+1;
 
-    return $pos_b - $pos_a;
+    return $pos_a - $pos_b;
 });
 
 var_dump($regions);
