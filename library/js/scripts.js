@@ -55,19 +55,20 @@ jQuery(document).ready(function($) {
 		});
 
 		var hash 		= 	window.decodeURIComponent(window.location.hash).split('/')[0]
-		var noHash		=	hash.replace("#","");
-		var noHashSub 	=  	window.location.hash.split('/')[1];
+		var noHash		=	hash.replace("#","").toLowerCase()
+		var hashSub 	=  	window.decodeURIComponent(window.location.hash).split('/')[1]
+		var noHashSub 	=  	hashSub.replace("#","").toLowerCase()
 		var filterLookup = {
-								'Teilnehmerinnen':'.cat-20',
-								'Eltern': '.cat-19',
-								'Allgemein': '.cat-21',
-								'Berlin' : '.term-18',
-								'Nord' : '.term-40',
-								'Ost' : '.term-16',
-								'Österreich' : '.term-48',
-								'Schweiz' : '.term-47',
-								'Süd' : '.term-17',
-								'West' : '.term-39',
+								'teilnehmerinnen':'.cat-20',
+								'eltern': '.cat-19',
+								'allgemein': '.cat-21',
+								'berlin' : '.term-18',
+								'nord' : '.term-40',
+								'ost' : '.term-16',
+								'österreich' : '.term-48',
+								'schweiz' : '.term-47',
+								'süd' : '.term-17',
+								'west' : '.term-39',
 								'pressematerial' : '.cat-56',
 								'pressekontakt': '.cat-57',
 								'pressestimmen' : '.cat-58',
@@ -81,13 +82,13 @@ jQuery(document).ready(function($) {
 								'2013': '.faq-2013',
 
 								//Teamseite:
-								//'Berlin' : 	'.term-18', 	//doppelt
-								'Dresden': 		'.term-16',
-								'Hamburg': 		'.term-40',
-								'Köln':			'.term-39',
-								//'Österreich':	'.term-48', 	// doppelt
-								//'Schweiz' : 	'.term-47',		//doppelt
-								'Ulm':			'.term-17'
+								//'berlin' : 	'.term-18', 	//	doppelt
+								'dresden': 		'.term-16',
+								'hamburg': 		'.term-40',
+								'köln':			'.term-39',
+								//'österreich':	'.term-48', 	//	doppelt
+								//'schweiz' : 	'.term-47',		//	doppelt
+								'ulm':			'.term-17'
 							}
 
 
