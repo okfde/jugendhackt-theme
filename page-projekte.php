@@ -24,14 +24,16 @@ foreach (get_categories( $args ) as $key => $value) {
 	$regions[$value->slug] = $value->name;
 }
 
-$order = array('berlin', 'oestereich', 'schweiz', 'nord', 'ost', 'sued', 'west');
+$order = array('berlin', 'oestereich', 'schweiz', 'nord', 'ost', 'sued', 'west', 'hamburg', 'dresden', 'koeln', 'ulm');
 
 uksort($regions, function ($a, $b) use ($order) {
 
-	echo $a.":";
-	echo array_search($a, $order)."\n";
     $pos_a = array_search($a, $order);
     $pos_b = array_search($b, $order);
+
+    if($pos_a === false) $pos_a = count($order)+1
+    if($pos_b === false) $pos_b = count($order)+1
+
     return $pos_b - $pos_a;
 });
 
