@@ -30,11 +30,31 @@ $args = array(
 	'post_status' => 'published' ); 
 
 $team_members = get_children( $args );
-
-var_dump($team_members);
-
-
 $team_members = array_values($team_members);
+
+$positions  = array("Orga" => 2, "Mentor/in" => 1)
+
+$points = array("Orga" => 2, "Mentor/in" => 1)
+
+usort($team_members, function ($a, $b) use ($$points) {
+
+	$pos_a = 0;
+	$pos_b = 0;
+
+
+	$positions_a = get_field('team_positions', $a->ID);
+	$positions_b = get_field('team_positions', $b->ID);
+
+	foreach ($positions_a as $position) {
+		$pos_a = max($pos_a, $points[$position] || 0)
+	}
+
+	foreach ($positions_b as $position) {
+		$pos_b = max($pos_b, $points[$position] || 0)
+	}
+
+	return $pos_a - $pos_b;
+});
 
 
 ?>
