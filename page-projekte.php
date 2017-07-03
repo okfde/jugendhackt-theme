@@ -34,7 +34,7 @@ uksort($regions, function ($a, $b) use ($order) {
     return $pos_a - $pos_b;
 });
 
-var_dump($regions)
+var_dump($regions);
 
 
 // Get the categories for years:
