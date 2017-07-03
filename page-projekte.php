@@ -31,6 +31,9 @@ uksort($regions, function ($a, $b) use ($order) {
     $pos_a = array_search($a, $order);
     $pos_b = array_search($b, $order);
 
+    echo $a.": ".$pos_a."\n";
+    echo $b.": ".$pos_b."\n";
+
     if($pos_a === false) $pos_a = count($order)+1;
     if($pos_b === false) $pos_b = count($order)+1;
 
