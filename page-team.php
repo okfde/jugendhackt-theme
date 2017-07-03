@@ -36,6 +36,9 @@ $positions  = array("Orga" => 2, "Mentor/in" => 1)
 
 $points = array("Orga" => 2, "Mentor/in" => 1)
 
+var_dump( 0 || 'TEST');
+var_dump(-1 || 'BLUB');
+
 usort($team_members, function ($a, $b) use ($$points) {
 
 	$pos_a = 0;
@@ -46,14 +49,14 @@ usort($team_members, function ($a, $b) use ($$points) {
 	$positions_b = get_field('team_positions', $b->ID);
 
 	foreach ($positions_a as $position) {
-		$pos_a = max($pos_a, $points[$position] || 0)
+		$pos_a = max($pos_a, $points[$position] || 0);
 	}
 
 	foreach ($positions_b as $position) {
-		$pos_b = max($pos_b, $points[$position] || 0)
+		$pos_b = max($pos_b, $points[$position] || 0);
 	}
 
-	return $pos_a - $pos_b;
+	return ($pos_b - $pos_a) || strcmp($a->post_title, $b->post_title);
 });
 
 
