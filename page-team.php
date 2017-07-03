@@ -30,6 +30,10 @@ $args = array(
 	'post_status' => 'published' ); 
 
 $team_members = get_children( $args );
+
+var_dump($team_members);
+
+
 $team_members = array_values($team_members);
 
 
