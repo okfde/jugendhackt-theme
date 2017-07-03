@@ -187,6 +187,8 @@ jQuery(document).ready(function($) {
 
 		$container.isotope('stamp',  $('#filters'));
 
+		console.log(hash, noHash, $(".filter[data-filter='"+ filterLookup[noHash] +"']"))
+
 		if (hash && noHash in filterLookup) {
 				// FAQ Mixitup
 				
@@ -194,7 +196,7 @@ jQuery(document).ready(function($) {
 				$('.mixitup-container').mixItUp('filter', filterLookup[noHash])
 
 				$(".filter[data-filter='"+ filterLookup[noHash] +"']").click()
-				
+
 		} else {
 				$('.mixitup-container').mixItUp();
 		}
