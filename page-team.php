@@ -60,6 +60,7 @@ usort($team_members, function ($a, $b) use ($points) {
 	}
 });
 
+var_dump($team_members);
 
 ?>
 
