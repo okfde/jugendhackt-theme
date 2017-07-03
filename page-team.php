@@ -32,9 +32,9 @@ $args = array(
 $team_members = get_children( $args );
 $team_members = array_values($team_members);
 
-$positions  = array("Orga" => 2, "Mentor/in" => 1)
+$positions  = array("Orga" => 2, "Mentor/in" => 1);
 
-$points = array("Orga" => 2, "Mentor/in" => 1)
+$points = array("Orga" => 2, "Mentor/in" => 1);
 
 var_dump( 0 || 'TEST');
 var_dump(-1 || 'BLUB');
