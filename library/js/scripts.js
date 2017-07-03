@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
 		var hash 		= 	window.decodeURIComponent(window.location.hash).split('/')[0]
 		var noHash		=	hash.replace("#","").toLowerCase()
 		var hashSub 	=  	window.decodeURIComponent(window.location.hash).split('/')[1]
-		var noHashSub 	=  	hashSub.replace("#","").toLowerCase()
+		var noHashSub 	=  	hashSub && hashSub.replace("#","").toLowerCase()
 		var filterLookup = {
 								'teilnehmerinnen':'.cat-20',
 								'eltern': '.cat-19',
