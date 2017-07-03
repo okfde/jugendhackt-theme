@@ -26,7 +26,7 @@ foreach (get_categories( $args ) as $key => $value) {
 
 $order = array('berlin', 'oestereich', 'schweiz', 'nord', 'ost', 'sued', 'west');
 
-uksort($regions, function ($a, $b) use ($order) {
+usort($regions, function ($a, $b) use ($order) {
     $pos_a = array_search($a, $order);
     $pos_b = array_search($b, $order);
     return $pos_a - $pos_b;
