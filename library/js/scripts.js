@@ -54,7 +54,7 @@ jQuery(document).ready(function($) {
 
 		});
 
-		var hash 		= 	window.location.hash.split('/')[0];
+		var hash 		= 	window.decodeURIComponent((window.location.hash.split('/')[0])
 		var noHash		=	hash.replace("#","");
 		var noHashSub 	=  	window.location.hash.split('/')[1];
 		var filterLookup = {
