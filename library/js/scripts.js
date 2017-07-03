@@ -188,7 +188,7 @@ jQuery(document).ready(function($) {
 
 		$container.isotope('stamp',  $('#filters'));
 
-		console.log(hash, noHash, $(".filter[data-filter='"+ filterLookup[noHash] +"']"))
+		console.log(hash, noHash, $("[data-filter='"+ filterLookup[noHash] +"']"))
 
 		if (hash && noHash in filterLookup) {
 				// FAQ Mixitup
