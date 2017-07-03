@@ -24,7 +24,7 @@ foreach (get_categories( $args ) as $key => $value) {
 	$regions[$value->slug] = $value->name;
 }
 
-$order = array('berlin', 'oestereich', 'schweiz', 'nord', 'ost', 'sued', 'west', 'hamburg', 'dresden', 'koeln', 'ulm');
+$order = array('berlin', 'oesterreich', 'schweiz', 'nord', 'ost', 'sued', 'west', 'hamburg', 'dresden', 'koeln', 'ulm');
 
 uksort($regions, function ($a, $b) use ($order) {
 
