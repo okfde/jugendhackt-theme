@@ -190,11 +190,11 @@ jQuery(document).ready(function($) {
 		if (hash && noHash in filterLookup) {
 				// FAQ Mixitup
 				
-				console.log(noHash) 
-				
 				$('.mixitup-container').mixItUp()
-				$('.mixitup-container').mixItUp('filter', filterLookup[noHash]);
-				$("#faq-filters .filter[data-filter='"+ filterLookup[noHash] +"']")[0].click()
+				$('.mixitup-container').mixItUp('filter', filterLookup[noHash])
+
+				$(".filter[data-filter='"+ filterLookup[noHash] +"']").click()
+				
 		} else {
 				$('.mixitup-container').mixItUp();
 		}
