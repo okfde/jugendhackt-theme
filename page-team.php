@@ -36,9 +36,6 @@ $positions  = array("Orga" => 2, "Mentor/in" => 1);
 
 $points = array("Orga" => 2, "Mentor/in" => 1);
 
-var_dump( 0 || 'TEST');
-var_dump(-1 || 'BLUB');
-
 usort($team_members, function ($a, $b) use ($points) {
 
 	$pos_a = 0;
@@ -56,7 +53,11 @@ usort($team_members, function ($a, $b) use ($points) {
 		$pos_b = max($pos_b, $points[$position] || 0);
 	}
 
-	return ($pos_b - $pos_a) || strcmp($a->post_title, $b->post_title);
+	if($pos_b - $pos_a == 0){
+		return(strcmp($a->post_title, $b->post_title));
+	} else {
+		return($pos_b - $pos_a);		
+	}
 });
 
 
