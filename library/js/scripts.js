@@ -180,6 +180,9 @@ jQuery(document).ready(function($) {
 
 		if (hash && noHash in filterLookup) {
 				// FAQ Mixitup
+				
+				console.log(noHash) 
+				
 				$('.mixitup-container').mixItUp()
 				$('.mixitup-container').mixItUp('filter', filterLookup[noHash]);
 				$("#faq-filters .filter[data-filter='"+ filterLookup[noHash] +"']")[0].click()
