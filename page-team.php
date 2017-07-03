@@ -39,7 +39,7 @@ $points = array("Orga" => 2, "Mentor/in" => 1);
 var_dump( 0 || 'TEST');
 var_dump(-1 || 'BLUB');
 
-usort($team_members, function ($a, $b) use ($$points) {
+usort($team_members, function ($a, $b) use ($points) {
 
 	$pos_a = 0;
 	$pos_b = 0;
