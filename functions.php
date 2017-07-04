@@ -412,10 +412,10 @@ class jh_twitter_widget extends WP_Widget {
 			'jh_twitter_widget', 
 
 			// Widget name will appear in UI
-			__('JH Twitter Widget', 'wpb_widget_domain'), 
+			__('JH Twitter Widget', 'jh_twitter_widget_domain'), 
 
 			// Widget description
-			array( 'description' => __( 'Display twitter feet from spesific account or list.', 'wpb_widget_domain' ), ) 
+			array( 'description' => __( 'Display twitter feet from specific account or list.', 'jh_twitter_widget_domain' ), ) 
 		);
 	}
 
@@ -431,7 +431,7 @@ class jh_twitter_widget extends WP_Widget {
 
 		?>
 
-			<a class="twitter-timeline" href="https://twitter.com/jugendhackt/lists/jugend-hackt-allstars/">A Twitter List by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<a class="twitter-timeline" href="<?php echo esc_url( $instance[href] ); ?>">A Twitter List by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 		<?php
 
 			// <div class="clearfix">
@@ -452,14 +452,17 @@ class jh_twitter_widget extends WP_Widget {
 			$title = $instance[ 'title' ];
 		}
 		else {
-			$title = __( 'New title', 'wpb_widget_domain' );
+			$title = __( 'New title', 'jh_twitter_widget_domain' );
 		}
 
 		// Widget admin form
 		?>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		</p>
+		<p>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'href' ); ?>" name="<?php echo $this->get_field_name( 'href' ); ?>" type="text" value="<?php echo esc_url( $instance[href] ); ?>" />
 		</p>
 		<?php 
 	}
@@ -467,7 +470,8 @@ class jh_twitter_widget extends WP_Widget {
 	// Updating widget replacing old instances with new
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		$instance['title'] 	= ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		$instance['href'] 	= ( ! empty( $new_instance['href'] ) ) ? esc_url_raw( $new_instance['href'] ) : '';
 		return $instance;
 	}
 } // Class wpb_widget ends here
