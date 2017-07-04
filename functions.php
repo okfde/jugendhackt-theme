@@ -430,6 +430,9 @@ class jh_twitter_widget extends WP_Widget {
 		echo $args['before_title'] . $title . $args['after_title'];
 
 		?>
+
+			<a class="twitter-timeline" href="https://twitter.com/jugendhackt/lists/jugend-hackt-allstars/">A Twitter List by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 			<div class="clearfix">
 				<div class="follow-wrap">
 					<a class="twitter-follow-button" href="https://twitter.com/jugendhackt" data-show-count="false" data-show-screen-name="false">Follow @twitterapi</a>
