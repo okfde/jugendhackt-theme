@@ -431,6 +431,9 @@ class jh_twitter_widget extends WP_Widget {
 
 	// This is where you run the code and display the output
 	echo __( 'Hello, World!', 'wpb_widget_domain' );
+	?>
+		<b>blub</b>
+	<?php
 	echo $args['after_widget'];
 	}
 
@@ -444,7 +447,7 @@ class jh_twitter_widget extends WP_Widget {
 		else {
 			$title = __( 'New title', 'wpb_widget_domain' );
 		}
-		
+
 		// Widget admin form
 		?>
 		<p>
