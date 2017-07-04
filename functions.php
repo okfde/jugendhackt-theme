@@ -432,15 +432,15 @@ class jh_twitter_widget extends WP_Widget {
 		?>
 
 			<a class="twitter-timeline" href="https://twitter.com/jugendhackt/lists/jugend-hackt-allstars/">A Twitter List by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-			<div class="clearfix">
-				<div class="follow-wrap">
-					<a class="twitter-follow-button" href="https://twitter.com/jugendhackt" data-show-count="false" data-show-screen-name="false">Follow @twitterapi</a>
-				</div>
-			</div>
-			<a class="twitter-timeline" href="https://twitter.com/jugendhackt" data-widget-id="535489125131239424" data-chrome="noborders transparent nofooter noheader">Tweets by @jugendhackt</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		<?php
+
+			// <div class="clearfix">
+			// 	<div class="follow-wrap">
+			// 		<a class="twitter-follow-button" href="https://twitter.com/jugendhackt" data-show-count="false" data-show-screen-name="false">Follow @twitterapi</a>
+			// 	</div>
+			// </div>
+			// <a class="twitter-timeline" href="https://twitter.com/jugendhackt" data-widget-id="535489125131239424" data-chrome="noborders transparent nofooter noheader">Tweets by @jugendhackt</a>
+			// <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		echo $args['after_widget'];
 	}
 
