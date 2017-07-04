@@ -422,19 +422,23 @@ class jh_twitter_widget extends WP_Widget {
 	// Creating widget front-end
 
 	public function widget( $args, $instance ) {
-	$title = apply_filters( 'widget_title', $instance['title'] );
+		$title = apply_filters( 'widget_title', $instance['title'] );
 
-	// before and after widget arguments are defined by themes
-	echo $args['before_widget'];
-	if ( ! empty( $title ) )
-	echo $args['before_title'] . $title . $args['after_title'];
+		// before and after widget arguments are defined by themes
+		echo $args['before_widget'];
+		if ( ! empty( $title ) )
+		echo $args['before_title'] . $title . $args['after_title'];
 
-	// This is where you run the code and display the output
-	echo __( 'Hello, World!', 'wpb_widget_domain' );
-	?>
-		<b>blub</b>
-	<?php
-	echo $args['after_widget'];
+		?>
+			<div class="clearfix">
+				<div class="follow-wrap">
+					<a class="twitter-follow-button" href="https://twitter.com/jugendhackt" data-show-count="false" data-show-screen-name="false">Follow @twitterapi</a>
+				</div>
+			</div>
+			<a class="twitter-timeline" href="https://twitter.com/jugendhackt" data-widget-id="535489125131239424" data-chrome="noborders transparent nofooter noheader">Tweets by @jugendhackt</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		<?php
+		echo $args['after_widget'];
 	}
 
 		
