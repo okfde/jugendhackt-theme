@@ -431,7 +431,8 @@ class jh_twitter_widget extends WP_Widget {
 
 		?>
 
-			<a class="twitter-timeline" href="<?php echo esc_url( $instance[href] ); ?>">A Twitter List by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<a class="twitter-timeline" href="<?php echo esc_url( $instance[href] ); ?>"><?php echo esc_url( $instance[href] ); ?></a> 
+			<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 		<?php
 
 			// <div class="clearfix">
