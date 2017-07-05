@@ -65,9 +65,9 @@ get_header();
 				'post_type' => 'post',
 				'post_status' => 'draft, publish, future, pending, private',
 				'suppress_filters' => true
-			)
+			);
 
-			$recent_posts = wp_get_recent_posts( $args);
+			$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
 			var_dump($recent_posts);
 
 			?>
