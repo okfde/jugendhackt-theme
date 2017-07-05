@@ -48,9 +48,9 @@ get_header();
 		</section>
 
 		<?php 
-			$extra = get_field('extra')
+			$extra = get_field('extra');
 
-			var_dump(extra)
+			var_dump(extra);
 
 			if($extra) { ?>
 			<section class="sixcol last background-panel entry-content clearfix">
