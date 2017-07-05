@@ -48,13 +48,29 @@ get_header();
 		</section>
 
 		<?php 
-			$terms = get_field('recent_posts');
-			var_dump($terms);
+			$term = get_field('recent_posts');
+			var_dump($term);
 
-			foreach( $terms as $term ): ?>
-				<?php echo $term->name; ?>
 
-			<?php endforeach; ?>
+			$args = array(
+				'numberposts' => 3,
+				'offset' => 0,
+				'category' => $term-slug,
+				'orderby' => 'post_date',
+				'order' => 'DESC',
+				'include' => '',
+				'exclude' => '',
+				'meta_key' => '',
+				'meta_value' =>'',
+				'post_type' => 'post',
+				'post_status' => 'draft, publish, future, pending, private',
+				'suppress_filters' => true
+			)
+
+			$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+			var_dump($recent_posts);
+
+			?>
 
 			<?php if($extra) { ?>
 			<section class="twelvecol last background-panel entry-content clearfix">
