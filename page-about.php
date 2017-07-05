@@ -49,7 +49,7 @@ get_header();
 
 		<?php 
 			$term_id = get_field('recent_posts');
-			var_dump($term);
+			var_dump($term_id);
 
 
 			$args = array(
