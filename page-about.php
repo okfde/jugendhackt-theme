@@ -52,6 +52,11 @@ get_header();
 			
 			if($term_id){
 
+		?>
+				<section class="twelvecol first entry-content" >
+		<?php>
+
+
 
 				$args = array(
 					'numberposts' => 3,
@@ -70,15 +75,17 @@ get_header();
 
 				$the_query = new WP_Query( $args );
 
-				while($the_query->have_posts()){ ?>
+				while($the_query->have_posts()){ 
+					 $the_query -> the_post();
+		?>
 
-					<section class="fourcol last background-panel entry-content clearfix">
-						<?php $the_query -> the_post(); ?>
+					<div class="class="background-panel <?php if($the_query->current_post == 0 )echo 'first'?> fourcol teaser-item"">
 						<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-					</section>
+					</div>
 					
-				<?php }  
-			}
+				<?php }  ?>
+				</section>
+			<?php } ?>
 		?>
 	
 		<section class="twelvecol first entry-content" >
