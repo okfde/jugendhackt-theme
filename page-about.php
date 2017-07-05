@@ -52,6 +52,21 @@ get_header();
 			var_dump($term_id);
 
 
+			$args = array(
+				'numberposts' => 3,
+				'offset' => 0,
+				'category' => $term_id,
+				'orderby' => 'post_date',
+				'order' => 'DESC',
+				'include' => '',
+				'exclude' => '',
+				'meta_key' => '',
+				'meta_value' =>'',
+				'post_type' => 'post',
+				'post_status' => 'draft, publish, future, pending, private',
+				'suppress_filters' => true
+			)
+
 
 			?>
 
