@@ -51,7 +51,7 @@ get_header();
 			$extra = get_field('extra');
 			if($extra) { ?>
 			<section class="sixcol last background-panel entry-content clearfix">
-				<?php do_shortcode($extra) ?>
+				<?php echo do_shortcode($extra); ?>
 			</section>
 		<?php } ?>
 
