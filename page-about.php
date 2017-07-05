@@ -48,9 +48,15 @@ get_header();
 		</section>
 
 		<?php 
-			$recent_posts = get_field('recent_posts');
-			var_dump($recent_posts);
-			if($extra) { ?>
+			$terms = get_field('recent_posts');
+			var_dump($terms);
+
+			<?php foreach( $terms as $term ): ?>
+				<?php echo $term->name; ?>
+
+			<?php endforeach; ?>
+
+			<?php if($extra) { ?>
 			<section class="twelvecol last background-panel entry-content clearfix">
 				<?php echo $extra; ?>
 				<?php var_dump(do_shortcode($extra)); ?>
