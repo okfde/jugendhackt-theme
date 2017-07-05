@@ -68,12 +68,12 @@ get_header();
 					'suppress_filters' => true
 				);
 
-				$recent_posts = wp_get_recent_posts( $args, OBJECT );
-				var_dump($recent_posts);
-				foreach($recent_posts as $post){ ?>
+				$query = $the_query = new WP_Query( $args );
+
+				while($the_query->have_posts()){ ?>
 
 					<section class="fourcol last background-panel entry-content clearfix">
-						<h3></h3>
+						<?php $the_query -> the_post(); ?>
 					</section>
 					
 				<?php }  
