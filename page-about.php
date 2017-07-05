@@ -51,6 +51,7 @@ get_header();
 			$extra = get_field('extra');
 			if($extra) { ?>
 			<section class="twelvecol last background-panel entry-content clearfix">
+				<?php $extra; ?>
 				<?php do_shortcode($extra); ?>
 			</section>
 		<?php } ?>
