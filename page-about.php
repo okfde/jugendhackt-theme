@@ -54,7 +54,7 @@ get_header();
 
 		?>
 				<section class="twelvecol first entry-content" >
-		<?php>
+		<?php
 
 
 
@@ -89,7 +89,6 @@ get_header();
 				</section>
 		<?php 
 			} 
-		?>
 		?>
 	
 		<section class="twelvecol first entry-content" >
