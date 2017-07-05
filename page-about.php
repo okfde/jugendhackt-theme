@@ -49,7 +49,7 @@ get_header();
 
 		<?php 
 			$recent_posts = get_field('recent_posts');
-			var_dump(recent_posts);
+			var_dump($recent_posts);
 			if($extra) { ?>
 			<section class="twelvecol last background-panel entry-content clearfix">
 				<?php echo $extra; ?>
