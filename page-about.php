@@ -79,13 +79,17 @@ get_header();
 					 $the_query -> the_post();
 		?>
 
-					<div class="class="background-panel <?php if($the_query->current_post == 0 )echo 'first'?> fourcol teaser-item"">
+					<div class="background-panel <?php if($the_query->current_post == 0) echo 'first';?> fourcol teaser-item">
 						<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 					</div>
 					
-				<?php }  ?>
+		<?php 	
+				}  
+		?>
 				</section>
-			<?php } ?>
+		<?php 
+			} 
+		?>
 		?>
 	
 		<section class="twelvecol first entry-content" >
