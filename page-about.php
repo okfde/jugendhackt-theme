@@ -48,14 +48,14 @@ get_header();
 		</section>
 
 		<?php 
-			$term = get_field('recent_posts');
+			$term_id = get_field('recent_posts');
 			var_dump($term);
 
 
 			$args = array(
 				'numberposts' => 3,
 				'offset' => 0,
-				'category' => $term->slug,
+				'category' => $term_id,
 				'orderby' => 'post_date',
 				'order' => 'DESC',
 				'include' => '',
