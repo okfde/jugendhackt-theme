@@ -81,6 +81,9 @@ get_header();
 
 					<div class="background-panel <?php if($the_query->current_post == 0) echo 'first';?> fourcol teaser-item">
 						<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+						<div>
+							<?php the_content(); ?>
+						</div>
 					</div>
 					
 		<?php 	
