@@ -7,6 +7,8 @@ get_header();
 
 ?>
 
+XXX
+
 <div id="content" data-speed="3" >
 	<div id="inner-content" class="wrap clearfix">
 
