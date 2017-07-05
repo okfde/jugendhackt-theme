@@ -55,7 +55,7 @@ get_header();
 			$args = array(
 				'numberposts' => 3,
 				'offset' => 0,
-				'category' => $term-slug,
+				'category' => $term->slug,
 				'orderby' => 'post_date',
 				'order' => 'DESC',
 				'include' => '',
