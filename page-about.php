@@ -47,10 +47,16 @@ get_header();
 			<?php echo get_field('about_video'); ?>
 		</section>
 
+		<?php 
+			$extra = get_field('extra')
 
-		<section class="twelvecol last background-panel entry-content clearfix">
-			<?php echo get_field('extra'); ?>
-		</section>
+			var_dump(extra)
+
+			if($extra) { ?>
+			<section class="sixcol last background-panel entry-content clearfix">
+				<?php $extra ?>
+			</section>
+		<?php } ?>
 
 
 	
