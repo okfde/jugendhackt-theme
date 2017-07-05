@@ -51,7 +51,7 @@ get_header();
 			$terms = get_field('recent_posts');
 			var_dump($terms);
 
-			<?php foreach( $terms as $term ): ?>
+			foreach( $terms as $term ): ?>
 				<?php echo $term->name; ?>
 
 			<?php endforeach; ?>
