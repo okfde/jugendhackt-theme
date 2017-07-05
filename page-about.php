@@ -68,12 +68,13 @@ get_header();
 					'suppress_filters' => true
 				);
 
-				$query = $the_query = new WP_Query( $args );
+				$the_query = new WP_Query( $args );
 
 				while($the_query->have_posts()){ ?>
 
 					<section class="fourcol last background-panel entry-content clearfix">
 						<?php $the_query -> the_post(); ?>
+						<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 					</section>
 					
 				<?php }  
