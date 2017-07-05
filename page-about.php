@@ -52,7 +52,7 @@ get_header();
 			if($extra) { ?>
 			<section class="twelvecol last background-panel entry-content clearfix">
 				<?php echo $extra; ?>
-				<?php do_shortcode($extra); ?>
+				<?php var_dump(do_shortcode($extra)); ?>
 			</section>
 		<?php } ?>
 
