@@ -67,6 +67,8 @@ get_header();
 				'suppress_filters' => true
 			)
 
+			$recent_posts = wp_get_recent_posts( $args);
+			var_dump($recent_posts);
 
 			?>
 
