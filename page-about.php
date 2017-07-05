@@ -49,37 +49,36 @@ get_header();
 
 		<?php 
 			$term_id = get_field('recent_posts');
-			var_dump($term_id);
+			
+			if($term_id){
 
 
-			$args = array(
-				'numberposts' => 3,
-				'offset' => 0,
-				'category' => $term_id,
-				'orderby' => 'post_date',
-				'order' => 'DESC',
-				'include' => '',
-				'exclude' => '',
-				'meta_key' => '',
-				'meta_value' =>'',
-				'post_type' => 'post',
-				'post_status' => 'draft, publish, future, pending, private',
-				'suppress_filters' => true
-			);
+				$args = array(
+					'numberposts' => 3,
+					'offset' => 0,
+					'category' => $term_id,
+					'orderby' => 'post_date',
+					'order' => 'DESC',
+					'include' => '',
+					'exclude' => '',
+					'meta_key' => '',
+					'meta_value' =>'',
+					'post_type' => 'post',
+					'post_status' => 'draft, publish, future, pending, private',
+					'suppress_filters' => true
+				);
 
-			$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
-			var_dump($recent_posts);
+				$recent_posts = wp_get_recent_posts( $args, OBJECT );
+				var_dump($recent_posts);
+				foreach($recent_posts as $post){ ?>
 
-			?>
-
-			<?php if($extra) { ?>
-			<section class="twelvecol last background-panel entry-content clearfix">
-				<?php echo $extra; ?>
-				<?php var_dump(do_shortcode($extra)); ?>
-			</section>
-		<?php } ?>
-
-
+					<section class="fourcol last background-panel entry-content clearfix">
+						<h3></h3>
+					</section>
+					
+				<?php }  
+			}
+		?>
 	
 		<section class="twelvecol first entry-content" >
 		<?php
