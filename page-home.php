@@ -19,16 +19,10 @@ $wp_query = new WP_Query( $args );
 
 			<?php 
 			// Is it odd or even
-			if($i%2 == 0) 
-				{ $odd = true; 
-				} 
-			else {
-					$odd = false;
-				};
+			$odd = ($i%2 == 0);
 
-
-				// If its odd (first column): Start a new row
-				if($odd) {echo "<div class='clearfix'>";} ?>
+			// If its odd (first column): Start a new row
+			if($odd) {echo "<div class='clearfix'>";} ?>
 
 				<article id="post-<?php the_ID(); ?>" class="<?php 
 
