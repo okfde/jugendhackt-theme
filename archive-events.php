@@ -2,11 +2,12 @@
 
 get_header(); 
   // Set the loop: only get the ones that have show on homepage set
-$args = array( 	'post_type' => array('events') , 
-	'orderby' => 'menu_order',
+$args = array( 	'post_type' => array('events'), 
+	'orderby' => 'meta_value_num',
+	'meta_key'  => 'event_date',
 	'order' => 'ASC',
 	'nopaging' => true
-	);
+);
 $wp_query = new WP_Query( $args );
 
 ?>
