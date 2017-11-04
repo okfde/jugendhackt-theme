@@ -78,7 +78,8 @@ if(!empty($categories)){
 
 	</div>
 
-	<!--
+	<?php 
+	/* 
 	<div class="teaser-meta">
 
 		<?php
@@ -105,5 +106,7 @@ if(!empty($categories)){
 			</div>
 		<?php } ?>
 	
-	</div> -->
+	</div> 
+	*/
+	?>
 </div>
