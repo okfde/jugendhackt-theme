@@ -77,36 +77,4 @@ if(!empty($categories)){
 		</div>
 
 	</div>
-
-	<?php 
-	/* 
-	<div class="teaser-meta">
-
-		<?php
-
-		$links = $project['project_links'];
-		$contributors = $project['project_contributors'];
-
-		if(!empty($contributors)){ ?>
-			<h3 class="project-who">
-				<?php echo 'Wer: ' . $contributors; ?>
-			</h3>
-		<?php }
-
-		if(!empty($links) || !empty($contributors) ){ ?>
-			<div class="project-links"> 
-				<h3>
-				<?php
-					foreach ($links as $key1 => $link) { ?>					
-						<a class="h3" href="<?php echo  $link['project_links_url']; ?>">
-							<?php echo $link['project_links_title'];?>
-						</a>
-					<?php if($key1 != (count($links)-1)) { echo ', ';} } ?>
-				</h3>
-			</div>
-		<?php } ?>
-	
-	</div> 
-	*/
-	?>
 </div>
