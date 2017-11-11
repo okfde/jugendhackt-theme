@@ -32,7 +32,7 @@ $args = array(
 $team_members = get_children( $args );
 $team_members = array_values($team_members);
 
-$positions  = array("Orga" => 2, "Mentor/in" => 1);
+// $positions  = array("Orga" => 2, "Mentor/in" => 1);
 
 $points = array("Orga" => 2, "Mentor/in" => 1);
 
@@ -45,12 +45,16 @@ usort($team_members, function ($a, $b) use ($points) {
 	$positions_a = get_field('team_positions', $a->ID);
 	$positions_b = get_field('team_positions', $b->ID);
 
-	foreach ($positions_a as $position) {
-		$pos_a = max($pos_a, $points[$position]);
+	if($positions_a){
+		foreach ($positions_a as $position) {
+			$pos_a = max($pos_a, $points[$position]);
+		}
 	}
 
-	foreach ($positions_b as $position) {
-		$pos_b = max($pos_b, $points[$position]);
+	if($positions_b){
+		foreach ($positions_b as $position) {
+			$pos_b = max($pos_b, $points[$position]);
+		}
 	}
 
 	if($pos_b - $pos_a == 0){
