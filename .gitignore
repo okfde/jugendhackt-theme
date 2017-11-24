@@ -5,3 +5,5 @@ Bones.esproj/Project.espressostorage
 .DS_Store
 node_modules
 bower_components
+README.node_modules
+package.json
