@@ -53,6 +53,7 @@ get_header();
 		<?php 
 			$term_id = get_field('recent_posts');
 			printf('<!-- '.$term_id.' -->');
+			printf('<!-- '.get_field('recent_events').' -->');
 			
 			if($term_id){
 
