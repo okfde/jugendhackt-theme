@@ -48,14 +48,22 @@ get_header();
 		</section>
 
 
-		<!-- begin recent posts of some category -->
+
+
+
+
 
 		<?php 
-			$term_id = get_field('recent_posts');
-			printf('<!-- '.$term_id.' -->');
-			printf('<!-- '.get_field('recent_events').' -->');
-			
-			if($term_id){
+			$category_id_for_recent_posts 	= get_field('recent_posts');
+			$category_id_for_recent_events 	= get_field('recent_events');
+
+			printf('<!-- '.$category_id_for_recent_posts.' -->');
+			printf('<!-- '.$category_id_for_recent_events.' -->');
+		?>
+
+		<!-- begin recent posts of some category -->
+		<?php
+			if($category_id_for_recent_posts){
 
 		?>
 				<section class="twelvecol first entry-content background-panel" >
@@ -66,7 +74,7 @@ get_header();
 				$args = array(
 					'numberposts' => 3,
 					'offset' => 0,
-					'category' => $term_id,
+					'category' => $category_id_for_recent_posts,
 					'orderby' => 'post_date',
 					'order' => 'DESC',
 					'include' => '',
@@ -115,23 +123,15 @@ get_header();
 		<!-- begin recent events of some category -->
 
 		<?php 
-			$term_id = get_field('recent_events');
-
-			printf('<!-- '.$term_id.' -->');
-			printf('<!-- '.get_field('recent_posts').' -->');
-
-			if($term_id){
-
+			if($category_id_for_recent_events){
 		?>
 				<section class="twelvecol first entry-content background-panel" >
 		<?php
 
-
-
 				$args = array(
 					'numberposts' => 3,
 					'offset' => 0,
-					'category' => $term_id,
+					'category' => $category_id_for_recent_events,
 					'orderby' => 'post_date',
 					'order' => 'DESC',
 					'include' => '',
