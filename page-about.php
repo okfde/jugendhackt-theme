@@ -113,8 +113,10 @@ get_header();
 		<!-- begin recent events of some category -->
 
 		<?php 
-			$term_id = get_field('recent_posts');
+			$term_id = get_field('recent_events');
 			
+			printf('<!-- '.$term_id.' -->');
+
 			if($term_id){
 
 		?>
