@@ -25,8 +25,7 @@ $wp_query = new WP_Query( $args );
 				$event_fields = get_event_fields($post->id);
 
 				// Is it odd or even
-				if($i%2 == 0) { $odd = true; } 
-				else { $odd = false; };
+				$odd = ($i%2 == 0);
 
 				if($odd) { 
 					$colClasses = "first sixcol";
